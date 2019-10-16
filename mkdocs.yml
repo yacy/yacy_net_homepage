@@ -1,17 +1,19 @@
-site_name: Cinder + Superhero
+site_name: YaCy
 
 theme:
     name: null
     custom_dir: 'cinder-superhero'
 
-site_author: Christopher Simpkins, Michael Christen
-site_description: "A Superhero-modified version of Cinder"
-repo_url: "https://github.com/Orbiter/MkDocs-Theme-Cinder-Superhero"
+site_author: Michael Christen
+site_description: "YaCy P2P - Decentralized Search Engine"
+repo_url: "https://github.com/yacy/yacy_net_homepage.git"
 
 nav:
   - Home: index.md
-  - Cinder: cinder.md
-  - Specimen: specimen.md
+  - Demo: demo.md
+  - Download: download.md
+  - Manual: manual.md
+  - Community: community.md
 
 markdown_extensions:
   - admonition

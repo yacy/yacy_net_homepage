@@ -52,6 +52,9 @@ pre {
 .navbar-default {
     background-color: #4E5D6C;
 }
+.navbar-brand {
+    padding: 7px 15px;
+}
 .bs-sidebar {
     border: none;
 }
