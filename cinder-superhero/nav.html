@@ -15,7 +15,7 @@
 
             <!-- Main title -->
 
-            <a class="navbar-brand" href="{{ nav.homepage.url|url }}"><img src="img/YaCyLogo2011_60.png" height="40"><!--{{ config.site_name }}--></a>
+            <a class="navbar-brand" href="{{ nav.homepage.url|url }}"><img src="/img/YaCyLogo2011_60.png" height="40"><!--{{ config.site_name }}--></a>
         </div>
 
         <!-- Expanded navigation -->
@@ -72,6 +72,7 @@
                     {%- endif %}
                 {%- endblock %}
 
+		<!--
                 {%- block repo %}
                     {%- if page and page.edit_url %}
                     <li>
@@ -103,6 +104,7 @@
                     </li>
                     {%- endif %}
                 {%- endblock %}
+		-->
             </ul>
         </div>
     </div>

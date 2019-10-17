@@ -27,20 +27,20 @@ YaCy is a free search engine that anyone can use to build a search portal for th
 
 <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>P2P Mode</h2>
 	  <img src="img/usecase_freeworld.png">
           <p>Fully decentralized search network, all users are equal, no central, no search request storage, shared index.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" style="background-color:#4E5D6C; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>Your Search Portal</h2>
 	  <img src="img/usecase_webportal.png">
           <p>Your YaCy installation is independent from other peers. Define your own web index and starting your own web crawl.</p>
        </div>
-        <div class="col-md-4">
+        <div class="col-md-4" style="background-color:#4E5D6C; margin-left:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>Intranet Search</h2>
 	  <img src="img/usecase_intranet.png">
-          <p>Create a search portal for your intranet or web pages or your (shared) file system.</p>
+          <p>Create a search portal for your intranet or web pages or your (shared) file system.<br/>&nbsp;</p>
         </div>
       </div>
 </div>
@@ -56,3 +56,8 @@ Here is a live image of the YaCy network:
 ## Installation is easy!
 
 The installation takes only three minutes. Just download the release, decompress the package and run the start script.
+
+Next Steps:
+<p><a class="btn btn-success btn-lg" href="/download/" role="button">Download and Install YaCy</a>
+<a class="btn btn-info btn-lg" href="/demo/" role="button">Watch screenshots and tutorial movies</a>
+<a class="btn btn-warning btn-lg" href="http://yacy.searchlab.eu/Status.html" role="button">Try out the YaCy Demo Peer</a>

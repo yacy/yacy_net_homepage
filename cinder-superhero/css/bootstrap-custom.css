@@ -537,8 +537,8 @@ pre code {
     overflow-y: scroll;
 }
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -866,7 +866,7 @@ pre code {
 .col-md-5 {
     width: 41.66666666666667%}
 .col-md-4 {
-    width: 33.33333333333333%}
+    width: 30%}
 .col-md-3 {
     width: 25%}
 .col-md-2 {
@@ -2977,7 +2977,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 .navbar-nav>li>a {
     padding-top: 10px;
     padding-bottom: 10px;
-    line-height: 26px;
+    line-height: 27px;
 }
 @media(max-width:767px) {
     .navbar-nav .open .dropdown-menu {

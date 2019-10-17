@@ -13,6 +13,7 @@ nav:
   - Demo: demo.md
   - Download: download.md
   - Manual: manual.md
+  - Privacy: privacy.md
   - Community: community.md
 
 markdown_extensions:
