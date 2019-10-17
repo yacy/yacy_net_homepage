@@ -97,38 +97,38 @@ These videos are short and most have nice music from [Shiryu Music](https://shir
 ### Demo: YaCy Installation in Windows
 Please install Java 8 first, the automatic Java installation within YaCy does not work any more.
 <div id="video01">
-<img src="img/tutorial_01_Installation_in_Windows.png" width="720" height="405"  onmouseover="document.getElementById('video01').innerHTML = embed01;">
+<img src="../img/tutorial_01_Installation_in_Windows.png" width="720" height="405"  onmouseover="document.getElementById('video01').innerHTML = embed01;">
 </div>
 
 ### Demo: YaCy Installation on a Mac
 <div id="video02">
-<img src="img/tutorial_02_Installation_on_a_Mac.png" width="720" height="405"  onmouseover="document.getElementById('video02').innerHTML = embed02;">
+<img src="../img/tutorial_02_Installation_on_a_Mac.png" width="720" height="405"  onmouseover="document.getElementById('video02').innerHTML = embed02;">
 </div>
 
 ### Demo: YaCy Installation in Ubuntu and any other Linux Systems
 Instead of Java-7 now please install Java-8
 <div id="video03">
-<img src="img/tutorial_03_Installation_in_Ubuntu_and_any_other_Linux.png" width="720" height="405"  onmouseover="document.getElementById('video03').innerHTML = embed03;">
+<img src="../img/tutorial_03_Installation_in_Ubuntu_and_any_other_Linux.png" width="720" height="405"  onmouseover="document.getElementById('video03').innerHTML = embed03;">
 </div>
 
 ### Demo: Basic Configuration of YaCy and Release Updates
 <div id="video04">
-<img src="img/tutorial_04_Basic_Configuration_Release_Update.png" width="720" height="405"  onmouseover="document.getElementById('video04').innerHTML = embed04;">
+<img src="../img/tutorial_04_Basic_Configuration_Release_Update.png" width="720" height="405"  onmouseover="document.getElementById('video04').innerHTML = embed04;">
 </div>
 
 ### Demo: Start a Web Crawl with YaCy
 <div id="video05">
-<img src="img/tutorial_05_Easy_Web_Crawl.png" width="720" height="405"  onmouseover="document.getElementById('video05').innerHTML = embed05;">
+<img src="../img/tutorial_05_Easy_Web_Crawl.png" width="720" height="405"  onmouseover="document.getElementById('video05').innerHTML = embed05;">
 </div>
 
 ### Demo: Secret Agents with YaCy RSS Feed Reader
 <div id="video06">
-<img src="img/tutorial_06_Secret_Agents_with_YaCy_RSS_Feed_Reader.png" width="720" height="405"  onmouseover="document.getElementById('video06').innerHTML = embed06;">
+<img src="../img/tutorial_06_Secret_Agents_with_YaCy_RSS_Feed_Reader.png" width="720" height="405"  onmouseover="document.getElementById('video06').innerHTML = embed06;">
 </div>
 
 ### Demo: Location Search with YaCy and Opensteetmap and Geonames
 <div id="video07">
-<img src="img/tutorial_07_Search_Locations_on_Map_with_Openstreetmap_and_Geonames.png" width="720" height="405"  onmouseover="document.getElementById('video07').innerHTML = embed07;">
+<img src="../img/tutorial_07_Search_Locations_on_Map_with_Openstreetmap_and_Geonames.png" width="720" height="405"  onmouseover="document.getElementById('video07').innerHTML = embed07;">
 </div>
 
 
