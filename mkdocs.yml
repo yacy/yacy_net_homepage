@@ -1,17 +1,17 @@
 site_name: YaCy
+site_author: Michael Christen
+site_description: "YaCy P2P - Decentralized Search Engine"
+site_url: "https://yacy.net"
+repo_url: "https://github.com/yacy/yacy_net_homepage.git"
 
 theme:
     name: null
     custom_dir: 'cinder-superhero'
 
-site_author: Michael Christen
-site_description: "YaCy P2P - Decentralized Search Engine"
-repo_url: "https://github.com/yacy/yacy_net_homepage.git"
-
 nav:
   - Home: index.md
-  - Demo: demo.md
-  - Download: download.md
+  - Demo: demonstration_tutorial_screenshot.md
+  - Download: download_installation.md
   - Manual: manual.md
   - Privacy: privacy.md
   - Community: community.md

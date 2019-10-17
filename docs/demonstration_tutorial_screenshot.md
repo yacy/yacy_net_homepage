@@ -8,32 +8,32 @@ We have screenshots, tutorial movies and a live demonstration. If you want to ju
 ### Search Results
 
 This is the search result page using peer-to-peer data:
-![YaCy Search Engine Result List](/img/screenshot_search_result.png)
+![YaCy Search Engine Result List](img/screenshot_search_result.png)
 
 Search result pages can be configured:
-![YaCy Search Engine Configuration](/img/screenshot_search_result_configuration.png)
+![YaCy Search Engine Configuration](img/screenshot_search_result_configuration.png)
 
 We provide a wide range of options to integrate a search page into an existing environment:
-![YaCy Search Engine Integration](/img/screenshot_search_result_integration.png)
+![YaCy Search Engine Integration](img/screenshot_search_result_integration.png)
 
 There are many pre-defined themes and an easy way to configure your own colour schema:
-![YaCy Search Engine Theme Configuration](/img/screenshot_appearance.png)
+![YaCy Search Engine Theme Configuration](img/screenshot_appearance.png)
 
 Search result ranking can be configured:
-![YaCy Search Engine Ranking Configuration](/img/screenshot_ranking.png)
+![YaCy Search Engine Ranking Configuration](img/screenshot_ranking.png)
 
 ### Crawling
 
 Before search resuls can be provided, a web crawl must be done to harvest the required document corpus.
 
 There is a easy-to-use simple crawl start service which takes almost only the starting URL as input:
-![YaCy Search Engine Site Crawler/Spider](/img/screenshot_crawler_site.png)
+![YaCy Search Engine Site Crawler/Spider](img/screenshot_crawler_site.png)
 
 A running crawl can be monitored in many ways, here is the crawler status dashboard:
-![YaCy Search Engine Crawler/Spider Monitor](/img/screenshot_crawler_monitor.png)
+![YaCy Search Engine Crawler/Spider Monitor](img/screenshot_crawler_monitor.png)
 
 For more complex harvesting tasks, here is the Expert Crawl Start service:
-![YaCy Search Engine Expert Crawl/Spider Start](/img/screenshot_expert_crawl_start.png)
+![YaCy Search Engine Expert Crawl/Spider Start](img/screenshot_expert_crawl_start.png)
 
 
 ### Data Analysis
@@ -43,23 +43,23 @@ To visualize that data about itself and the data it harvested from the internet,
 dashboards and monitoring features.
 
 The status page which informs about the current activities of your YaCy instance:
-![YaCy Search Engine Status Dashboard](/img/screenshot_status.png)
+![YaCy Search Engine Status Dashboard](img/screenshot_status.png)
 
 Crawled web pages can be reconstructed and browsed with the host browser where you see the internal link structure and all kind of details of the parsing results:
-![YaCy Search Engine Host Browser](/img/screenshot_host_browser.png)
+![YaCy Search Engine Host Browser](img/screenshot_host_browser.png)
 
 While the host browser reveals the structure of documents within all of the single domains, the web strucure service shows how domains are linked to each other:
-![YaCy Search Engine Web Structure](/img/screenshot_web_structure.png)
+![YaCy Search Engine Web Structure](img/screenshot_web_structure.png)
 
 ### Configuration
 
 YaCy can configured in every detail using the web interface. You can use a configuration file and edit details also inside the such files, but a web fron-end is much more convenient.
 
 Here you see the use case configuration. This is actually the first service which YaCy shows to you because the first thing you have to do is to choose which use case you are prefering: Peer-to-Peer operation, your own Search Portal, Intranet Indexing:
-![YaCy Search Engine Basic Configuration for Use Case: Peer-to-Peer, Portal, Intranet](/img/screenshot_use_case_configuration.png)
+![YaCy Search Engine Basic Configuration for Use Case: Peer-to-Peer, Portal, Intranet](img/screenshot_use_case_configuration.png)
 
 The main purpose of YaCy is to aquire a lot of data from the web and makes them searchable. Consequently, this uses a lot of disk space. We make the resources which YaCy takes configurable with the following service. YaCy loves to use more RAM if available, give it more RAM and it performes better! 
-![YaCy Search Engine Performance Setting](/img/screenshot_performance_settings.png)
+![YaCy Search Engine Performance Setting](img/screenshot_performance_settings.png)
 
 
 ### Network Activity
@@ -67,13 +67,13 @@ The main purpose of YaCy is to aquire a lot of data from the web and makes them 
 YaCy makes a lot of network connections an it is transparent about doing that.
 
 In case that you are running YaCy in peer-to-peer operation, you can watch the network graphic here:
-![YaCy Peer-to-Peer Network](/img/screenshot_peer_network.png)
+![YaCy Peer-to-Peer Network](img/screenshot_peer_network.png)
 
 The peer-to-peer network can be investigated in detail in a table:
-![YaCy Peer List Table](/img/screenshot_peer_list.png)
+![YaCy Peer List Table](img/screenshot_peer_list.png)
 
 Every connection that YaCy does, peer-to-peer or crawling, is monitored as well:
-![YaCy Network Monitor](/img/screenshot_access_grid.png)
+![YaCy Network Monitor](img/screenshot_access_grid.png)
 
 
 ## Tutorial Movies
@@ -97,38 +97,38 @@ These videos are short and most have nice music from [Shiryu Music](https://shir
 ### Demo: YaCy Installation in Windows
 Please install Java 8 first, the automatic Java installation within YaCy does not work any more.
 <div id="video01">
-<img src="/img/tutorial_01_Installation_in_Windows.png" width="720" height="405"  onmouseover="document.getElementById('video01').innerHTML = embed01;">
+<img src="img/tutorial_01_Installation_in_Windows.png" width="720" height="405"  onmouseover="document.getElementById('video01').innerHTML = embed01;">
 </div>
 
 ### Demo: YaCy Installation on a Mac
 <div id="video02">
-<img src="/img/tutorial_02_Installation_on_a_Mac.png" width="720" height="405"  onmouseover="document.getElementById('video02').innerHTML = embed02;">
+<img src="img/tutorial_02_Installation_on_a_Mac.png" width="720" height="405"  onmouseover="document.getElementById('video02').innerHTML = embed02;">
 </div>
 
 ### Demo: YaCy Installation in Ubuntu and any other Linux Systems
 Instead of Java-7 now please install Java-8
 <div id="video03">
-<img src="/img/tutorial_03_Installation_in_Ubuntu_and_any_other_Linux.png" width="720" height="405"  onmouseover="document.getElementById('video03').innerHTML = embed03;">
+<img src="img/tutorial_03_Installation_in_Ubuntu_and_any_other_Linux.png" width="720" height="405"  onmouseover="document.getElementById('video03').innerHTML = embed03;">
 </div>
 
 ### Demo: Basic Configuration of YaCy and Release Updates
 <div id="video04">
-<img src="/img/tutorial_04_Basic_Configuration_Release_Update.png" width="720" height="405"  onmouseover="document.getElementById('video04').innerHTML = embed04;">
+<img src="img/tutorial_04_Basic_Configuration_Release_Update.png" width="720" height="405"  onmouseover="document.getElementById('video04').innerHTML = embed04;">
 </div>
 
 ### Demo: Start a Web Crawl with YaCy
 <div id="video05">
-<img src="/img/tutorial_05_Easy_Web_Crawl.png" width="720" height="405"  onmouseover="document.getElementById('video05').innerHTML = embed05;">
+<img src="img/tutorial_05_Easy_Web_Crawl.png" width="720" height="405"  onmouseover="document.getElementById('video05').innerHTML = embed05;">
 </div>
 
 ### Demo: Secret Agents with YaCy RSS Feed Reader
 <div id="video06">
-<img src="/img/tutorial_06_Secret_Agents_with_YaCy_RSS_Feed_Reader.png" width="720" height="405"  onmouseover="document.getElementById('video06').innerHTML = embed06;">
+<img src="img/tutorial_06_Secret_Agents_with_YaCy_RSS_Feed_Reader.png" width="720" height="405"  onmouseover="document.getElementById('video06').innerHTML = embed06;">
 </div>
 
 ### Demo: Location Search with YaCy and Opensteetmap and Geonames
 <div id="video07">
-<img src="/img/tutorial_07_Search_Locations_on_Map_with_Openstreetmap_and_Geonames.png" width="720" height="405"  onmouseover="document.getElementById('video07').innerHTML = embed07;">
+<img src="img/tutorial_07_Search_Locations_on_Map_with_Openstreetmap_and_Geonames.png" width="720" height="405"  onmouseover="document.getElementById('video07').innerHTML = embed07;">
 </div>
 
 
