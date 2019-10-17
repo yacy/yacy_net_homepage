@@ -58,6 +58,6 @@ Here is a live image of the YaCy network:
 The installation takes only three minutes. Just download the release, decompress the package and run the start script.
 
 Next Steps:
-<p><a class="btn btn-success btn-lg" href="/download/" role="button">Download and Install YaCy</a>
-<a class="btn btn-info btn-lg" href="/demo/" role="button">Watch screenshots and tutorial movies</a>
+<p><a class="btn btn-success btn-lg" href="/download_installation/" role="button">Download and Install YaCy</a>
+<a class="btn btn-info btn-lg" href="/demonstration_tutorial_screenshot/" role="button">Watch screenshots and tutorial movies</a>
 <a class="btn btn-warning btn-lg" href="http://yacy.searchlab.eu/Status.html" role="button">Try out the YaCy Demo Peer</a>
