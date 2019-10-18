@@ -3,7 +3,6 @@
 */
 
 body {
-    font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.7;
     background-color: #2B3E50;
@@ -19,14 +18,20 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
 h1, h2 {
     font-weight: 700;
 }
+h2 {
+    margin-top:40px;
+    color:#ccc;
+}
+h3 {
+    margin-top:25px;
+    color:#ccc;
+}
 h4 {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
     margin-top: 20px;
     font-style: italic;
 }
 h5 {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-variant: small-caps;
 }

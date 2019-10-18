@@ -12,9 +12,9 @@ nav:
   - Home: index.md
   - Demo: demonstration_tutorial_screenshot.md
   - Download: download_installation.md
-  - Manual: manual.md
   - Privacy: privacy.md
   - Community: community.md
+  - FAQ: faq.md
 
 markdown_extensions:
   - admonition
