@@ -15,10 +15,12 @@
     {% endblock %}
 
     <link href="{{ 'css/hack.min.css'|url }}" rel="stylesheet">
+    <link href="{{ 'css/latolatinfonts.css'|url }}" rel="stylesheet">
     <link href="{{ 'css/bootstrap-custom.css'|url }}" rel="stylesheet">
     <link href="{{ 'css/base.css'|url }}" rel="stylesheet">
     <link href="{{ 'css/cinder.css'|url }}" rel="stylesheet">
     <link href="{{ 'css/highlight.css'|url }}" rel="stylesheet">
+    <!-- <link href="{{ 'css/latostyle.css'|url }}" rel="stylesheet">-->
 
     {%- for path in config['extra_css'] %}
     <link href="{{ path|url }}" rel="stylesheet">

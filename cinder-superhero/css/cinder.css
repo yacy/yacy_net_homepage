@@ -9,7 +9,7 @@ body {
     color: #EBEBEB;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family:'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'LatoLatinWeb', PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #EBEBEB;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
@@ -48,7 +48,7 @@ pre {
     border: none;
 }
 .lead {
-    font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "LatoLatinWeb", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     line-height: 1.4;
     letter-spacing: 0.0312em;
@@ -85,7 +85,7 @@ pre {
     box-shadow: none;
 }
 #mkdocs-search-query {
-    font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "LatoLatinWeb", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20px;
     font-weight: 700;
     color: #EBEBEB;

@@ -31,7 +31,7 @@ YaCy is a free search engine that anyone can use to build a search portal for th
         <div id="mode-intranet" class="col-md-4" style="background-color:#4E5D6C; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>Intranet Search</h2>
 	  <img src="img/usecase_intranet.png">
-          <p>Create a search portal for your intranet or web pages or your (shared) file system.</p>
+          <p>Create a search portal for your intranet or web pages or your (shared) file system.</p><br/>
         </div>
       </div>
 </div>

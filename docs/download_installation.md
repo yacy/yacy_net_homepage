@@ -68,6 +68,8 @@ This is an easy process and everyone should be able to do this. Windows and Maci
 
 * Install Java 8 from [https://www.java.com/en/download/manual.jsp](https://www.java.com/en/download/manual.jsp)
 * Install YaCy by double-clicking the downloaded installer
+* When the message "Windows protected your PC (in Windows 10) appears, klick "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", klick "yes".
+* Within the YaCy Installer, klick "Next", "I Agree", "Next", "Install", "Finish"
 * To run YaCy, just double-click the YaCy App Icon (which may be on your desktop)
 * YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
 
@@ -78,13 +80,26 @@ This is an easy process and everyone should be able to do this. Windows and Maci
 * To run YaCy, just double-click the YaCy App Icon in your Application Folder
 * YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
 
-### On Linux and any other Operation System
+### On Linux and any other Operation Systems
 
 If you know how to install Java on your computer and how to start a shell script, the process is very simple:
 
 * Install JDK 8 (Oracle or OpenJDK)
 * Download and decompress the tarball
 * Run `startYACY.sh` inside your decompressed folder
+
+This can be done by running in a terminal:
+
+```
+sudo apt-get update
+sudo dpkg --configure -a
+sudo apt-get install -y openjdk-8-jdk
+wget http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz
+tar xfz http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz
+cd yacy
+./startYACY.sh
+```
+
 * YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
 * no password is required when accessing this YaCy instance from localhost
 * for headless operation, set the password on the host console with `bin/passwd.sh <password>`
