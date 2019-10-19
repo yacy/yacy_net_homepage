@@ -17,14 +17,15 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
 }
 h1, h2 {
     font-weight: 700;
+    color:#DE6724;
 }
 h2 {
     margin-top:40px;
-    color:#ccc;
+    color:#EBEBEB;
 }
 h3 {
     margin-top:25px;
-    color:#ccc;
+    color:#DE6724;
 }
 h4 {
     font-weight: 300;
