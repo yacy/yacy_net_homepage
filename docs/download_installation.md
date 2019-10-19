@@ -46,9 +46,11 @@ You may also download and try out YaCy first and come back later to donate. Plea
 ### Generic Tarball
 [http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz](http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz)
 
+<!--
 ### Debian Package
 Our packages are released at [http://debian.yacy.net/](http://debian.yacy.net/).
 Please see the instructions below for the installation process.
+-->
 
 ### Get the Source Code
 The source code is inside the generic tarball. We recommend that you clone our git repository at
@@ -59,6 +61,25 @@ Automatic builds can be obtained from
 [http://latest.yacy.net/](http://latest.yacy.net/)
 
 ## Installation
+
+This is an easy process and everyone should be able to do this. Windows and Macintosh users should be able to install YaCy in the same way as they install any other application.
+
+### On Windows
+
+* Install Java 8 from [https://www.java.com/en/download/manual.jsp](https://www.java.com/en/download/manual.jsp)
+* Install YaCy by double-clicking the downloaded installer
+* To run YaCy, just double-click the YaCy App Icon (which may be on your desktop)
+* YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
+
+### On Macintosh
+
+* Install Java 8 from [https://www.java.com/en/download/manual.jsp](https://www.java.com/en/download/manual.jsp)
+* Double-Click the downloaded `.dmg`-File and copy the YaCy App out of the mounted drive into your Application folder
+* To run YaCy, just double-click the YaCy App Icon in your Application Folder
+* YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
+
+### On Linux and any other Operation System
+
 If you know how to install Java on your computer and how to start a shell script, the process is very simple:
 
 * Install JDK 8 (Oracle or OpenJDK)
@@ -68,6 +89,24 @@ If you know how to install Java on your computer and how to start a shell script
 * no password is required when accessing this YaCy instance from localhost
 * for headless operation, set the password on the host console with `bin/passwd.sh <password>`
 
+### Compile YaCy yourself
+
+You can download and build your own YaCy with these simple steps. You need:
+
+* jdk-8 installed (Oracle Java 8 or OpenJDK 8)
+* ant
+* git
+
+then do:
+
+```
+git clone https://github.com/yacy/yacy_search_server.git
+cd yacy_search_server
+ant clean all dist
+```
+The compiled tarball in then in the `RELEASE` folder.
+
+<!--
 ### Debian Packages
 
 Installation on Debian-based GNU/Linux operating systems is easy using our Debian repository:
@@ -76,7 +115,7 @@ Installation on Debian-based GNU/Linux operating systems is easy using our Debia
 http://debian.yacy.net
 ```
 
-Create a debian source list file for YaCy sources:
+Become root (i.e. with `sudo su -`) and create a debian source list file for YaCy sources:
 
 ```
 echo 'deb http://debian.yacy.net ./' > /etc/apt/sources.list.d/yacy.list 
@@ -96,6 +135,9 @@ apt-get update
 apt-get install openjdk-8-jre-headless # java 8 is required, only a headless version is needed
 apt-get install yacy
 ```
+
+YaCy is running now on port 8090 and you can access it with  [http://localhost:8090](http://localhost:8090)
+
 
 #### Important File Locations
 
@@ -197,4 +239,4 @@ Then add the following at the end of the file:
 ```
 
 Please note, there is no user name on the line above, and absolute (full) paths are used here to prevent binary location problems!
-
+-->

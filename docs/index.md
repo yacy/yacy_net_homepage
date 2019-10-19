@@ -11,15 +11,6 @@ body {
   <img src="img/YaCyLogo2011_240.png" width="240">
   <h2>Decentralized Web Search</h2>
 </div></div>
-<script>
-function setSpace() {
-  w = window.innerWidth || document.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
-  jumbotron = document.getElementsByClassName('jumbotron')[0];
-  jumbotron.style = 'background: none; margin-bottom: ' + (w * 0.4 - 340) + 'px;'
-}
-setSpace();
-window.onresize = setSpace;
-</script>
 
 # Web Search by the people, for the people
 
@@ -27,24 +18,45 @@ YaCy is a free search engine that anyone can use to build a search portal for th
 
 <div class="container">
       <div class="row">
-        <div class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
+        <div id="mode-p2p" class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>P2P Mode</h2>
 	  <img src="img/usecase_freeworld.png">
           <p>Fully decentralized search network, all users are equal, no central, no search request storage, shared index.</p>
         </div>
-        <div class="col-md-4" style="background-color:#4E5D6C; padding-left:15px; padding-right:15px; position:relative; left:15px;">
+        <div id="mode-portal" class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>Your Search Portal</h2>
 	  <img src="img/usecase_webportal.png">
           <p>Your YaCy installation is independent from other peers. Define your own web index and starting your own web crawl.</p>
        </div>
-        <div class="col-md-4" style="background-color:#4E5D6C; margin-left:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
+        <div id="mode-intranet" class="col-md-4" style="background-color:#4E5D6C; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>Intranet Search</h2>
 	  <img src="img/usecase_intranet.png">
-          <p>Create a search portal for your intranet or web pages or your (shared) file system.<br/>&nbsp;</p>
+          <p>Create a search portal for your intranet or web pages or your (shared) file system.</p>
         </div>
       </div>
 </div>
 
+<script>
+function setSpace() {
+  w = window.innerWidth || document.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
+  margin = w * 0.4 - 360;
+  if (margin < -40) {
+     document.body.style.backgroundImage = 'none';
+     document.body.style.backgroundImage = 'url("img/YaCy_Network_Dark_Small.png")';
+     margin = -40;
+  }
+  jumbotron = document.getElementsByClassName('jumbotron')[0];
+  jumbotron.style = 'background: none; margin-bottom: ' + margin + 'px;'
+
+  c1 = document.getElementById("mode-portal").scrollHeight;
+  if (document.readyState === 'complete') {
+    document.getElementById("mode-p2p").style.height = c1 + "px";
+    document.getElementById("mode-intranet").style.height = c1 + "px";
+  }
+}
+setSpace();
+window.onresize = setSpace;
+</script>
 
 ## Decentralization
 Imagine if, rather than relying on the proprietary software of a large professional search engine operator, your search engine was run by many private computers which aren't under the control of any one company or individual. Well, that's what YaCy does! 

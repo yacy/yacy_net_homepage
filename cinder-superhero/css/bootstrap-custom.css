@@ -218,11 +218,11 @@ input, button, select, textarea {
     line-height: inherit;
 }
 a {
-    color: #2080c0;
+    color: #30c0ff;
     text-decoration: none;
 }
 a:hover, a:focus {
-    color: #30c0ff;
+    color: #2080c0;
     text-decoration: none;
 }
 a:focus {
