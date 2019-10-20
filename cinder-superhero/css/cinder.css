@@ -6,22 +6,25 @@ body {
     font-size: 16px;
     line-height: 1.7;
     background-color: #2B3E50;
-    color: #EBEBEB;
+    color: #fff;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'LatoLatinWeb', PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #EBEBEB;
+    color: #fff;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
     color: #B1B7B9;
 }
-h1, h2 {
+h1 {
     font-weight: 700;
-    color:#DE6724;
+    color: #30c0ff;
+}
+h2 {
+    font-weight: 700;
+    color:#fff;
 }
 h2 {
     margin-top:40px;
-    color:#EBEBEB;
 }
 h3 {
     margin-top:25px;

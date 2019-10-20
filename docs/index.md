@@ -12,16 +12,18 @@ body {
   <h2>Decentralized Web Search</h2>
 </div></div>
 
-# Web Search by the people, for the people
+# Web Search Engine Software
 
-YaCy is a free search engine that anyone can use to build a search portal for their intranet or to help search the public internet. We want to achieve freedom of information through a free, distributed web search which is powered by the world's users.
+YaCy is free software for your own search engine. Join a community of search engines or make your own search portal!
+
+There are these three use cases you can choose from:
 
 <div class="container">
       <div class="row">
         <div id="mode-p2p" class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>P2P Mode</h2>
 	  <img src="img/usecase_freeworld.png">
-          <p>Fully decentralized search network, all users are equal, no central, no search request storage, shared index.</p>
+          <p>Web Search by the people, for the people: decentralized, all users are equal, no central, no search request storage, shared index.</p>
         </div>
         <div id="mode-portal" class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>Your Search Portal</h2>
