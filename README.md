@@ -2,8 +2,9 @@
 
 This is the home page of the YaCy project at http://yacy.net
 
-Currently under development and not yet live:
-development-builds are visible at https://yacy.github.io/yacy_net_homepage/
+Development-builds are visible at https://yacy.github.io/yacy_net_homepage/
+Github pages are not used to host the home page for privacy reasons! (github/Microsoft would see every request...)
+The live page at yacy.net is build + hosted on a private server automatically.
 
 ## Usage:
 * Install MKDocs according to https://www.mkdocs.org/#installation
