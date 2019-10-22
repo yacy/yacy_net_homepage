@@ -37,14 +37,14 @@ or
 
 You may also download and try out YaCy first and come back later to donate. Please help!
 
+### Linux: Generic Tarball
+[http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz](http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz)
+
 ### Windows Installer
 [http://latest.yacy.net/yacy_v1.922_20191014_9966.exe](http://latest.yacy.net/yacy_v1.922_20191014_9966.exe)
 
 ### Mac Application
 [http://latest.yacy.net/yacy_v1.922_20191013_9964.dmg](http://latest.yacy.net/yacy_v1.922_20191013_9964.dmg)
-
-### Generic Tarball
-[http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz](http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz)
 
 <!--
 ### Debian Package
@@ -63,22 +63,6 @@ Automatic builds can be obtained from
 ## Installation
 
 This is an easy process and everyone should be able to do this. Windows and Macintosh users should be able to install YaCy in the same way as they install any other application.
-
-### On Windows
-
-* Install Java 8 from [https://www.java.com/en/download/manual.jsp](https://www.java.com/en/download/manual.jsp)
-* Install YaCy by double-clicking the downloaded installer
-* When the message "Windows protected your PC (in Windows 10) appears, klick "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", klick "yes".
-* Within the YaCy Installer, klick "Next", "I Agree", "Next", "Install", "Finish"
-* To run YaCy, just double-click the YaCy App Icon (which may be on your desktop)
-* YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
-
-### On Macintosh
-
-* Install Java 8 from [https://www.java.com/en/download/manual.jsp](https://www.java.com/en/download/manual.jsp)
-* Double-Click the downloaded `.dmg`-File and copy the YaCy App out of the mounted drive into your Application folder
-* To run YaCy, just double-click the YaCy App Icon in your Application Folder
-* YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
 
 ### On Linux and any other Operation Systems
 
@@ -103,6 +87,22 @@ cd yacy
 * YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
 * no password is required when accessing this YaCy instance from localhost
 * for headless operation, set the password on the host console with `bin/passwd.sh <password>`
+
+### On Windows
+
+* Install Java 8 from [https://www.java.com/en/download/manual.jsp](https://www.java.com/en/download/manual.jsp)
+* Install YaCy by double-clicking the downloaded installer
+* When the message "Windows protected your PC (in Windows 10) appears, klick "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", klick "yes".
+* Within the YaCy Installer, klick "Next", "I Agree", "Next", "Install", "Finish"
+* To run YaCy, just double-click the YaCy App Icon (which may be on your desktop)
+* YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
+
+### On Macintosh
+
+* Install Java 8 from [https://www.java.com/en/download/manual.jsp](https://www.java.com/en/download/manual.jsp)
+* Double-Click the downloaded `.dmg`-File and copy the YaCy App out of the mounted drive into your Application folder
+* To run YaCy, just double-click the YaCy App Icon in your Application Folder
+* YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
 
 ### Compile YaCy yourself
 
