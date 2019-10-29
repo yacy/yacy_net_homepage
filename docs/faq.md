@@ -1,5 +1,8 @@
 # FAQ - Frequently Asked Questions
 
+<p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/faq.md" role="button" target="_blank">Improve this doc</a>
+</p>
+
 ## General
 
 ### What is this?

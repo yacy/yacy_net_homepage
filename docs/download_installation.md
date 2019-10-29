@@ -2,6 +2,9 @@
 
 YaCy is available as packages for Windows, Macintosh and Debian packages. You can also install YaCy on any other operation system using a tarball. YaCy needs Java 8, we recommend to run Openjdk 8.
 
+<p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/download_installation.md" role="button" target="_blank">Improve this doc</a>
+</p>
+
 ## Download
 
 YaCy is free software - licensed under GPL-2. We provide downloads free of charge, but we ask for a donation:

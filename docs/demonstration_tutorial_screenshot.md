@@ -2,6 +2,9 @@
 
 We have screenshots, tutorial movies and a live demonstration. If you want to jump to the section where we show where we took the beautiful teaser image from, jump to the [peer-to-peer network activity dashboard](#network-activity)!
 
+<p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/demonstration_tutorial_screenshot.md" role="button" target="_blank">Improve this doc</a>
+</p>
+
 ## Screenshots
 .. the best way to show what you get ..
 
@@ -139,4 +142,4 @@ Well, YaCy is all about running your own search engine, not using a central one.
 We provide here a link to the administration page of the test instance where you can also find your way to the search page. Administration functions are disabled but you are able to browse through the services without a password:
 
 ### YaCy Demo Peer
-<p><a class="btn btn-warning btn-lg" href="http://yacy.searchlab.eu/Status.html" role="button">Click here to operate a YaCy Demo Peer</a>
+<p><a class="btn btn-default btn-lg" href="http://yacy.searchlab.eu/Status.html" role="button">Click here to operate a YaCy Demo Peer</a></p>
