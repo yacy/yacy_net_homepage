@@ -40,6 +40,22 @@
 
 <body{% if page and page.is_homepage %} class="homepage" {% endif %}>
 
+    {%- block scripts %}
+    <script src="{{ 'js/jquery.min.js'|url }}"></script>
+    <script src="{{ 'js/fontawesome-all.js'|url }}"></script>
+    <script src="{{ 'js/bootstrap-3.0.3.min.js'|url }}"></script>
+    <script src="{{ 'js/highlight.pack.js'|url }}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>var base_url = {{ base_url | tojson }}</script>
+    {% if config.shortcuts %}
+        <script>var shortcuts = {{ config.shortcuts | tojson }}</script>
+    {% endif %}
+    <script src="{{ 'js/base.js'|url }}"></script>
+    {%- for path in config['extra_javascript'] %}
+    <script src="{{ path|url }}"></script>
+    {%- endfor %}
+    {%- endblock %}
+
     {% include "nav.html" %}
 
     <div class="container">
@@ -105,21 +121,6 @@
         {% endblock %}
     </footer>
     
-    {%- block scripts %}
-    <script src="{{ 'js/jquery.min.js'|url }}"></script>
-    <script src="{{ 'js/fontawesome-all.js'|url }}"></script>
-    <script src="{{ 'js/bootstrap-3.0.3.min.js'|url }}"></script>
-    <script src="{{ 'js/highlight.pack.js'|url }}"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script>var base_url = {{ base_url | tojson }}</script>
-    {% if config.shortcuts %}
-        <script>var shortcuts = {{ config.shortcuts | tojson }}</script>
-    {% endif %}
-    <script src="{{ 'js/base.js'|url }}"></script>
-    {%- for path in config['extra_javascript'] %}
-    <script src="{{ path|url }}"></script>
-    {%- endfor %}
-    {%- endblock %}
 
     {% if 'search' in config['plugins'] %}{%- include "search-modal.html" %}{% endif %}
     {%- include "keyboard-modal.html" %}
