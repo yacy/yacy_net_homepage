@@ -142,4 +142,4 @@ Well, YaCy is all about running your own search engine, not using a central one.
 We provide here a link to the administration page of the test instance where you can also find your way to the search page. Administration functions are disabled but you are able to browse through the services without a password:
 
 ### YaCy Demo Peer
-<p><a class="btn btn-default btn-lg" href="http://yacy.searchlab.eu/Status.html" role="button">Click here to operate a YaCy Demo Peer</a></p>
+<p><a class="btn btn-default btn-lg" href="https://yacy.searchlab.eu/Status.html" role="button">Click here to operate a YaCy Demo Peer</a></p>

@@ -22,7 +22,7 @@ $(document).ready(function() {
         "info":     false,
         "searching":   false,
         "ajax": {
-	   "url": "http://yacy.searchlab.eu/Network.json?page=1&maxCount=1000",
+	   "url": "https://yacy.searchlab.eu/Network.json?page=1&maxCount=1000",
 	   "dataSrc": "peers"
 	},
         "columns": [
