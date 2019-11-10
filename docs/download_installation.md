@@ -93,7 +93,7 @@ cd yacy
 
 ### On Windows
 
-* Install Java 8 from [https://www.java.com/en/download/manual.jsp](https://www.java.com/en/download/manual.jsp)
+* Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
 * Install YaCy by double-clicking the downloaded installer
 * When the message "Windows protected your PC (in Windows 10) appears, klick "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", klick "yes".
 * Within the YaCy Installer, klick "Next", "I Agree", "Next", "Install", "Finish"
@@ -102,7 +102,7 @@ cd yacy
 
 ### On Macintosh
 
-* Install Java 8 from [https://www.java.com/en/download/manual.jsp](https://www.java.com/en/download/manual.jsp)
+* Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
 * Double-Click the downloaded `.dmg`-File and copy the YaCy App out of the mounted drive into your Application folder
 * To run YaCy, just double-click the YaCy App Icon in your Application Folder
 * YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
