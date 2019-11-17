@@ -212,7 +212,7 @@ The YaCy web server runs on port 8090 by default. The administration landing pag
 but you can also assign any other port to the interface using the administration pages in YaCy. Port 80 is possible, but it is better to facilitate access to this port using [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding).
 
 #### Changing password
-If not setting a username and password during installation, the username will be "admin" and the password will be randomly generated. Your running YaCy node will not be as usefull before changing password-protected settings. Access the password-protected parts by changing the password manually in a terminal. You can do this by going to /usr/share/yacy/bin and running:
+If not setting a username and password during installation, the username will be "admin" and the password will be randomly generated. Your running YaCy node will not be as useful before changing password-protected settings. Access the password-protected parts by changing the password manually in a terminal. You can do this by going to /usr/share/yacy/bin and running:
 
 ```
 ./passwd.sh <new password>
