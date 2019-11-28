@@ -1,6 +1,6 @@
 # Download and Installation of YaCy
 
-YaCy is available as packages for Windows, Macintosh and Debian packages. You can also install YaCy on any other operation system using a tarball. YaCy needs Java 8, we recommend to run Openjdk 8.
+YaCy is available as packages for Windows, Macintosh and Debian. You can also install YaCy on any other operation system using a tarball. YaCy needs Java 8; we recommend to run Openjdk 8.
 
 <p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/download_installation.md" role="button" target="_blank">Improve this doc</a>
 </p>
@@ -68,7 +68,6 @@ Automatic builds can be obtained from
 This is an easy process and everyone should be able to do this. Windows and Macintosh users should be able to install YaCy in the same way as they install any other application.
 
 ### On Linux and any other Operation Systems
-
 If you know how to install Java on your computer and how to start a shell script, the process is very simple:
 
 * Install JDK 8 (Oracle or OpenJDK)
@@ -95,15 +94,15 @@ cd yacy
 
 * Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
 * Install YaCy by double-clicking the downloaded installer
-* When the message "Windows protected your PC (in Windows 10) appears, klick "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", klick "yes".
-* Within the YaCy Installer, klick "Next", "I Agree", "Next", "Install", "Finish"
+* When the message "Windows protected your PC (in Windows 10) appears, click "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", click "yes".
+* Within the YaCy Installer, click "Next", "I Agree", "Next", "Install", "Finish"
 * To run YaCy, just double-click the YaCy App Icon (which may be on your desktop)
 * YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
 
 ### On Macintosh
 
 * Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
-* Double-Click the downloaded `.dmg`-File and copy the YaCy App out of the mounted drive into your Application folder
+* Double-click the downloaded `.dmg`-File and copy the YaCy App out of the mounted drive into your Application folder
 * To run YaCy, just double-click the YaCy App Icon in your Application Folder
 * YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
 
@@ -159,7 +158,7 @@ YaCy is running now on port 8090 and you can access it with  [http://localhost:8
 
 #### Important File Locations
 
-After the installation, the yacy application path is:
+After installation, the yacy application path is:
 
 ```
 /usr/share/yacy
@@ -186,7 +185,7 @@ The log files should be here:
 ```
 
 #### Managing YaCy
-When you have installed YaCy using the Debian repository, YaCy is started automatically after a OS startup, and stopped before shutdown. You can also start and stop YaCy from the command line with: (must be run as root)
+When you have installed YaCy using the Debian repository, YaCy is started automatically after your OS has started, and is stopped before shutdown. You can also start and stop YaCy from the command line with: (must be run as root)
 
 ```
 /etc/init.d/yacy stop
