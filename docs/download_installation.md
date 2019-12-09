@@ -82,7 +82,7 @@ sudo apt-get update
 sudo dpkg --configure -a
 sudo apt-get install -y openjdk-8-jdk
 wget http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz
-tar xfz http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz
+tar xfz yacy_v1.922_20191013_9964.tar.gz
 cd yacy
 ./startYACY.sh
 ```
