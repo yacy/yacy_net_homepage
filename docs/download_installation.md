@@ -1,22 +1,23 @@
 # Download and Installation of YaCy
 
-YaCy is available as packages for Windows, Macintosh and Debian. You can also install YaCy on any other operation system using a tarball. YaCy needs Java 8; we recommend to run Openjdk 8.
+
+YaCy is available as packages for Windows, Macintosh and Debian. You can also install YaCy on any other operation system using a tarball. YaCy needs Java 8, OpenJDK 8 is recommended.
 
 <p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/download_installation.md" role="button" target="_blank">Improve this doc</a>
 </p>
 
 ## Download
 
-YaCy is free software - licensed under GPL-2. We provide downloads free of charge, but we ask for a donation:
+YaCy is libre software - licensed GPL-2+. Downloads are provided gratis, with the option to donate:
 
 <div class="container">
       <div class="row">
         <div class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h3>Private User</h3>
-          <p>Please donate a small one-time fee</p><br/>
+          <p>Please donate a one-time sum</p><br/>
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin:0px; padding:0px;">
 <input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="on0" value="Your contribution is received as a taxable, legal payment.">
+<input type="hidden" name="on0" value="Your contribution is happily received as a tax-deductable, legal payment.">
 <img src="../img/pp-logo-100px.png">&nbsp;
 <input type="radio" name="os0" value="beneficial">&nbsp;5 &euro;&nbsp;
 <input type="radio" name="os0" value="generous" checked>&nbsp;25 &euro;&nbsp;
@@ -31,7 +32,7 @@ YaCy is free software - licensed under GPL-2. We provide downloads free of charg
           <h3>Commercial Users</h3>
           <p>..Universities and generous private users:<br/>please subscribe to</p>
 <a href="https://github.com/users/Orbiter/sponsorship" target="_blank"><img src="https://yacy.net/images/logo-mona-100.png" width="32" height="32"></a>
-<a href="https://github.com/users/Orbiter/sponsorship" target="_blank">Github Sponsors</a>
+<a href="https://github.com/users/Orbiter/sponsorship" target="_blank">GitHub Sponsors</a>
 or
 <a href="https://www.patreon.com/0rb1t3r" target="_blank"><img src="https://yacy.net/images/become_a_patron_button.png" width="120"></a><br/><br/>
         </div>
@@ -46,7 +47,7 @@ You may also download and try out YaCy first and come back later to donate. Plea
 ### Windows Installer
 [http://latest.yacy.net/yacy_v1.922_20191014_9966.exe](http://latest.yacy.net/yacy_v1.922_20191014_9966.exe)
 
-### Mac Application
+### macOS Application
 [http://latest.yacy.net/yacy_v1.922_20191013_9964.dmg](http://latest.yacy.net/yacy_v1.922_20191013_9964.dmg)
 
 <!--
@@ -56,23 +57,24 @@ Please see the instructions below for the installation process.
 -->
 
 ### Get the Source Code
-The source code is inside the generic tarball. We recommend that you clone our git repository at
-[https://github.com/yacy/yacy_search_server](https://github.com/yacy/yacy_search_server)
+The source code is inside the generic tarball. It is recommended you clone the Git repository at
+[https://github.com/yacy/yacy_search_server](https://github.com/yacy/yacy_search_server).
 
 ### Development builds
 Automatic builds can be obtained from
-[http://latest.yacy.net/](http://latest.yacy.net/)
+[http://latest.yacy.net/](http://latest.yacy.net/).
 
 ## Installation
 
-This is an easy process and everyone should be able to do this. Windows and Macintosh users should be able to install YaCy in the same way as they install any other application.
+Linux, Windows and Macintosh users should be able to install YaCy the same way as any other application.
 
 ### On Linux and any other Operation Systems
-If you know how to install Java on your computer and how to start a shell script, the process is very simple:
 
-* Install JDK 8 (Oracle or OpenJDK)
-* Download and decompress the tarball
-* Run `startYACY.sh` inside your decompressed folder
+You will install Java on your computer if you don't have it already, and start a shell script.
+
+* Install JDK 8 (Oracle or preferably OpenJDK).
+* Download and unpack the tarball.
+* Run `startYACY.sh` inside your decompressed folder.
 
 This can be done by running in a terminal:
 
@@ -86,25 +88,25 @@ cd yacy
 ./startYACY.sh
 ```
 
-* YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
-* no password is required when accessing this YaCy instance from localhost
-* for headless operation, set the password on the host console with `bin/passwd.sh <password>`
+* YaCy is now running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
+* No password is required when accessing this YaCy instance from localhost.
+* Headless operation can be achieved by setting a password on the host console with `bin/passwd.sh <password>`.
 
 ### On Windows
 
-* Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
-* Install YaCy by double-clicking the downloaded installer
-* When the message "Windows protected your PC (in Windows 10) appears, click "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", click "yes".
-* Within the YaCy Installer, click "Next", "I Agree", "Next", "Install", "Finish"
-* To run YaCy, just double-click the YaCy App Icon (which may be on your desktop)
-* YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
+* Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/).
+* Install YaCy by double-clicking the downloaded installer.
+* When the message "Windows protected your PC (in Windows 10) appears, klick "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", klick "yes".
+* Within the YaCy Installer, klick "Next", "I Agree", "Next", "Install", "Finish".
+* To run YaCy, double-click the YaCy app icon (which may be on your desktop).
+* YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
 
 ### On Macintosh
 
-* Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
-* Double-click the downloaded `.dmg`-File and copy the YaCy App out of the mounted drive into your Application folder
-* To run YaCy, just double-click the YaCy App Icon in your Application Folder
-* YaCy is then running on port 8090; i.e. open [http://localhost:8090](http://localhost:8090) in your browser
+* Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/).
+* Double-click the downloaded `.dmg`-file and copy the YaCy app out of the mounted drive into your "Application" folder.
+* To run YaCy, just double-click the YaCy app icon in your "Application" folder.
+* YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
 
 ### Compile YaCy yourself
 
@@ -114,25 +116,25 @@ You can download and build your own YaCy with these simple steps. You need:
 * ant
 * git
 
-then do:
+Then run:
 
 ```
 git clone https://github.com/yacy/yacy_search_server.git
 cd yacy_search_server
 ant clean all dist
 ```
-The compiled tarball in then in the `RELEASE` folder.
+The compiled tarball will then be in the `RELEASE` folder.
 
 <!--
 ### Debian Packages
 
-Installation on Debian-based GNU/Linux operating systems is easy using our Debian repository:
+Install YaCy on Debian-based GNU/Linux operating systems using our repository:
 
 ```
 http://debian.yacy.net
 ```
 
-Become root (i.e. with `sudo su -`) and create a debian source list file for YaCy sources:
+Become root (i.e. with `sudo su -`) and create a Debian source list file for YaCy sources:
 
 ```
 echo 'deb http://debian.yacy.net ./' > /etc/apt/sources.list.d/yacy.list 
@@ -153,12 +155,12 @@ apt-get install openjdk-8-jre-headless # java 8 is required, only a headless ver
 apt-get install yacy
 ```
 
-YaCy is running now on port 8090 and you can access it with  [http://localhost:8090](http://localhost:8090)
+YaCy is now running on port 8090 on your machine, and you can access it with [http://localhost:8090](http://localhost:8090).
 
 
 #### Important File Locations
 
-After installation, the yacy application path is:
+After the installation, the YaCy application path is:
 
 ```
 /usr/share/yacy
@@ -185,7 +187,7 @@ The log files should be here:
 ```
 
 #### Managing YaCy
-When you have installed YaCy using the Debian repository, YaCy is started automatically after your OS has started, and is stopped before shutdown. You can also start and stop YaCy from the command line with: (must be run as root)
+Having installed YaCy using the Debian repository, YaCy is started automatically following a OS startup, and stopped before shutdown. You can also start and stop YaCy as root from the command line with:
 
 ```
 /etc/init.d/yacy stop
@@ -193,25 +195,31 @@ When you have installed YaCy using the Debian repository, YaCy is started automa
 /etc/init.d/yacy restart
 ```
 
-You can use systemctl (run as root) to enable or disable YaCy automatic startup at boot.
+You can use systemctl as root to turn on or off automatic YaCy startup upon booting.
 
-Enable automatic startup :
+Automatic startup :
 
 ```
 systemctl enable yacy
 ```
 
-Disable automatic startup :
+Turn off automatic startup:
 
 ```
 systemctl disable yacy
 ```
 
-The YaCy web server runs on port 8090 by default. The administration pages are at `http://localhost:8090/`
-but you can also set any other port for the interface using the administration pages of YaCy. A Port 80 is possible, but it is better to get access to this port using a Portforwarding.
+The YaCy web server runs on port 8090 by default. The administration landing page is at `http://localhost:8090/`
+but you can also assign any other port to the interface using the administration pages in YaCy. Port 80 is possible, but it is better to facilitate access to this port using [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding).
 
 #### Changing password
-If you do not set a username and password during installation, the username will be "admin" and the password will be randomly generated. You can still run a yacy node this way, but it won't have the potential to be as useful since you won't be able to change password-protected settings. Access the password-protected parts by changing the password manually in a terminal. You can do this by going to /usr/share/yacy/bin and running "./passwd.sh <new password>" (Note: your new password will appear in plain text in the terminal).
+If not setting a username and password during installation, the username will be "admin" and the password will be randomly generated. Your running YaCy node will not be as useful before changing password-protected settings. Access the password-protected parts by changing the password manually in a terminal. You can do this by going to /usr/share/yacy/bin and running:
+
+```
+./passwd.sh <new password>
+```
+
+(Note: your new password will appear in plain text in the terminal).
 
 ```
 cd /usr/share/yacy/bin
@@ -229,7 +237,7 @@ In Ubuntu, the above line is only valid for the system crontab file (located at 
 
 ```
 # /etc/crontab: system-wide crontab
-# Unlike any other crontab you don't have to run the `crontab'
+# Unlike any other crontab, you don't have to run the `crontab`
 # command to install the new version when you edit this file
 # and files in /etc/cron.d. These files also have username fields,
 # that none of the other crontabs do.
@@ -241,9 +249,9 @@ If you want to use the root user crontab in Ubuntu instead, an example would be:
 username@hostname:~$ sudo crontab -e 
 no crontab for root - using an empty one
 
-Select an editor.  To change later, run 'select-editor'.
+Select an editor. To change later, run 'select-editor'.
  1. /bin/ed
- 2. /bin/nano        <---- easiest
+ 2. /bin/nano        ← (easiest)
  3. /usr/bin/vim.basic
 
 Choose 1-3 [2]: <enter>
@@ -255,5 +263,5 @@ Then add the following at the end of the file:
 0 6 * * * /usr/bin/apt-get update && /usr/bin/apt-get -y --force-yes install yacy
 ```
 
-Please note, there is no user name on the line above, and absolute (full) paths are used here to prevent binary location problems!
+Please note, there is no username on the line above, and absolute (full) paths are used here to prevent binary location problems!
 -->
