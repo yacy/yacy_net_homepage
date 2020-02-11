@@ -1,5 +1,6 @@
 # Download and Installation of YaCy
 
+
 YaCy is available as packages for Windows, Macintosh and Debian. You can also install YaCy on any other operation system using a tarball. YaCy needs Java 8, OpenJDK 8 is recommended.
 
 <p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/download_installation.md" role="button" target="_blank">Improve this doc</a>
@@ -80,9 +81,9 @@ This can be done by running in a terminal:
 ```
 sudo apt-get update
 sudo dpkg --configure -a
-sudo apt-get install -y openjdk-8-jdk
-wget https://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz
-tar xfz https://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz
+sudo apt-get install -y openjdk-8-jre-headless
+wget http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz
+tar xfz yacy_v1.922_20191013_9964.tar.gz
 cd yacy
 ./startYACY.sh
 ```
