@@ -44,7 +44,7 @@ Yes. You can start your own crawl and you may also trigger distributed crawling,
 No. The YaCy network architecture does not need a central server, and there is none. There are currently four so-called seed-list servers hard-coded into source code due to they are mostly available and have accurate seed list information (see FAQ for details).
 
 ### Search Engines need a lot of terabytes of space, don't they? How much space do I need on my machine?
-The global index is shared, but not copied to the peers. If you run YaCy, you need an average of the same disc memory amount for the index as you need for the cache. In fact, the global space for the index may reach the space of Terabytes, but not all of that on your machine!
+The global index is shared, but not copied to the peers. If you run YaCy, you need an average of the same disc memory amount for the index as you need for the cache. In fact, the global space for the index may reach the space of Terabytes, but not all of that is on your machine!
 
 ### Do I need a fast machine? Search Engines need big server farms, don't they?
 You don't need a fast machine to run YaCy. You also don't need a lot of space. You can configure the amount of Megabytes that you want to spend for the cache and (currently only indirectly) the index. Any time-critical task is delayed automatically and takes place when you are idle surfing (this works only if you use YaCy as http proxy).
@@ -108,23 +108,23 @@ First of all: run YaCy in senior mode. This helps to enrich the global index and
 YaCy is still undergoing development, so one should opt for a stable version for use. The latest stable version can be downloaded from the YaCy homepage http://www.yacy.net. If you are experiencing a strange behaviour of YaCy then you should search the Wiki or the forum http://www.yacy-forum.org/ for known issues. If the issue is unknown, then you can ask for help on the forum (and provide the YaCy version, details on the occurrence of the issue, and if possible an excerpt from the log file in order to help fix the bug).
 
 ### How can I index Tor or Freenet pages?
-The indexing of Tor or Freenet pages is for the moment deliberately avoided in the source code because it is not desired to index these pages at this stage of the development of YaCy. However, the crawling of such sites is planned in the future, however, most likely the crawl results will not distributed globally, but will only be available to the local peer.
+The indexing of Tor or Freenet pages is for the moment deliberately avoided in the source code because it is not desired to index these pages at this stage of the development of YaCy. However, the crawling of such sites is planned in the future. Most likely the crawl results will not distributed globally, but will only be available to the local peer.
 
 ### How do I give the index of one peer to another?
 This actually happens automatically through the DHT distribution of the words. However, there is also the possibility of transferring the entire index to another peer. This can either be done through a so-called Index-Transfer (link needs update) or a index-Import (link needs update).
 
 ### Will already-indexed pages (i.e. indexed and index-exchanged) automatically be reindexed after a few days/years?
-Unfortunately no. However, there is the possibility for a chronological "recrawl" to be executed for a URL (or an entire website if desired). Learn more about this feature under "Index Control -> Index Creation."
+Unfortunately no. However, there is the possibility for a chronological "recrawl" to be executed for a URL (or an entire website if desired). Learn more about this feature under "Index Control" -> "Index Creation."
 
 ### Are DHT entries unique in a search network or can URLs also appear twice or three times?
 URLs are analyzed more than once so that a peer delayed does not lose his part in the search index. As for the indexes they are stored redundantly on multiple peers.
 
 ### How can I change the Connection Timeout value?
-This can be done on the configuration page "Admin Console" -> "Advanced behavior" http://localhost:8090/ConfigProperties_p.html. Just search for the line client-timeout "and change the value there. The timeout is in milliseconds.
+This can be done on the configuration page "Admin Console" -> "Advanced behavior" http://localhost:8090/ConfigProperties_p.html. Just search for the line client-timeout and change the value there. The timeout is in milliseconds.
 
 Do not forget to restart YaCy after the change.
 
-Alternatively, another way to do is through the configuration file httpProxy.conf in DATA/SETTINGS. If this type of configuration is to be performed then YaCy must be stopped before.
+Alternatively, another way to do this is through the configuration file httpProxy.conf in DATA/SETTINGS. If this type of configuration is to be performed then YaCy must be stopped before.
 
 ### I can not log in YaCy anymore as I forgot my password. How do I reset my password?
 If you have lost your password, you can reset it (or choose a new one). There are two methods:
@@ -132,7 +132,7 @@ If you have lost your password, you can reset it (or choose a new one). There ar
 ### Password reset while YaCy is running
 This is the most convenient way. You don't need to shut down YaCy:
 
-use a command line terminal and log in to the user account running YaCy
+Use a command line terminal and log in to the user account running YaCy then
 execute `<yacy-app>/bin/passwd.sh <new-password>`
 
 This changes only the admin account password for the account named 'admin'.
@@ -142,7 +142,7 @@ edit the file DATA/SETTINGS/yacy.conf:
 
 * remove the entry serverAccountBase64MD5
 * remove the entry adminAccount (if any)
-* choose a new password by setting the entry serverAccount to <account>:<password>, for example serverAccount=admin:mysecretpassword
+* choose a new password by setting the entry serverAccount to \<account\>:\<password\>, for example serverAccount=admin:mysecretpassword
 
 The next time you start YaCy the account/password combination will be read, encrypted and then deleted from yacy.conf, so that it will not be available in plain text anywhere anymore.
 
@@ -151,7 +151,7 @@ Then you will be able to log again into YaCy with the account/password you enter
 ## Disk space
 
 ### How can I limit the size of single files to be downloaded?
-The maximum file size can be set under Advanced settings-> Crawler settings. Maximum sizes can be specified for HTTP and FTP. The file size is in bytes. A converter can be found at Bit and Byte (bits and bytes) (broken link)
+The maximum file size can be set under Advanced settings -> Crawler settings. Maximum sizes can be specified for HTTP and FTP. The file size is in bytes. A converter can be found at Bit and Byte (bits and bytes) (broken link)
 
 ### How many links/words and how much disk space can a YaCy instance manage?
 The number of storable links/words is theoretically not limited, but it becomes actually limited following the slowdown of the indexing process with the increase of the links/words number. There are users with more than 10 million Web pages indexed in their YaCy instance. Also, the necessary space for the index of a web page depends on the size and nature of the document. With 10 million web pages indexed, an index size of 20GB is not uncommon.
