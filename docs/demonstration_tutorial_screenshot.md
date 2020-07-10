@@ -1,6 +1,6 @@
 # YaCy Demonstration
 
-We have screenshots, tutorial movies and a live demonstration. If you want to jump to the section where we show where we took the beautiful teaser image from, jump to the [peer-to-peer network activity dashboard](#network-activity)!
+We have screenshots, tutorial movies, and a live demonstration. If you want to jump to the section where we show where we took the beautiful teaser image from, jump to the [peer-to-peer network activity dashboard](#network-activity)!
 
 <p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/demonstration_tutorial_screenshot.md" role="button" target="_blank">Improve this doc</a>
 </p>
@@ -56,20 +56,20 @@ While the host browser reveals the structure of documents within all of the sing
 
 ### Configuration
 
-YaCy can configured in every detail using the web interface. You can use a configuration file and edit details also inside the such files, but a web fron-end is much more convenient.
+YaCy can be configured in every detail using the web interface. You can use a configuration file and also edit details inside of that file, but a web front-end is much more convenient.
 
-Here you see the use case configuration. This is actually the first service which YaCy shows to you because the first thing you have to do is to choose which use case you are prefering: Peer-to-Peer operation, your own Search Portal, Intranet Indexing:
+Here you see the use case configuration. This is actually the first service which YaCy shows to you because the first thing you have to do is to choose which use case you are prefering: Peer-to-Peer operation, your own Search Portal, or Intranet Indexing:
 ![YaCy Search Engine Basic Configuration for Use Case: Peer-to-Peer, Portal, Intranet](img/screenshot_use_case_configuration.png)
 
-The main purpose of YaCy is to aquire a lot of data from the web and makes them searchable. Consequently, this uses a lot of disk space. We make the resources which YaCy takes configurable with the following service. YaCy loves to use more RAM if available, give it more RAM and it performes better! 
+The main purpose of YaCy is to aquire a lot of data from the web and make them searchable. Consequently, this uses a lot of disk space. We make the resources which YaCy takes configurable with the following service. YaCy loves to use more RAM if available, give it more RAM and it performes better! 
 ![YaCy Search Engine Performance Setting](img/screenshot_performance_settings.png)
 
 
 ### Network Activity
 
-YaCy makes a lot of network connections an it is transparent about doing that.
+YaCy makes a lot of network connections and it is transparent about doing that.
 
-In case that you are running YaCy in peer-to-peer operation, you can watch the network graphic here:
+In case you are running YaCy in peer-to-peer operation, you can watch the network graphic here:
 ![YaCy Peer-to-Peer Network](img/screenshot_peer_network.png)
 
 The peer-to-peer network can be investigated in detail in a table:
@@ -137,7 +137,7 @@ Instead of Java-7 now please install Java-8
 
 ## Live Demonstration
 
-Well, YaCy is all about running your own search engine, not using a central one. Therefore we highly recommend to download and try out your own YaCy instance instead of trying this demonstration. Therefore, please consider this demonstration not as production-grade search portal, just as help to find out what YaCy is and how it looks.
+Well, YaCy is all about running your own search engine, not using a central one. Therefore we highly recommend you download and try out your own YaCy instance instead of trying this demonstration. Therefore, please consider this demonstration not as production-grade search portal, just as help to find out what YaCy is and how it looks.
 
 We provide here a link to the administration page of the test instance where you can also find your way to the search page. Administration functions are disabled but you are able to browse through the services without a password:
 
