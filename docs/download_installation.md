@@ -6,9 +6,9 @@ YaCy is available as packages for Windows, Macintosh and Debian. You can also in
 <p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/download_installation.md" role="button" target="_blank">Improve this doc</a>
 </p>
 
-## Download
+## Please Support YaCy
 
-YaCy is libre software - licensed GPL-2+. Downloads are provided gratis, with the option to donate:
+YaCy is libre software - licensed GPL-2+. Downloads are provided free, with the option to donate:
 
 <div class="container">
       <div class="row">
@@ -41,40 +41,33 @@ or
 
 You may also download and try out YaCy first and come back later to donate. Please help!
 
-### Linux: Generic Tarball
-[http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz](http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz)
-
-### Windows Installer
-[http://latest.yacy.net/yacy_v1.922_20191014_9966.exe](http://latest.yacy.net/yacy_v1.922_20191014_9966.exe)
-
-### macOS Application
-[http://latest.yacy.net/yacy_v1.922_20191013_9964.dmg](http://latest.yacy.net/yacy_v1.922_20191013_9964.dmg)
-
-<!--
-### Debian Package
-Our packages are released at [http://debian.yacy.net/](http://debian.yacy.net/).
-Please see the instructions below for the installation process.
--->
-
-### Get the Source Code
-The source code is inside the generic tarball. It is recommended you clone the Git repository at
-[https://github.com/yacy/yacy_search_server](https://github.com/yacy/yacy_search_server).
-
-### Development builds
-Automatic builds can be obtained from
-[http://latest.yacy.net/](http://latest.yacy.net/).
-
 ## Installation
 
-Linux, Windows and Macintosh users should be able to install YaCy the same way as any other application.
+Installation is very easy on any system. If it looks complex here it's just because we give directions in great detail.
 
-### On Linux and any other Operation Systems
+### YaCy for Windows
 
-You will install Java on your computer if you don't have it already, and start a shell script.
+* Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/).
+* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.922_20191014_9966.exe" role="button">Download YaCy for Windows</a> from [https://download.yacy.net/yacy_v1.922_20191014_9966.exe](https://download.yacy.net/yacy_v1.922_20191014_9966.exe)
+* Install YaCy by double-clicking the downloaded installer.
+* When the message "Windows protected your PC (in Windows 10) appears, klick "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", klick "yes".
+* Within the YaCy Installer, klick "Next", "I Agree", "Next", "Install", "Finish".
+* To run YaCy, double-click the YaCy app icon (which may be on your desktop).
+* YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
 
-* Install JDK 8 (Oracle or preferably OpenJDK).
-* Download and unpack the tarball.
+
+### YaCy for Linux and other OS
+You must install Java 8 on your computer if you don't have it already, and start the YaCy start shell script.
+YaCy can run under a normal user account, no root rights are needed if Java 8 is already installed.
+
+* Install JDK 8 (Oracle or preferably OpenJDK). You get Java for Linux from [https://adoptopenjdk.net/](https://adoptopenjdk.net/) but you should follow the installer package system that comes with your linux distribution.
+* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.922_20191013_9964.tar.gz" role="button">Download generic YaCy</a> from [https://download.yacy.net/yacy_v1.922_20191013_9964.tar.gz](https://download.yacy.net/yacy_v1.922_20191013_9964.tar.gz), i.e. by
+
+* Unpack the tarball.
 * Run `startYACY.sh` inside your decompressed folder.
+```
+wget https://download.yacy.net/yacy_v1.922_20191013_9964.tar.gz
+```
 
 This can be done by running in a terminal:
 
@@ -82,7 +75,7 @@ This can be done by running in a terminal:
 sudo apt-get update
 sudo dpkg --configure -a
 sudo apt-get install -y openjdk-8-jre-headless
-wget http://latest.yacy.net/yacy_v1.922_20191013_9964.tar.gz
+wget https://download.yacy.net/yacy_v1.922_20191013_9964.tar.gz
 tar xfz yacy_v1.922_20191013_9964.tar.gz
 cd yacy
 ./startYACY.sh
@@ -92,15 +85,11 @@ cd yacy
 * No password is required when accessing this YaCy instance from localhost.
 * Headless operation can be achieved by setting a password on the host console with `bin/passwd.sh <password>`.
 
-### On Windows
 
-* Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/).
-* Install YaCy by double-clicking the downloaded installer.
-* When the message "Windows protected your PC (in Windows 10) appears, klick "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", klick "yes".
-* Within the YaCy Installer, klick "Next", "I Agree", "Next", "Install", "Finish".
-* To run YaCy, double-click the YaCy app icon (which may be on your desktop).
-* YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
 
+
+### macOS Application
+[https://download.yacy.net/yacy_v1.922_20191013_9964.dmg](https://download.yacy.net/yacy_v1.922_20191013_9964.dmg)
 ### On Macintosh
 
 * Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/).
@@ -108,6 +97,19 @@ cd yacy
 * To run YaCy, just double-click the YaCy app icon in your "Application" folder.
 * YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
 
+
+
+
+### Any OS with Java 8
+Automatic development builds can be obtained from
+[https://download.yacy.net/](https://download.yacy.net/).
+
+
+
+
+### Get the Source Code
+The source code is inside the generic tarball. It is recommended you clone the Git repository at
+[https://github.com/yacy/yacy_search_server](https://github.com/yacy/yacy_search_server).
 ### Compile YaCy yourself
 
 You can download and build your own YaCy with these simple steps. You need:
@@ -125,6 +127,11 @@ ant clean all dist
 ```
 The compiled tarball will then be in the `RELEASE` folder.
 
+<!--
+### Debian Package
+Our packages are released at [http://debian.yacy.net/](http://debian.yacy.net/).
+Please see the instructions below for the installation process.
+-->
 <!--
 ### Debian Packages
 
