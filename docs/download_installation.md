@@ -12,9 +12,15 @@ YaCy is libre software - licensed GPL-2+. Downloads are provided free, with the 
 
 <div class="container">
       <div class="row">
+        <div class="col-md-4" style="background-color:#4E5D6C; padding-left:15px; padding-right:15px; position:relative; left:15px;">
+          <h3>Become a YaCy Patron</h3>
+with <a href="https://www.patreon.com/0rb1t3r" target="_blank"><img src="https://yacy.net/images/become_a_patron_button.png" width="120"></a><br/>
+or
+<a href="https://github.com/users/Orbiter/sponsorship" target="_blank"><img src="https://yacy.net/images/logo-mona-100.png" width="32" height="32"></a>
+<a href="https://github.com/users/Orbiter/sponsorship" target="_blank">GitHub Sponsors</a></br>
+        </div>
         <div class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
-          <h3>Private User</h3>
-          <p>Please donate a one-time sum</p><br/>
+          <h3>One-Time Donation</h3>
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin:0px; padding:0px;">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="on0" value="Your contribution is happily received as a tax-deductable, legal payment.">
@@ -28,16 +34,9 @@ YaCy is libre software - licensed GPL-2+. Downloads are provided free, with the 
 <input class="btn btn-success btn-sm" type="submit" name="submit" value="Donate">
 </form><br/>
         </div>
-        <div class="col-md-4" style="background-color:#4E5D6C; padding-left:15px; padding-right:15px; position:relative; left:15px;">
-          <h3>Commercial Users</h3>
-          <p>..Universities and generous private users:<br/>please subscribe to</p>
-<a href="https://github.com/users/Orbiter/sponsorship" target="_blank"><img src="https://yacy.net/images/logo-mona-100.png" width="32" height="32"></a>
-<a href="https://github.com/users/Orbiter/sponsorship" target="_blank">GitHub Sponsors</a>
-or
-<a href="https://www.patreon.com/0rb1t3r" target="_blank"><img src="https://yacy.net/images/become_a_patron_button.png" width="120"></a><br/><br/>
-        </div>
       </div>
 </div>
+
 
 You may also download and try out YaCy first and come back later to donate. Please help!
 
@@ -86,25 +85,29 @@ cd yacy
 * Headless operation can be achieved by setting a password on the host console with `bin/passwd.sh <password>`.
 
 
+### Docker ###
+
+Just run
+```
+docker run -d --name yacy -p 8090:8090 -p 8443:8443 yacy/yacy_search_server
+```
+then open http://localhost:8090
+
+The default login for YaCy on docker is `admin`:`docker` 
 
 
-### macOS Application
-[https://download.yacy.net/yacy_v1.922_20191013_9964.dmg](https://download.yacy.net/yacy_v1.922_20191013_9964.dmg)
 ### On Macintosh
 
 * Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/).
+* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.922_20191013_9964.dmg" role="button">Download YaCy for MacOS</a> from [https://download.yacy.net/yacy_v1.922_20191013_9964.dmg](https://download.yacy.net/yacy_v1.922_20191013_9964.dmg)
 * Double-click the downloaded `.dmg`-file and copy the YaCy app out of the mounted drive into your "Application" folder.
 * To run YaCy, just double-click the YaCy app icon in your "Application" folder.
 * YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
 
 
-
-
 ### Any OS with Java 8
 Automatic development builds can be obtained from
 [https://download.yacy.net/](https://download.yacy.net/).
-
-
 
 
 ### Get the Source Code
@@ -119,13 +122,17 @@ You can download and build your own YaCy with these simple steps. You need:
 * git
 
 Then run:
-
 ```
 git clone https://github.com/yacy/yacy_search_server.git
 cd yacy_search_server
 ant clean all dist
 ```
 The compiled tarball will then be in the `RELEASE` folder.
+
+To start YaCy from your compiled code, simply run:
+```
+./startYACY.sh
+```
 
 <!--
 ### Debian Package
