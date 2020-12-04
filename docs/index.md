@@ -65,7 +65,7 @@ Imagine if, rather than relying on the proprietary software of a large professio
 
 Here is a live image of the YaCy network:
 
-![YaCy P2P Network](https://yacy.searchlab.eu/NetworkPicture.png?width=960&height=720&bgcolor=111111&pal=10080&pol=10080)
+![YaCy P2P Network](https://yacy.searchlab.eu/NetworkPicture.png?width=960&height=720&bgcolor=2C3E4F&pal=10080&pol=10080)
 
 ## Installation is easy!
 
