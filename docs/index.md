@@ -9,12 +9,12 @@ body {
 </style>
 <div class="jumbotron" style="background: none;"><div class="container">
   <img src="img/YaCyLogo2011_240.png" width="240">
-  <h2>Decentralized Web Search</h2>
+  <h2>Search Engine Software</h2>
 </div></div>
 
-# Web Search Engine Software
+# YaCy is free software for your own search engine.
 
-YaCy is free software for your own search engine. Join a community of search engines or make your own search portal!
+Join a community of search engines or make your own search portal!
 
 There are these three use cases you can choose from:
 
