@@ -9,12 +9,12 @@ body {
 </style>
 <div class="jumbotron" style="background: none;"><div class="container">
   <img src="img/YaCyLogo2011_240.png" width="240">
-  <h2>Decentralized Web Search</h2>
+  <h2>Search Engine Software</h2>
 </div></div>
 
-# Web Search Engine Software
+# YaCy is free software for your own search engine.
 
-YaCy is free software for your own search engine. Join a community of search engines or make your own search portal!
+Join a community of search engines or make your own search portal!
 
 There are these three use cases you can choose from:
 
@@ -65,7 +65,7 @@ Imagine if, rather than relying on the proprietary software of a large professio
 
 Here is a live image of the YaCy network:
 
-![YaCy P2P Network](https://yacy.searchlab.eu/NetworkPicture.png?width=960&height=720&bgcolor=111111&pal=10080&pol=10080)
+![YaCy P2P Network](https://yacy.searchlab.eu/NetworkPicture.png?width=960&height=720&bgcolor=2C3E4F&pal=10080&pol=10080)
 
 ## Installation is easy!
 
