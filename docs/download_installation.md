@@ -46,12 +46,14 @@ Installation is very easy on any system. If it looks complex here it's just beca
 
 ### YaCy for Windows
 
-* Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/).
-* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.922_20191014_9966.exe" role="button">Download YaCy for Windows</a> from [https://download.yacy.net/yacy_v1.922_20191014_9966.exe](https://download.yacy.net/yacy_v1.922_20191014_9966.exe)
+* *IMPORTANT* Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/) *first*.
+* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.exe" role="button">Download YaCy for Windows</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.exe](https://download.yacy.net/yacy_v1.924_20201214_10042.exe)
 * Install YaCy by double-clicking the downloaded installer.
 * When the message "Windows protected your PC (in Windows 10) appears, klick "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", klick "yes".
 * Within the YaCy Installer, klick "Next", "I Agree", "Next", "Install", "Finish".
 * To run YaCy, double-click the YaCy app icon (which may be on your desktop).
+* Whenever the following dialog appears click "allow private networks" and "allow access"
+![Windows Java Security Setting](img/win_java_security_dialog.png){: width="400"}
 * YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
 
 
@@ -60,12 +62,12 @@ You must install Java 8 on your computer if you don't have it already, and start
 YaCy can run under a normal user account, no root rights are needed if Java 8 is already installed.
 
 * Install JDK 8 (Oracle or preferably OpenJDK). You get Java for Linux from [https://adoptopenjdk.net/](https://adoptopenjdk.net/) but you should follow the installer package system that comes with your linux distribution.
-* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.922_20191013_9964.tar.gz" role="button">Download generic YaCy</a> from [https://download.yacy.net/yacy_v1.922_20191013_9964.tar.gz](https://download.yacy.net/yacy_v1.922_20191013_9964.tar.gz), i.e. by
+* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.tar.gz" role="button">Download generic YaCy</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.tar.gz](https://download.yacy.net/yacy_v1.924_20201214_10042.tar.gz), i.e. by
 
 * Unpack the tarball.
 * Run `startYACY.sh` inside your decompressed folder.
 ```
-wget https://download.yacy.net/yacy_v1.922_20191013_9964.tar.gz
+wget https://download.yacy.net/yacy_v1.924_20201214_10042.tar.gz
 ```
 
 This can be done by running in a terminal:
@@ -74,8 +76,8 @@ This can be done by running in a terminal:
 sudo apt-get update
 sudo dpkg --configure -a
 sudo apt-get install -y openjdk-8-jre-headless
-wget https://download.yacy.net/yacy_v1.922_20191013_9964.tar.gz
-tar xfz yacy_v1.922_20191013_9964.tar.gz
+wget https://download.yacy.net/yacy_v1.924_20201214_10042.tar.gz
+tar xfz yacy_v1.924_20201214_10042.tar.gz
 cd yacy
 ./startYACY.sh
 ```
@@ -99,7 +101,7 @@ The default login for YaCy on docker is `admin`:`docker`
 ### On Macintosh
 
 * Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/).
-* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.922_20191013_9964.dmg" role="button">Download YaCy for MacOS</a> from [https://download.yacy.net/yacy_v1.922_20191013_9964.dmg](https://download.yacy.net/yacy_v1.922_20191013_9964.dmg)
+* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.dmg" role="button">Download YaCy for MacOS</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.dmg](https://download.yacy.net/yacy_v1.924_20201214_10042.dmg)
 * Double-click the downloaded `.dmg`-file and copy the YaCy app out of the mounted drive into your "Application" folder.
 * To run YaCy, just double-click the YaCy app icon in your "Application" folder.
 * YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
