@@ -95,7 +95,7 @@ docker run -d --name yacy -p 8090:8090 -p 8443:8443 yacy/yacy_search_server
 ```
 then open http://localhost:8090
 
-The default login for YaCy on docker is `admin`:`docker` 
+The default login for YaCy on docker is `admin`:`yacy` 
 
 
 ### On Macintosh
