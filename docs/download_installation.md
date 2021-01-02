@@ -87,17 +87,6 @@ cd yacy
 * Headless operation can be achieved by setting a password on the host console with `bin/passwd.sh <password>`.
 
 
-### Docker ###
-
-Just run
-```
-docker run -d --name yacy -p 8090:8090 -p 8443:8443 yacy/yacy_search_server
-```
-then open http://localhost:8090
-
-The default login for YaCy on docker is `admin`:`yacy` 
-
-
 ### On Macintosh
 
 * Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/).
@@ -105,6 +94,27 @@ The default login for YaCy on docker is `admin`:`yacy`
 * Double-click the downloaded `.dmg`-file and copy the YaCy app out of the mounted drive into your "Application" folder.
 * To run YaCy, just double-click the YaCy app icon in your "Application" folder.
 * YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
+
+
+### Docker ###
+
+Run
+```
+docker run -d --name yacy -p 8090:8090 -p 8443:8443 -v yacy_data:/opt/yacy_search_server/DATA --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
+```
+then open http://localhost:8090
+
+The default login for YaCy on docker is `admin`:`yacy` 
+
+### Kubernetes ###
+
+```
+kubectl create namespace yacy-freeworld
+kubectl create deployment --namespace=yacy-freeworld --image=yacy/yacy_search_server:latest yacy-app
+kubectl scale deployment yacy-app --replicas=1
+kubectl expose deployment yacy-app --name=yacy-http --port 8090 --target-port 8090
+kubectl run yacy-app
+```
 
 
 ### Any OS with Java 8
