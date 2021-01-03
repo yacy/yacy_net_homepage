@@ -98,7 +98,14 @@ cd yacy
 
 ### Docker ###
 
-Run
+The Official YaCy Images are hosted on Dockerub at https://hub.docker.com/r/yacy/yacy_search_server
+
+We provide amd64, arm64v8 and arm32v7 versions with the following tags:
+* amd64: `yacy/yacy_search_server:latest`
+* arm64v8: `yacy/yacy_search_server:aarch64-latest` 
+* arm32v7: `yacy/yacy_search_server:armv7-latest`
+
+i.e. to install YaCy on amd64, run:
 ```
 docker run -d --name yacy -p 8090:8090 -p 8443:8443 -v yacy_data:/opt/yacy_search_server/DATA --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
 ```
