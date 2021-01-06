@@ -116,11 +116,34 @@ The default login for YaCy on docker is `admin`:`yacy`
 ### Kubernetes ###
 
 ```
-kubectl create namespace yacy-freeworld
-kubectl create deployment --namespace=yacy-freeworld --image=yacy/yacy_search_server:latest yacy-app
-kubectl scale deployment yacy-app --replicas=1
-kubectl expose deployment yacy-app --name=yacy-http --port 8090 --target-port 8090
-kubectl run yacy-app
+# optional: for a quick and easy installation of kubernetes, run minikube
+minikube start
+minikube dashboard
+
+# optional: if you want to run YaCy in a new namespace (does not work with minikube dashboard)
+kubectl create namespace searchlab
+kubectl config set-context --current --namespace=searchlab
+
+# create deployment
+kubectl create deployment yacy --image=yacy/yacy_search_server:latest --replicas=1 --port=8090
+kubectl get deployment yacy -o wide # optional: show attributes of deployment
+kubectl logs -f deployment.apps/yacy # optional: show logs of deployment
+
+# create service
+kubectl create service nodeport yacy --node-port=30890 --tcp=8090:8090
+kubectl get service yacy -o wide # optional: show service configuration
+
+# optional: access service in minicube
+minikube service list
+minikube service yacy
+minikube service yacy -n searchlab # in case you are running in namespace 'searchlab'
+
+# optional: shut down the yacy deployment
+kubectl delete service yacy
+kubectl delete deployment yacy
+
+# optional: switch back to default namespace
+config set-context --current --namespace=default
 ```
 
 
