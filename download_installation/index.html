@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="YaCy Suchmaschine search engine spider harvester indexer p2p peer network open free download software development">
+    <meta name="copyright" content="Michael Peter Christen">
+
+    <meta name="description" content="YaCy P2P - Decentralized Search Engine">
+    <meta name="author" content="Michael Christen">
+    <link rel="canonical" href="https://yacy.net/download_installation/">
+    <link rel="../img/favicon.ico">
+
+    
+    <title>Download - YaCy</title>
+    
+
+    <link href="../css/hack.min.css" rel="stylesheet">
+    <link href="../css/latolatinfonts.css" rel="stylesheet">
+    <link href="../css/bootstrap-custom.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+    <link href="../css/highlight.css" rel="stylesheet">
+    <!-- <link href="../css/latostyle.css" rel="stylesheet">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+     
+</head>
+
+<body>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/fontawesome-all.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="..">
+<!--YaCy-->
+<img src="../img/YaCyLogo2011_60.png" height="40">
+</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../demonstration_tutorial_screenshot/">Demo</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Download</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../faq/">FAQ</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+		    <li>
+                        <a href="https://searchlab.eu">
+                           Forum
+                        </a>
+                    </li>
+		    <!--
+                    <li >
+                        <a rel="prev" href="../demonstration_tutorial_screenshot/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../faq/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+		    -->
+                    <li>
+                        <a href="https://github.com/yacy/yacy_search_server">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#download-and-installation-of-yacy">Download and Installation of YaCy</a></li>
+            <li class="second-level"><a href="#please-support-yacy">Please Support YaCy</a></li>
+                
+            <li class="second-level"><a href="#installation">Installation</a></li>
+                
+                <li class="third-level"><a href="#yacy-for-windows">YaCy for Windows</a></li>
+                <li class="third-level"><a href="#yacy-for-linux-and-other-os">YaCy for Linux and other OS</a></li>
+                <li class="third-level"><a href="#on-macintosh">On Macintosh</a></li>
+                <li class="third-level"><a href="#docker">Docker</a></li>
+                <li class="third-level"><a href="#kubernetes">Kubernetes</a></li>
+                <li class="third-level"><a href="#any-os-with-java-8">Any OS with Java 8</a></li>
+                <li class="third-level"><a href="#get-the-source-code">Get the Source Code</a></li>
+                <li class="third-level"><a href="#compile-yacy-yourself">Compile YaCy yourself</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="download-and-installation-of-yacy">Download and Installation of YaCy</h1>
+<p>YaCy is available as packages for Linux, Windows, Macintosh and also as Docker Image. You can also install YaCy on any other operation system either by compiling it yourself or using a tarball. YaCy needs Java 8, OpenJDK 8 is recommended.</p>
+<p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/download_installation.md" role="button" target="_blank">Improve this doc</a>
+</p>
+
+<h2 id="please-support-yacy">Please Support YaCy</h2>
+<p>YaCy is libre software - licensed GPL-2+. Downloads are provided free, with the option to donate:</p>
+<div class="container">
+      <div class="row">
+        <div class="col-md-4" style="background-color:#4E5D6C; padding-left:15px; padding-right:15px; position:relative; left:15px;">
+          <h3>Become a YaCy Patron</h3>
+with <a href="https://www.patreon.com/0rb1t3r" target="_blank"><img src="https://yacy.net/images/become_a_patron_button.png" width="120"></a><br/>
+or
+<a href="https://github.com/users/Orbiter/sponsorship" target="_blank"><img src="https://yacy.net/images/logo-mona-100.png" width="32" height="32"></a>
+<a href="https://github.com/users/Orbiter/sponsorship" target="_blank">GitHub Sponsors</a></br>
+        </div>
+        <div class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
+          <h3>One-Time Donation</h3>
+<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin:0px; padding:0px;">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="on0" value="Your contribution is happily received as a tax-deductable, legal payment.">
+<img src="../img/pp-logo-100px.png">&nbsp;
+<input type="radio" name="os0" value="beneficial">&nbsp;5 &euro;&nbsp;
+<input type="radio" name="os0" value="generous" checked>&nbsp;25 &euro;&nbsp;
+<input type="radio" name="os0" value="gracious">&nbsp;50 &euro;&nbsp;
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input class="btn btn-success btn-sm" type="submit" name="submit" value="Donate">
+</form><br/>
+        </div>
+      </div>
+</div>
+
+<p>You may also download and try out YaCy first and come back later to donate. Please help!</p>
+<h2 id="installation">Installation</h2>
+<p>Installation is very easy on any system. If it looks complex here it's just because we give directions in great detail.</p>
+<h3 id="yacy-for-windows">YaCy for Windows</h3>
+<ul>
+<li><em>IMPORTANT</em> Install Java 8 from <a href="https://adoptopenjdk.net/">https://adoptopenjdk.net/</a> <em>first</em>.</li>
+<li><a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.exe" role="button">Download YaCy for Windows</a> from <a href="https://download.yacy.net/yacy_v1.924_20201214_10042.exe">https://download.yacy.net/yacy_v1.924_20201214_10042.exe</a></li>
+<li>Install YaCy by double-clicking the downloaded installer.</li>
+<li>When the message "Windows protected your PC (in Windows 10) appears, klick "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", klick "yes".</li>
+<li>Within the YaCy Installer, klick "Next", "I Agree", "Next", "Install", "Finish".</li>
+<li>To run YaCy, double-click the YaCy app icon (which may be on your desktop).</li>
+<li>Whenever the following dialog appears click "allow private networks" and "allow access"
+<img alt="Windows Java Security Setting" src="../img/win_java_security_dialog.png" width="400" /></li>
+<li>YaCy is then running on port 8090 on your machine. Open <a href="http://localhost:8090">http://localhost:8090</a> in your web-browser.</li>
+</ul>
+<h3 id="yacy-for-linux-and-other-os">YaCy for Linux and other OS</h3>
+<p>You must install Java 8 on your computer if you don't have it already, and start the YaCy start shell script.
+YaCy can run under a normal user account, no root rights are needed if Java 8 is already installed.</p>
+<ul>
+<li>Install JDK 8 (Oracle or preferably OpenJDK). You get Java for Linux from <a href="https://adoptopenjdk.net/">https://adoptopenjdk.net/</a> but you should follow the installer package system that comes with your linux distribution.</li>
+<li>
+<p><a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz" role="button">Download generic YaCy</a> from <a href="https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz">https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz</a>, i.e. by</p>
+</li>
+<li>
+<p>Unpack the tarball.</p>
+</li>
+<li>Run <code>startYACY.sh</code> inside your decompressed folder.</li>
+</ul>
+<pre><code>wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
+</code></pre>
+<p>This can be done by running in a terminal:</p>
+<pre><code>sudo apt-get update
+sudo dpkg --configure -a
+sudo apt-get install -y openjdk-8-jre-headless
+wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
+tar xfz yacy_v1.924_20210209_10069.tar.gz
+cd yacy
+./startYACY.sh
+</code></pre>
+<ul>
+<li>YaCy is now running on port 8090 on your machine. Open <a href="http://localhost:8090">http://localhost:8090</a> in your web-browser.</li>
+<li>No password is required when accessing this YaCy instance from localhost.</li>
+<li>Headless operation can be achieved by setting a password on the host console with <code>bin/passwd.sh &lt;password&gt;</code>.</li>
+</ul>
+<h3 id="on-macintosh">On Macintosh</h3>
+<ul>
+<li>Install Java 8 from <a href="https://adoptopenjdk.net/">https://adoptopenjdk.net/</a>.</li>
+<li><a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.dmg" role="button">Download YaCy for MacOS</a> from <a href="https://download.yacy.net/yacy_v1.924_20201214_10042.dmg">https://download.yacy.net/yacy_v1.924_20201214_10042.dmg</a></li>
+<li>Double-click the downloaded <code>.dmg</code>-file and copy the YaCy app out of the mounted drive into your "Application" folder.</li>
+<li>To run YaCy, just double-click the YaCy app icon in your "Application" folder.</li>
+<li>YaCy is then running on port 8090 on your machine. Open <a href="http://localhost:8090">http://localhost:8090</a> in your web-browser.</li>
+</ul>
+<h3 id="docker">Docker</h3>
+<p>The Official YaCy Images are hosted on Dockerub at https://hub.docker.com/r/yacy/yacy_search_server</p>
+<p>We provide amd64, arm64v8 and arm32v7 versions with the following tags:
+* amd64: <code>yacy/yacy_search_server:latest</code>
+* arm64v8: <code>yacy/yacy_search_server:aarch64-latest</code> 
+* arm32v7: <code>yacy/yacy_search_server:armv7-latest</code></p>
+<p>i.e. to install YaCy on amd64, run:</p>
+<pre><code>docker run -d --name yacy -p 8090:8090 -p 8443:8443 -v yacy_data:/opt/yacy_search_server/DATA --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
+</code></pre>
+<p>then open http://localhost:8090</p>
+<p>The default login for YaCy on docker is <code>admin</code>:<code>yacy</code> </p>
+<h3 id="kubernetes">Kubernetes</h3>
+<pre><code># optional: for a quick and easy installation of kubernetes, run minikube
+minikube start
+minikube dashboard
+
+# optional: if you want to run YaCy in a new namespace (does not work with minikube dashboard)
+kubectl create namespace searchlab
+kubectl config set-context --current --namespace=searchlab
+
+# create deployment
+kubectl create deployment yacy --image=yacy/yacy_search_server:latest --replicas=1 --port=8090
+kubectl get deployment yacy -o wide # optional: show attributes of deployment
+kubectl logs -f deployment.apps/yacy # optional: show logs of deployment
+
+# create service
+kubectl create service nodeport yacy --node-port=30890 --tcp=8090:8090
+kubectl get service yacy -o wide # optional: show service configuration
+
+# optional: access service in minicube
+minikube service list
+minikube service yacy
+minikube service yacy -n searchlab # in case you are running in namespace 'searchlab'
+
+# optional: shut down the yacy deployment
+kubectl delete service yacy
+kubectl delete deployment yacy
+
+# optional: switch back to default namespace
+config set-context --current --namespace=default
+</code></pre>
+<h3 id="any-os-with-java-8">Any OS with Java 8</h3>
+<p>Automatic development builds can be obtained from
+<a href="https://download.yacy.net/">https://download.yacy.net/</a>.</p>
+<h3 id="get-the-source-code">Get the Source Code</h3>
+<p>The source code is inside the generic tarball. It is recommended you clone the Git repository at
+<a href="https://github.com/yacy/yacy_search_server">https://github.com/yacy/yacy_search_server</a>.</p>
+<h3 id="compile-yacy-yourself">Compile YaCy yourself</h3>
+<p>You can download and build your own YaCy with these simple steps. You need:</p>
+<ul>
+<li>jdk-8 installed (Oracle Java 8 or OpenJDK 8)</li>
+<li>ant</li>
+<li>git</li>
+</ul>
+<p>Then run:</p>
+<pre><code>git clone https://github.com/yacy/yacy_search_server.git
+cd yacy_search_server
+ant clean all dist
+</code></pre>
+<p>The compiled tarball will then be in the <code>RELEASE</code> folder.</p>
+<p>To start YaCy from your compiled code, simply run:</p>
+<pre><code>./startYACY.sh
+</code></pre>
+<!--
+### Debian Package
+Our packages are released at [http://debian.yacy.net/](http://debian.yacy.net/).
+Please see the instructions below for the installation process.
+-->
+<!--
+### Debian Packages
+
+Install YaCy on Debian-based GNU/Linux operating systems using our repository:
+
+
+<pre><code>http://debian.yacy.net
+</code></pre>
+
+
+Become root (i.e. with `sudo su -`) and create a Debian source list file for YaCy sources:
+
+
+<pre><code>echo 'deb http://debian.yacy.net ./' &gt; /etc/apt/sources.list.d/yacy.list 
+</code></pre>
+
+
+Install the developer key with one of the two next methods
+
+
+<pre><code>wget http://debian.yacy.net/yacy_orbiter_key.asc -O- | apt-key add -
+apt-key advanced --keyserver pgp.net.nz --recv-keys 03D886E7
+</code></pre>
+
+
+And finally install YaCy itself. 
+
+
+<pre><code>apt-get update
+apt-get install openjdk-8-jre-headless # java 8 is required, only a headless version is needed
+apt-get install yacy
+</code></pre>
+
+
+YaCy is now running on port 8090 on your machine, and you can access it with [http://localhost:8090](http://localhost:8090).
+
+
+#### Important File Locations
+
+After the installation, the YaCy application path is:
+
+
+<pre><code>/usr/share/yacy
+</code></pre>
+
+
+The DATA-path is:
+
+
+<pre><code>/var/lib/yacy
+</code></pre>
+
+
+The configuration files should be here:
+
+
+<pre><code>/etc/yacy/
+</code></pre>
+
+
+`/etc/yacy/yacy.conf` is created using the `/usr/share/yacy/defaults/yacy.init` file on the first run.
+
+The log files should be here:
+
+
+<pre><code>/var/log/yacy/
+</code></pre>
+
+
+#### Managing YaCy
+Having installed YaCy using the Debian repository, YaCy is started automatically following a OS startup, and stopped before shutdown. You can also start and stop YaCy as root from the command line with:
+
+
+<pre><code>/etc/init.d/yacy stop
+/etc/init.d/yacy start
+/etc/init.d/yacy restart
+</code></pre>
+
+
+You can use systemctl as root to turn on or off automatic YaCy startup upon booting.
+
+Automatic startup :
+
+
+<pre><code>systemctl enable yacy
+</code></pre>
+
+
+Turn off automatic startup:
+
+
+<pre><code>systemctl disable yacy
+</code></pre>
+
+
+The YaCy web server runs on port 8090 by default. The administration landing page is at `http://localhost:8090/`
+but you can also assign any other port to the interface using the administration pages in YaCy. Port 80 is possible, but it is better to facilitate access to this port using [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding).
+
+#### Changing password
+If not setting a username and password during installation, the username will be "admin" and the password will be randomly generated. Your running YaCy node will not be as useful before changing password-protected settings. Access the password-protected parts by changing the password manually in a terminal. You can do this by going to /usr/share/yacy/bin and running:
+
+
+<pre><code>./passwd.sh &lt;new password&gt;
+</code></pre>
+
+
+(Note: your new password will appear in plain text in the terminal).
+
+
+<pre><code>cd /usr/share/yacy/bin
+./passwd.sh &lt;new password&gt;
+</code></pre>
+
+
+#### Automatic Updates
+When configured this way, the YaCy-internal auto-updater does not work. An automatic update must be done with OS tools. i.e. with a crontab command. An example for that is the following line, which you must write into `/etc/crontab`
+
+
+<pre><code>0 6 * * * root apt-get update &amp;&amp; apt-get -y --force-yes install yacy
+</code></pre>
+
+
+In Ubuntu, the above line is only valid for the system crontab file (located at /etc/crontab) - you can edit this file on newer Ubuntu OS directly without using the crontab command. Below are comments from the file in Ubuntu 12.04:
+
+
+<pre><code># /etc/crontab: system-wide crontab
+# Unlike any other crontab, you don't have to run the `crontab`
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+</code></pre>
+
+
+If you want to use the root user crontab in Ubuntu instead, an example would be:
+
+
+<pre><code>username@hostname:~$ sudo crontab -e 
+no crontab for root - using an empty one
+
+Select an editor. To change later, run 'select-editor'.
+ 1. /bin/ed
+ 2. /bin/nano        ← (easiest)
+ 3. /usr/bin/vim.basic
+
+Choose 1-3 [2]: &lt;enter&gt;
+</code></pre>
+
+
+Then add the following at the end of the file:
+
+
+<pre><code>0 6 * * * /usr/bin/apt-get update &amp;&amp; /usr/bin/apt-get -y --force-yes install yacy
+</code></pre>
+
+
+Please note, there is no username on the line above, and absolute (full) paths are used here to prevent binary location problems!
+--></div>
+        
+        
+    </div>
+
+    <br/><br/>
+    <footer class="col-md-12 text-center" style="background-color:#000000;" >
+<div class="container" style="text-align:left; font-size:13px; padding-top:30px;">
+      <div class="row">
+        <div class="col-md-3" style="padding-left:15px; padding-right:15px;">
+          <h3>Products</h3>
+          <p>YaCy is both the name of a project and the name of a software. Our main 'product' (it's free-software) is the YaCy Search Server.</p>
+        </div>
+        <div class="col-md-3" style="padding-right:15px;">
+          <h3>GDPR Compliance</h3>
+          <p>YaCy has a strong connection to privacy-aware tools. As such it does not collect personalized data. It also has no 'phoning-home' integrated. This web page does not use cookies. However, linked services may have cookies.</p>
+       </div>
+        <div class="col-md-3" style="padding-right:15px;">
+          <h3>Company</h3>
+          <p>The brand 'YaCy' is owned in a private company. While the software YaCy is a non-profit, free software we also provide consulting for YaCy and search-related business topics. To run the non-profit YaCy project we heavily depend on community support either as contribution to our software and documentation or on donations. Please donate! For a contact please see&nbsp;
+<a href="../impressum/">Impressum</a>
+
+
+</p>
+        </div>
+        <div class="col-md-3" style="padding-right:15px;">
+          <h3>Follow Us</h3>
+          <ul>
+	    <li>Twitter: <a href="https://twitter.com/yacy_search">@yacy_search</a></li>
+	    <li>Youtube: <a href="https://www.youtube.com/YaCyTutorials">YaCyTutorials</a></li>
+	    <li>GitHub: <a href="https://github.com/yacy">yacy_search_server</a></li>
+	    <li>Searchlab Forum: <a href="https://searchlab.eu/">YaCy Forum</a></li>
+	  </ul>
+        </div>
+      </div>
+</div>
+
+
+        
+        <p>
+        <!--
+	<small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+	-->
+
+        
+        
+    </footer>
+    
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

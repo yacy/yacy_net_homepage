@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="YaCy Suchmaschine search engine spider harvester indexer p2p peer network open free download software development">
+    <meta name="copyright" content="Michael Peter Christen">
+
+    <meta name="description" content="YaCy P2P - Decentralized Search Engine">
+    <meta name="author" content="Michael Christen">
+    <link rel="canonical" href="https://yacy.net/faq/">
+    <link rel="../img/favicon.ico">
+
+    
+    <title>FAQ - YaCy</title>
+    
+
+    <link href="../css/hack.min.css" rel="stylesheet">
+    <link href="../css/latolatinfonts.css" rel="stylesheet">
+    <link href="../css/bootstrap-custom.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+    <link href="../css/highlight.css" rel="stylesheet">
+    <!-- <link href="../css/latostyle.css" rel="stylesheet">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+     
+</head>
+
+<body>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/fontawesome-all.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="..">
+<!--YaCy-->
+<img src="../img/YaCyLogo2011_60.png" height="40">
+</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../demonstration_tutorial_screenshot/">Demo</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../download_installation/">Download</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">FAQ</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+		    <li>
+                        <a href="https://searchlab.eu">
+                           Forum
+                        </a>
+                    </li>
+		    <!--
+                    <li >
+                        <a rel="prev" href="../download_installation/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+		    -->
+                    <li>
+                        <a href="https://github.com/yacy/yacy_search_server">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#faq-frequently-asked-questions">FAQ - Frequently Asked Questions</a></li>
+            <li class="second-level"><a href="#general">General</a></li>
+                
+                <li class="third-level"><a href="#what-is-this">What is this?</a></li>
+                <li class="third-level"><a href="#what-does-indexing-mean">What does indexing mean?</a></li>
+                <li class="third-level"><a href="#what-is-a-dht">What is a DHT?</a></li>
+                <li class="third-level"><a href="#whats-the-meaning-of-to-crawl">What's the meaning of "to crawl"?</a></li>
+                <li class="third-level"><a href="#what-is-a-p2p-network">What is a P2P network?</a></li>
+                <li class="third-level"><a href="#what-is-a-peer">What is a Peer?</a></li>
+                <li class="third-level"><a href="#what-is-rwi">What is RWI?</a></li>
+                <li class="third-level"><a href="#isnt-p2p-illegal">Isn't P2P illegal?</a></li>
+            <li class="second-level"><a href="#yacy-in-general">YaCy in general</a></li>
+                
+                <li class="third-level"><a href="#what-are-global-and-local-indexes">What are global and local indexes?</a></li>
+                <li class="third-level"><a href="#i-am-not-a-technican-can-i-install-yacy-easily-and-use-it-to-index-my-own-web-pages">I am not a technican. Can I install YaCy easily and use it to index my own web pages?</a></li>
+                <li class="third-level"><a href="#can-i-crawl-and-index-the-web-with-yacy">Can I crawl and index the web with YaCy?</a></li>
+                <li class="third-level"><a href="#is-there-a-central-server-does-the-search-engine-network-need-one">Is there a central server? Does the search engine network need one?</a></li>
+                <li class="third-level"><a href="#search-engines-need-a-lot-of-terabytes-of-space-dont-they-how-much-space-do-i-need-on-my-machine">Search Engines need a lot of terabytes of space, don't they? How much space do I need on my machine?</a></li>
+                <li class="third-level"><a href="#do-i-need-a-fast-machine-search-engines-need-big-server-farms-dont-they">Do I need a fast machine? Search Engines need big server farms, don't they?</a></li>
+                <li class="third-level"><a href="#how-long-does-a-search-take">How long does a search take?</a></li>
+                <li class="third-level"><a href="#do-i-need-to-set-up-and-run-a-separate-database">Do I need to set up and run a separate database?</a></li>
+                <li class="third-level"><a href="#what-does-virgin-junior-senior-principal-status-mean">What does Virgin, Junior, Senior, Principal Status mean?</a></li>
+                <li class="third-level"><a href="#why-should-i-run-my-peer-in-senior-mode">Why should I run my peer in Senior Mode?</a></li>
+                <li class="third-level"><a href="#my-peer-says-it-runs-in-junior-mode-how-can-i-run-it-in-senior-mode">My peer says it runs in 'Junior Mode'. How can I run it in Senior Mode?</a></li>
+                <li class="third-level"><a href="#will-running-yacy-jeopardize-my-privacy">Will running YaCy jeopardize my privacy?</a></li>
+                <li class="third-level"><a href="#can-other-people-find-out-about-my-browsing-loghistory">Can other people find-out about my browsing log/history?</a></li>
+                <li class="third-level"><a href="#my-yacy-search-pages-doesnt-show">My YaCy search pages doesn't show!</a></li>
+                <li class="third-level"><a href="#why-does-yacy-show-different-results-from-google">Why does YaCy show different results from Google?</a></li>
+                <li class="third-level"><a href="#i-can-not-uninstall-because-yacy-is-still-running">I can not uninstall, because YaCy is still running</a></li>
+                <li class="third-level"><a href="#how-can-i-help">How can I help?</a></li>
+            <li class="second-level"><a href="#technology">Technology</a></li>
+                
+                <li class="third-level"><a href="#something-seems-not-to-be-working-properly-what-should-i-do">Something seems not to be working properly ; what should I do?</a></li>
+                <li class="third-level"><a href="#how-can-i-index-tor-or-freenet-pages">How can I index Tor or Freenet pages?</a></li>
+                <li class="third-level"><a href="#how-do-i-give-the-index-of-one-peer-to-another">How do I give the index of one peer to another?</a></li>
+                <li class="third-level"><a href="#will-already-indexed-pages-ie-indexed-and-index-exchanged-automatically-be-reindexed-after-a-few-daysyears">Will already-indexed pages (i.e. indexed and index-exchanged) automatically be reindexed after a few days/years?</a></li>
+                <li class="third-level"><a href="#are-dht-entries-unique-in-a-search-network-or-can-urls-also-appear-twice-or-three-times">Are DHT entries unique in a search network or can URLs also appear twice or three times?</a></li>
+                <li class="third-level"><a href="#how-can-i-change-the-connection-timeout-value">How can I change the Connection Timeout value?</a></li>
+                <li class="third-level"><a href="#i-can-not-log-in-yacy-anymore-as-i-forgot-my-password-how-do-i-reset-my-password">I can not log in YaCy anymore as I forgot my password. How do I reset my password?</a></li>
+                <li class="third-level"><a href="#password-reset-while-yacy-is-running">Password reset while YaCy is running</a></li>
+            <li class="second-level"><a href="#disk-space">Disk space</a></li>
+                
+                <li class="third-level"><a href="#how-can-i-limit-the-size-of-single-files-to-be-downloaded">How can I limit the size of single files to be downloaded?</a></li>
+                <li class="third-level"><a href="#how-many-linkswords-and-how-much-disk-space-can-a-yacy-instance-manage">How many links/words and how much disk space can a YaCy instance manage?</a></li>
+                <li class="third-level"><a href="#can-i-limit-the-size-of-the-indexes-on-my-hard-drive">Can I limit the size of the indexes on my hard-drive?</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="faq-frequently-asked-questions">FAQ - Frequently Asked Questions</h1>
+<p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/faq.md" role="button" target="_blank">Improve this doc</a>
+</p>
+
+<h2 id="general">General</h2>
+<h3 id="what-is-this">What is this?</h3>
+<p>YaCy is a distributed Web Search Engine, based on a peer-to-peer network.</p>
+<h3 id="what-does-indexing-mean">What does indexing mean?</h3>
+<p>Indexing means that a web page is separated into the single words on it and to save the URLs to the sites containing them under a reference to the word itself in a database. So searching for a word (or many words) may be easily performed by fetching all URLs "belonging" to the search term.</p>
+<h3 id="what-is-a-dht">What is a DHT?</h3>
+<p>A distributed hash table (DHT) is a class of a decentralized distributed system that provides a lookup service similar to a hash table; (key, value) pairs are stored in a DHT, and any participating node can efficiently retrieve the value associated with a given key. Responsibility for maintaining the mapping from keys to values is distributed among the nodes, in such a way that a change in the set of participants causes a minimal amount of disruption.(source:Wikipedia)</p>
+<h3 id="whats-the-meaning-of-to-crawl">What's the meaning of "to crawl"?</h3>
+<p>A so-called "crawler" fetches a web page and parses out all links on it; this is the first step or "depth 0". It continues to get all web pages linked on the first document which is then called "depth 1" and does the same respectively for all documents of this step. The crawler is limitable to a specified depth or can even crawl indefinitely and so can crawl the whole "indexable Web", including those parts of the indexable web who are censored by commercial search-engines and therefore normally not part of what most people are presented as The visible web.</p>
+<h3 id="what-is-a-p2p-network">What is a P2P network?</h3>
+<p>Meaning Peer to Peer computing or networking is a distributed application architecture that partitions tasks or work loads between peers. Peers are equally privileged, equipotent participants in the application. They are said to form a peer-to-peer network of nodes. Peers make a portion of their resources, such as processing power, disk storage or network bandwidth, directly available to other network participants, without the need for central coordination by servers or stable hosts. Wikipedia</p>
+<h3 id="what-is-a-peer">What is a Peer?</h3>
+<p>A peer is a communications endpoint in a computer network. Each peer offers its services and uses the services of other peers. In YaCy, a peer provides web indexing services to other peers on the YaCy search network.</p>
+<h3 id="what-is-rwi">What is RWI?</h3>
+<p>RWI is an acronym for Reverse Word Index. This is generated by the indexer from the collected data and stored in the database.</p>
+<h3 id="isnt-p2p-illegal">Isn't P2P illegal?</h3>
+<p>No. P2P (peer to peer) only describes the technology by which computers exchange data amongst themselves. Past legal disputes have been over what types of data have been exchanged over such networks. Namely, copyrighted material. The P2P file sharing technique itself is legal, despite the fact that it has been used facilitate in the transfer of copyrighted data. The only files shared amongst YaCy peers are indexes of the publicly accessible internet.</p>
+<h2 id="yacy-in-general">YaCy in general</h2>
+<h3 id="what-are-global-and-local-indexes">What are global and local indexes?</h3>
+<p>Once you use the proxy, a local copy of the indexed data is automatically created. You can access the global index only if the program has a connection to the YaCy network. This is effectively the combination of all local indexes.</p>
+<h3 id="i-am-not-a-technican-can-i-install-yacy-easily-and-use-it-to-index-my-own-web-pages">I am not a technican. Can I install YaCy easily and use it to index my own web pages?</h3>
+<p>YaCy is very easy to install. You don't need any special knowledge or additional software; also you don't need to set up an extra database engine. Indexing your own website isn't hard too: Simply crawl it and turn off DHT Distribution and DHT Receive to keep the index of your site on your peer.</p>
+<h3 id="can-i-crawl-and-index-the-web-with-yacy">Can I crawl and index the web with YaCy?</h3>
+<p>Yes. You can start your own crawl and you may also trigger distributed crawling, which means that your own YaCy peer asks other peers to perform specific crawl tasks. You can specify many parameters that focus your crawl to a limited set of web pages.</p>
+<h3 id="is-there-a-central-server-does-the-search-engine-network-need-one">Is there a central server? Does the search engine network need one?</h3>
+<p>No. The YaCy network architecture does not need a central server, and there is none. There are currently four so-called seed-list servers hard-coded into source code due to they are mostly available and have accurate seed list information (see FAQ for details).</p>
+<h3 id="search-engines-need-a-lot-of-terabytes-of-space-dont-they-how-much-space-do-i-need-on-my-machine">Search Engines need a lot of terabytes of space, don't they? How much space do I need on my machine?</h3>
+<p>The global index is shared, but not copied to the peers. If you run YaCy, you need an average of the same disc memory amount for the index as you need for the cache. In fact, the global space for the index may reach the space of Terabytes, but not all of that is on your machine!</p>
+<h3 id="do-i-need-a-fast-machine-search-engines-need-big-server-farms-dont-they">Do I need a fast machine? Search Engines need big server farms, don't they?</h3>
+<p>You don't need a fast machine to run YaCy. You also don't need a lot of space. You can configure the amount of Megabytes that you want to spend for the cache and (currently only indirectly) the index. Any time-critical task is delayed automatically and takes place when you are idle surfing (this works only if you use YaCy as http proxy).</p>
+<h3 id="how-long-does-a-search-take">How long does a search take?</h3>
+<p>Time for a search depends on many factors. One is, if you perform a local-only search or a global DHT-based search. Another factor comes in place when enable search heuristics. A third and important factor is if you have already searched for it often (short time between two same searches), in this case the search may still be cached. Another factor is if the parameter verify=true, if so the fetched HTML snippet got verified, say fetched again. If you use verify=false this may give you less accurate search results (wrong maybe) but they are way faster.</p>
+<p>In general YaCy's architecture does not do peer-hopping, it also doesn't have a TTL (time-to-live). It is expected that search results are instantly responded to the requester. This can be done by asking the index-owning peer directly which is in fact possible by using DHT's (distributed hash tables). Because YaCy needs some redundancy to compensate for missing peers, it asks several peers simultaneously. To collect their response, YaCy waits a little time of at most 6 seconds (by default, you can change that).</p>
+<h3 id="do-i-need-to-set-up-and-run-a-separate-database">Do I need to set up and run a separate database?</h3>
+<p>No. YaCy contains its own database engine, which does not need any extra set-up or configuration.</p>
+<h3 id="what-does-virgin-junior-senior-principal-status-mean">What does Virgin, Junior, Senior, Principal Status mean?</h3>
+<h4 id="virgin">virgin</h4>
+<p>Status Virgin means your peer did not have contact to the network yet. Simply put, you are "offline". You can search the local index only.</p>
+<h4 id="junior">junior</h4>
+<p>Status Junior means your peer has contact to the yacy network but cannot be reached by other peers. One reason could be a firewall or missing router configuration. You can search the local index only. Junior peers can contribute to the network by submitting index files to senior/principal peers without being asked.</p>
+<h4 id="senior">senior</h4>
+<p>Status Senior means your peer has contact to the yacy network and can be reached by other peers. It is now an access point for index sharing and distribution. You can search the local and global index. This is the best status to use, it supports the network.</p>
+<h4 id="principal">principal</h4>
+<p>A Principal is a Senior peer that uploaded an additional peer-list to a server. This list supports other peers to get in contact with the existing Yacy network to perform a global search. If you have the possibility to upload a file to an FTP server, you can become a Principal by uploading your peer-list.</p>
+<h3 id="why-should-i-run-my-peer-in-senior-mode">Why should I run my peer in Senior Mode?</h3>
+<p>Some p2p-based file sharing software assign non-contributing peers very low priority. We think that that this is not always fair since sometimes the operator does not have the choice of opening the firewall or configuring the router accordingly. Our idea of 'information wares' and their exchange can also be applied to junior peers: they must contribute to the global index by submitting their index actively, while senior peers contribute passively. Therefore we don't need to give junior peers low priority: they contribute equally, so they may participate equally. But enough senior peers are needed to make this architecture functional.</p>
+<p>Since any peer contributes almost equally, either actively or passively, it is not mandatory. However, since any peer can add to the index, but what is added can only be stored on and found through senior peers, you should decide to run in Senior Mode if you can.</p>
+<p>Even if only 1/10 of the peers which were Junior as of March 2012 become Senior, the network’s capacity will grow considerably.</p>
+<h3 id="my-peer-says-it-runs-in-junior-mode-how-can-i-run-it-in-senior-mode">My peer says it runs in 'Junior Mode'. How can I run it in Senior Mode?</h3>
+<p>Open your firewall for port 8090 (or the port you configured) or program your router to forward this port to your computer.</p>
+<h3 id="will-running-yacy-jeopardize-my-privacy">Will running YaCy jeopardize my privacy?</h3>
+<p>YaCy respects user privacy. All password- or cookies-protected pages are excluded from indexing. Additionally, pages loaded using GET or POST parameters are not indexed by default. Thus, only publicly accessible, non-password-protected pages will be indexed.</p>
+<p>For a detailed explanation on the technique: How YaCy protects your privacy wrt to personalized pages.</p>
+<h3 id="can-other-people-find-out-about-my-browsing-loghistory">Can other people find-out about my browsing log/history?</h3>
+<p>There's no way to browse the pages that are stored on a peer. A search of the pages is only possible on a precise word. The words are themselves dispatched over the peers thanks to the distributed hash tables (DHT). Then the hash tables of the peers are mixed, which makes retrieving the history of browsing of a certain peer impossible.</p>
+<h3 id="my-yacy-search-pages-doesnt-show">My YaCy search pages doesn't show!</h3>
+<p>The default address for the YaCy search and administration page is http://localhost:8090. If you are using Internet Explorer, please mind adding http:// before localhost:8090. In case you have changed the default port of YaCy from 8090 to another one, you will have to open the new port in your firewall or router (and maybe close the port 8090 if you don't use it). Another reason could be a bad setting of the proxy, in which case you need to deactivate the proxy for the local pages.</p>
+<h3 id="why-does-yacy-show-different-results-from-google">Why does YaCy show different results from Google?</h3>
+<p>We expect YaCy to show different results than Google, for several reasons. As long as YaCy has only a few peers working, it cannot compete with Google. Hence the importance of having a great number of YaCy peers working. But even then YaCy will provide different and better results than Google, since it can be adapted to the user's own preferences and is not influenced by commercial aspects.</p>
+<h3 id="i-can-not-uninstall-because-yacy-is-still-running">I can not uninstall, because YaCy is still running</h3>
+<p>First check whether YaCy still runs. If it doesn't run, it may not have been shut down properly. Start YaCy again, then uninstall. Alternatively delete the yacy.running file in the yacy/DATA/ directory, then uninstall.</p>
+<h3 id="how-can-i-help">How can I help?</h3>
+<p>First of all: run YaCy in senior mode. This helps to enrich the global index and to make YaCy more attractive. If you want to add your own code, you are welcome; but please contact the author first and discuss your idea to see how it may fit into the overall architecture. You can help a lot by simply giving us feedback or telling us about new ideas. You can also help by telling other people about this software. And if you find a bug or you see an uncovered use-case, we welcome your bug-report. Any feed-back is welcome.</p>
+<h2 id="technology">Technology</h2>
+<h3 id="something-seems-not-to-be-working-properly-what-should-i-do">Something seems not to be working properly ; what should I do?</h3>
+<p>YaCy is still undergoing development, so one should opt for a stable version for use. The latest stable version can be downloaded from the YaCy homepage http://www.yacy.net. If you are experiencing a strange behaviour of YaCy then you should search the Wiki or the forum http://www.yacy-forum.org/ for known issues. If the issue is unknown, then you can ask for help on the forum (and provide the YaCy version, details on the occurrence of the issue, and if possible an excerpt from the log file in order to help fix the bug).</p>
+<h3 id="how-can-i-index-tor-or-freenet-pages">How can I index Tor or Freenet pages?</h3>
+<p>The indexing of Tor or Freenet pages is for the moment deliberately avoided in the source code because it is not desired to index these pages at this stage of the development of YaCy. However, the crawling of such sites is planned in the future. Most likely the crawl results will not distributed globally, but will only be available to the local peer.</p>
+<h3 id="how-do-i-give-the-index-of-one-peer-to-another">How do I give the index of one peer to another?</h3>
+<p>This actually happens automatically through the DHT distribution of the words. However, there is also the possibility of transferring the entire index to another peer. This can either be done through a so-called Index-Transfer (link needs update) or a index-Import (link needs update).</p>
+<h3 id="will-already-indexed-pages-ie-indexed-and-index-exchanged-automatically-be-reindexed-after-a-few-daysyears">Will already-indexed pages (i.e. indexed and index-exchanged) automatically be reindexed after a few days/years?</h3>
+<p>Unfortunately no. However, there is the possibility for a chronological "recrawl" to be executed for a URL (or an entire website if desired). Learn more about this feature under "Index Control" -&gt; "Index Creation."</p>
+<h3 id="are-dht-entries-unique-in-a-search-network-or-can-urls-also-appear-twice-or-three-times">Are DHT entries unique in a search network or can URLs also appear twice or three times?</h3>
+<p>URLs are analyzed more than once so that a peer delayed does not lose his part in the search index. As for the indexes they are stored redundantly on multiple peers.</p>
+<h3 id="how-can-i-change-the-connection-timeout-value">How can I change the Connection Timeout value?</h3>
+<p>This can be done on the configuration page "Admin Console" -&gt; "Advanced behavior" http://localhost:8090/ConfigProperties_p.html. Just search for the line client-timeout and change the value there. The timeout is in milliseconds.</p>
+<p>Do not forget to restart YaCy after the change.</p>
+<p>Alternatively, another way to do this is through the configuration file httpProxy.conf in DATA/SETTINGS. If this type of configuration is to be performed then YaCy must be stopped before.</p>
+<h3 id="i-can-not-log-in-yacy-anymore-as-i-forgot-my-password-how-do-i-reset-my-password">I can not log in YaCy anymore as I forgot my password. How do I reset my password?</h3>
+<p>If you have lost your password, you can reset it (or choose a new one). There are two methods:</p>
+<h3 id="password-reset-while-yacy-is-running">Password reset while YaCy is running</h3>
+<p>This is the most convenient way. You don't need to shut down YaCy:</p>
+<p>Use a command line terminal and log in to the user account running YaCy then
+execute <code>&lt;yacy-app&gt;/bin/passwd.sh &lt;new-password&gt;</code></p>
+<p>This changes only the admin account password for the account named 'admin'.</p>
+<p>Password reset while YaCy is shut down:
+edit the file DATA/SETTINGS/yacy.conf:</p>
+<ul>
+<li>remove the entry serverAccountBase64MD5</li>
+<li>remove the entry adminAccount (if any)</li>
+<li>choose a new password by setting the entry serverAccount to \&lt;account>:\&lt;password>, for example serverAccount=admin:mysecretpassword</li>
+</ul>
+<p>The next time you start YaCy the account/password combination will be read, encrypted and then deleted from yacy.conf, so that it will not be available in plain text anywhere anymore.</p>
+<p>Then you will be able to log again into YaCy with the account/password you entered in the yacy.conf file, or set another password if you didn't set a combination.</p>
+<h2 id="disk-space">Disk space</h2>
+<h3 id="how-can-i-limit-the-size-of-single-files-to-be-downloaded">How can I limit the size of single files to be downloaded?</h3>
+<p>The maximum file size can be set under Advanced settings -&gt; Crawler settings. Maximum sizes can be specified for HTTP and FTP. The file size is in bytes. A converter can be found at Bit and Byte (bits and bytes) (broken link)</p>
+<h3 id="how-many-linkswords-and-how-much-disk-space-can-a-yacy-instance-manage">How many links/words and how much disk space can a YaCy instance manage?</h3>
+<p>The number of storable links/words is theoretically not limited, but it becomes actually limited following the slowdown of the indexing process with the increase of the links/words number. There are users with more than 10 million Web pages indexed in their YaCy instance. Also, the necessary space for the index of a web page depends on the size and nature of the document. With 10 million web pages indexed, an index size of 20GB is not uncommon.</p>
+<h3 id="can-i-limit-the-size-of-the-indexes-on-my-hard-drive">Can I limit the size of the indexes on my hard-drive?</h3>
+<p>For the moment not directly. Automatically limiting that size would mean having to delete stored indexes, which is not suitable.</p>
+<p>You can set two minimums of free disk space at /Performance_p.html: one for the crawls, and the other for DHT-in. The number for crawls seems to have to be equal or bigger than the number for DHT-in. Note that, with DHT-in disabled, global searching using the peer's UI is disabled. Also proxy/crawling privacy might suffer.
+You can also just disable “Index Receive” at /ConfigNetwork_p.html, so that your index is only augmented through crawling (over which you have some control).
+For a very indirect additional limit, you can change the Index Reference Size at /IndexControlRWIs_p.html.</p></div>
+        
+        
+    </div>
+
+    <br/><br/>
+    <footer class="col-md-12 text-center" style="background-color:#000000;" >
+<div class="container" style="text-align:left; font-size:13px; padding-top:30px;">
+      <div class="row">
+        <div class="col-md-3" style="padding-left:15px; padding-right:15px;">
+          <h3>Products</h3>
+          <p>YaCy is both the name of a project and the name of a software. Our main 'product' (it's free-software) is the YaCy Search Server.</p>
+        </div>
+        <div class="col-md-3" style="padding-right:15px;">
+          <h3>GDPR Compliance</h3>
+          <p>YaCy has a strong connection to privacy-aware tools. As such it does not collect personalized data. It also has no 'phoning-home' integrated. This web page does not use cookies. However, linked services may have cookies.</p>
+       </div>
+        <div class="col-md-3" style="padding-right:15px;">
+          <h3>Company</h3>
+          <p>The brand 'YaCy' is owned in a private company. While the software YaCy is a non-profit, free software we also provide consulting for YaCy and search-related business topics. To run the non-profit YaCy project we heavily depend on community support either as contribution to our software and documentation or on donations. Please donate! For a contact please see&nbsp;
+<a href="../impressum/">Impressum</a>
+
+
+</p>
+        </div>
+        <div class="col-md-3" style="padding-right:15px;">
+          <h3>Follow Us</h3>
+          <ul>
+	    <li>Twitter: <a href="https://twitter.com/yacy_search">@yacy_search</a></li>
+	    <li>Youtube: <a href="https://www.youtube.com/YaCyTutorials">YaCyTutorials</a></li>
+	    <li>GitHub: <a href="https://github.com/yacy">yacy_search_server</a></li>
+	    <li>Searchlab Forum: <a href="https://searchlab.eu/">YaCy Forum</a></li>
+	  </ul>
+        </div>
+      </div>
+</div>
+
+
+        
+        <p>
+        <!--
+	<small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+	-->
+
+        
+        
+    </footer>
+    
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

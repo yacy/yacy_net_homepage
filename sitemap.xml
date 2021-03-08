@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
+     <loc>https://yacy.net/</loc>
+     <lastmod>2021-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://yacy.net/demonstration_tutorial_screenshot/</loc>
+     <lastmod>2021-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://yacy.net/download_installation/</loc>
+     <lastmod>2021-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://yacy.net/faq/</loc>
+     <lastmod>2021-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+</urlset>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="YaCy Suchmaschine search engine spider harvester indexer p2p peer network open free download software development">
+    <meta name="copyright" content="Michael Peter Christen">
+
+    <meta name="description" content="YaCy P2P - Decentralized Search Engine">
+    <meta name="author" content="Michael Christen">
+    <link rel="canonical" href="https://yacy.net/demonstration_tutorial_screenshot/">
+    <link rel="../img/favicon.ico">
+
+    
+    <title>Demo - YaCy</title>
+    
+
+    <link href="../css/hack.min.css" rel="stylesheet">
+    <link href="../css/latolatinfonts.css" rel="stylesheet">
+    <link href="../css/bootstrap-custom.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+    <link href="../css/highlight.css" rel="stylesheet">
+    <!-- <link href="../css/latostyle.css" rel="stylesheet">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+     
+</head>
+
+<body>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/fontawesome-all.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="..">
+<!--YaCy-->
+<img src="../img/YaCyLogo2011_60.png" height="40">
+</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Demo</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../download_installation/">Download</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../faq/">FAQ</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+		    <li>
+                        <a href="https://searchlab.eu">
+                           Forum
+                        </a>
+                    </li>
+		    <!--
+                    <li >
+                        <a rel="prev" href="..">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../download_installation/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+		    -->
+                    <li>
+                        <a href="https://github.com/yacy/yacy_search_server">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#yacy-demonstration">YaCy Demonstration</a></li>
+            <li class="second-level"><a href="#screenshots">Screenshots</a></li>
+                
+                <li class="third-level"><a href="#search-results">Search Results</a></li>
+                <li class="third-level"><a href="#crawling">Crawling</a></li>
+                <li class="third-level"><a href="#data-analysis">Data Analysis</a></li>
+                <li class="third-level"><a href="#configuration">Configuration</a></li>
+                <li class="third-level"><a href="#network-activity">Network Activity</a></li>
+            <li class="second-level"><a href="#tutorial-movies">Tutorial Movies</a></li>
+                
+                <li class="third-level"><a href="#demo-yacy-installation-in-windows">Demo: YaCy Installation in Windows</a></li>
+                <li class="third-level"><a href="#demo-yacy-installation-on-a-mac">Demo: YaCy Installation on a Mac</a></li>
+                <li class="third-level"><a href="#demo-yacy-installation-in-ubuntu-and-any-other-linux-systems">Demo: YaCy Installation in Ubuntu and any other Linux Systems</a></li>
+                <li class="third-level"><a href="#demo-basic-configuration-of-yacy-and-release-updates">Demo: Basic Configuration of YaCy and Release Updates</a></li>
+                <li class="third-level"><a href="#demo-start-a-web-crawl-with-yacy">Demo: Start a Web Crawl with YaCy</a></li>
+                <li class="third-level"><a href="#demo-secret-agents-with-yacy-rss-feed-reader">Demo: Secret Agents with YaCy RSS Feed Reader</a></li>
+                <li class="third-level"><a href="#demo-location-search-with-yacy-and-opensteetmap-and-geonames">Demo: Location Search with YaCy and Opensteetmap and Geonames</a></li>
+            <li class="second-level"><a href="#live-demonstration">Live Demonstration</a></li>
+                
+                <li class="third-level"><a href="#yacy-demo-peer">YaCy Demo Peer</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="yacy-demonstration">YaCy Demonstration</h1>
+<p>We have screenshots, tutorial movies, and a live demonstration. If you want to jump to the section where we show where we took the beautiful teaser image from, jump to the <a href="#network-activity">peer-to-peer network activity dashboard</a>!</p>
+<p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/demonstration_tutorial_screenshot.md" role="button" target="_blank">Improve this doc</a>
+</p>
+
+<h2 id="screenshots">Screenshots</h2>
+<p>.. the best way to show what you get ..</p>
+<h3 id="search-results">Search Results</h3>
+<p>This is the search result page using peer-to-peer data:
+<img alt="YaCy Search Engine Result List" src="../img/screenshot_search_result.png" /></p>
+<p>Search result pages can be configured:
+<img alt="YaCy Search Engine Configuration" src="../img/screenshot_search_result_configuration.png" /></p>
+<p>We provide a wide range of options to integrate a search page into an existing environment:
+<img alt="YaCy Search Engine Integration" src="../img/screenshot_search_result_integration.png" /></p>
+<p>There are many pre-defined themes and an easy way to configure your own colour schema:
+<img alt="YaCy Search Engine Theme Configuration" src="../img/screenshot_appearance.png" /></p>
+<p>Search result ranking can be configured:
+<img alt="YaCy Search Engine Ranking Configuration" src="../img/screenshot_ranking.png" /></p>
+<h3 id="crawling">Crawling</h3>
+<p>Before search resuls can be provided, a web crawl must be done to harvest the required document corpus.</p>
+<p>There is a easy-to-use simple crawl start service which takes almost only the starting URL as input:
+<img alt="YaCy Search Engine Site Crawler/Spider" src="../img/screenshot_crawler_site.png" /></p>
+<p>A running crawl can be monitored in many ways, here is the crawler status dashboard:
+<img alt="YaCy Search Engine Crawler/Spider Monitor" src="../img/screenshot_crawler_monitor.png" /></p>
+<p>For more complex harvesting tasks, here is the Expert Crawl Start service:
+<img alt="YaCy Search Engine Expert Crawl/Spider Start" src="../img/screenshot_expert_crawl_start.png" /></p>
+<h3 id="data-analysis">Data Analysis</h3>
+<p>A running YaCy instance has many management tasks runnning and it creates a lot of data.
+To visualize that data about itself and the data it harvested from the internet, there are a lot of
+dashboards and monitoring features.</p>
+<p>The status page which informs about the current activities of your YaCy instance:
+<img alt="YaCy Search Engine Status Dashboard" src="../img/screenshot_status.png" /></p>
+<p>Crawled web pages can be reconstructed and browsed with the host browser where you see the internal link structure and all kind of details of the parsing results:
+<img alt="YaCy Search Engine Host Browser" src="../img/screenshot_host_browser.png" /></p>
+<p>While the host browser reveals the structure of documents within all of the single domains, the web strucure service shows how domains are linked to each other:
+<img alt="YaCy Search Engine Web Structure" src="../img/screenshot_web_structure.png" /></p>
+<h3 id="configuration">Configuration</h3>
+<p>YaCy can be configured in every detail using the web interface. You can use a configuration file and also edit details inside of that file, but a web front-end is much more convenient.</p>
+<p>Here you see the use case configuration. This is actually the first service which YaCy shows to you because the first thing you have to do is to choose which use case you are prefering: Peer-to-Peer operation, your own Search Portal, or Intranet Indexing:
+<img alt="YaCy Search Engine Basic Configuration for Use Case: Peer-to-Peer, Portal, Intranet" src="../img/screenshot_use_case_configuration.png" /></p>
+<p>The main purpose of YaCy is to aquire a lot of data from the web and make them searchable. Consequently, this uses a lot of disk space. We make the resources which YaCy takes configurable with the following service. YaCy loves to use more RAM if available, give it more RAM and it performes better! 
+<img alt="YaCy Search Engine Performance Setting" src="../img/screenshot_performance_settings.png" /></p>
+<h3 id="network-activity">Network Activity</h3>
+<p>YaCy makes a lot of network connections and it is transparent about doing that.</p>
+<p>In case you are running YaCy in peer-to-peer operation, you can watch the network graphic here:
+<img alt="YaCy Peer-to-Peer Network" src="../img/screenshot_peer_network.png" /></p>
+<p>The peer-to-peer network can be investigated in detail in a table:
+<img alt="YaCy Peer List Table" src="../img/screenshot_peer_list.png" /></p>
+<p>Every connection that YaCy does, peer-to-peer or crawling, is monitored as well:
+<img alt="YaCy Network Monitor" src="../img/screenshot_access_grid.png" /></p>
+<h2 id="tutorial-movies">Tutorial Movies</h2>
+<p>We have a youtube channel! Yes, thats a google service - therefore all videos embedded here are mouseover-activated, that means as long as you do not touch them, there is no referrer appearing at a G server.</p>
+<p>These videos are short and most have nice music from <a href="https://shiryu.bandcamp.com/">Shiryu Music</a> in the background. Shiryu is just great and inspiring! </p>
+<p><a class="btn btn-danger btn-lg" href="https://www.youtube.com/yacy_tutorials" role="button">Subscribe to the YaCy Tutorial Youtube channel</a></p>
+
+<script>
+    embed01 = "<iframe width='720' height='405' src='//www.youtube.com/embed/CFwebavBU0s?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
+    embed02 = "<iframe width='720' height='405' src='//www.youtube.com/embed/XDoVNzOMoIo?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
+    embed03 = "<iframe width='720' height='405' src='//www.youtube.com/embed/iqJuf_EA1UE?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
+    embed04 = "<iframe width='720' height='405' src='//www.youtube.com/embed/t5y5MmnmraA?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
+    embed05 = "<iframe width='720' height='405' src='//www.youtube.com/embed/UUAylWYqzac?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
+    embed06 = "<iframe width='720' height='405' src='//www.youtube.com/embed/hGwjllUdjU0?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
+    embed07 = "<iframe width='720' height='405' src='//www.youtube.com/embed/o3-v2oaXSa0?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
+</script>
+
+<h3 id="demo-yacy-installation-in-windows">Demo: YaCy Installation in Windows</h3>
+<p>Please install Java 8 first, the automatic Java installation within YaCy does not work any more.</p>
+<div id="video01">
+<img src="../img/tutorial_01_Installation_in_Windows.png" width="720" height="405"  onmouseover="document.getElementById('video01').innerHTML = embed01;">
+</div>
+
+<h3 id="demo-yacy-installation-on-a-mac">Demo: YaCy Installation on a Mac</h3>
+<div id="video02">
+<img src="../img/tutorial_02_Installation_on_a_Mac.png" width="720" height="405"  onmouseover="document.getElementById('video02').innerHTML = embed02;">
+</div>
+
+<h3 id="demo-yacy-installation-in-ubuntu-and-any-other-linux-systems">Demo: YaCy Installation in Ubuntu and any other Linux Systems</h3>
+<p>Instead of Java-7 now please install Java-8</p>
+<div id="video03">
+<img src="../img/tutorial_03_Installation_in_Ubuntu_and_any_other_Linux.png" width="720" height="405"  onmouseover="document.getElementById('video03').innerHTML = embed03;">
+</div>
+
+<h3 id="demo-basic-configuration-of-yacy-and-release-updates">Demo: Basic Configuration of YaCy and Release Updates</h3>
+<div id="video04">
+<img src="../img/tutorial_04_Basic_Configuration_Release_Update.png" width="720" height="405"  onmouseover="document.getElementById('video04').innerHTML = embed04;">
+</div>
+
+<h3 id="demo-start-a-web-crawl-with-yacy">Demo: Start a Web Crawl with YaCy</h3>
+<div id="video05">
+<img src="../img/tutorial_05_Easy_Web_Crawl.png" width="720" height="405"  onmouseover="document.getElementById('video05').innerHTML = embed05;">
+</div>
+
+<h3 id="demo-secret-agents-with-yacy-rss-feed-reader">Demo: Secret Agents with YaCy RSS Feed Reader</h3>
+<div id="video06">
+<img src="../img/tutorial_06_Secret_Agents_with_YaCy_RSS_Feed_Reader.png" width="720" height="405"  onmouseover="document.getElementById('video06').innerHTML = embed06;">
+</div>
+
+<h3 id="demo-location-search-with-yacy-and-opensteetmap-and-geonames">Demo: Location Search with YaCy and Opensteetmap and Geonames</h3>
+<div id="video07">
+<img src="../img/tutorial_07_Search_Locations_on_Map_with_Openstreetmap_and_Geonames.png" width="720" height="405"  onmouseover="document.getElementById('video07').innerHTML = embed07;">
+</div>
+
+<h2 id="live-demonstration">Live Demonstration</h2>
+<p>Well, YaCy is all about running your own search engine, not using a central one. Therefore we highly recommend you download and try out your own YaCy instance instead of trying this demonstration. Therefore, please consider this demonstration not as production-grade search portal, just as help to find out what YaCy is and how it looks.</p>
+<p>We provide here a link to the administration page of the test instance where you can also find your way to the search page. Administration functions are disabled but you are able to browse through the services without a password:</p>
+<h3 id="yacy-demo-peer">YaCy Demo Peer</h3>
+<p><a class="btn btn-default btn-lg" href="https://yacy.searchlab.eu/Status.html" role="button">Click here to operate a YaCy Demo Peer</a></p></div>
+        
+        
+    </div>
+
+    <br/><br/>
+    <footer class="col-md-12 text-center" style="background-color:#000000;" >
+<div class="container" style="text-align:left; font-size:13px; padding-top:30px;">
+      <div class="row">
+        <div class="col-md-3" style="padding-left:15px; padding-right:15px;">
+          <h3>Products</h3>
+          <p>YaCy is both the name of a project and the name of a software. Our main 'product' (it's free-software) is the YaCy Search Server.</p>
+        </div>
+        <div class="col-md-3" style="padding-right:15px;">
+          <h3>GDPR Compliance</h3>
+          <p>YaCy has a strong connection to privacy-aware tools. As such it does not collect personalized data. It also has no 'phoning-home' integrated. This web page does not use cookies. However, linked services may have cookies.</p>
+       </div>
+        <div class="col-md-3" style="padding-right:15px;">
+          <h3>Company</h3>
+          <p>The brand 'YaCy' is owned in a private company. While the software YaCy is a non-profit, free software we also provide consulting for YaCy and search-related business topics. To run the non-profit YaCy project we heavily depend on community support either as contribution to our software and documentation or on donations. Please donate! For a contact please see&nbsp;
+<a href="../impressum/">Impressum</a>
+
+
+</p>
+        </div>
+        <div class="col-md-3" style="padding-right:15px;">
+          <h3>Follow Us</h3>
+          <ul>
+	    <li>Twitter: <a href="https://twitter.com/yacy_search">@yacy_search</a></li>
+	    <li>Youtube: <a href="https://www.youtube.com/YaCyTutorials">YaCyTutorials</a></li>
+	    <li>GitHub: <a href="https://github.com/yacy">yacy_search_server</a></li>
+	    <li>Searchlab Forum: <a href="https://searchlab.eu/">YaCy Forum</a></li>
+	  </ul>
+        </div>
+      </div>
+</div>
+
+
+        
+        <p>
+        <!--
+	<small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+	-->
+
+        
+        
+    </footer>
+    
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
