@@ -62,12 +62,12 @@ You must install Java 8 on your computer if you don't have it already, and start
 YaCy can run under a normal user account, no root rights are needed if Java 8 is already installed.
 
 * Install JDK 8 (Oracle or preferably OpenJDK). You get Java for Linux from [https://adoptopenjdk.net/](https://adoptopenjdk.net/) but you should follow the installer package system that comes with your linux distribution.
-* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.tar.gz" role="button">Download generic YaCy</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.tar.gz](https://download.yacy.net/yacy_v1.924_20201214_10042.tar.gz), i.e. by
+* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz" role="button">Download generic YaCy</a> from [https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz](https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz), i.e. by
 
 * Unpack the tarball.
 * Run `startYACY.sh` inside your decompressed folder.
 ```
-wget https://download.yacy.net/yacy_v1.924_20201214_10042.tar.gz
+wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
 ```
 
 This can be done by running in a terminal:
@@ -76,8 +76,8 @@ This can be done by running in a terminal:
 sudo apt-get update
 sudo dpkg --configure -a
 sudo apt-get install -y openjdk-8-jre-headless
-wget https://download.yacy.net/yacy_v1.924_20201214_10042.tar.gz
-tar xfz yacy_v1.924_20201214_10042.tar.gz
+wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
+tar xfz yacy_v1.924_20210209_10069.tar.gz
 cd yacy
 ./startYACY.sh
 ```
