@@ -107,7 +107,7 @@ We provide amd64, arm64v8 and arm32v7 versions with the following tags:
 
 i.e. to install YaCy on amd64, run:
 ```
-docker run -d --name yacy -p 8090:8090 -p 8443:8443 -v yacy_data:/opt/yacy_search_server/DATA --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
+docker run -d --name yacy -p 8090:8090 -p 8443:8443 -v yacy_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
 ```
 then open http://localhost:8090
 
