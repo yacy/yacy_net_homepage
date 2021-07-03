@@ -105,13 +105,34 @@ We provide amd64, arm64v8 and arm32v7 versions with the following tags:
 * arm64v8: `yacy/yacy_search_server:aarch64-latest` 
 * arm32v7: `yacy/yacy_search_server:armv7-latest`
 
-i.e. to install YaCy on amd64, run:
+i.e. to install YaCy in intel-based environmnts, run:
 ```
-docker run -d --name yacy -p 8090:8090 -p 8443:8443 -v yacy_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
+docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 -v yacy_search_server_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
 ```
 then open http://localhost:8090
 
 The default login for YaCy on docker is `admin`:`yacy` 
+
+To upgrade YaCy, follow the default upgrade pattern for docker images, i.e.
+```
+docker stop yacy_search_server
+docker rm yacy_search_server
+docker pull yacy/yacy_search_server:latest
+```
+.. and restart the container with the same command that you used initially to run the container, i.e. (like above)
+```
+docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 -v yacy_search_server_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
+```
+This will mount the data volume from the upgraded yacy instance.
+
+#### Configuration with Environment Variables ####
+All of the environment variables (see https://github.com/yacy/yacy_search_server/blob/master/defaults/yacy.init ) can be overwritten with the `docker run` command. The environment variables are named like those in the `yacy.init` files, with all `.` (dot) replaced with `_` (underscore), all uppercase and prefixed with `YACY_`. 
+
+For example: the default peer name can be set with `network.unit.agent` in `yacy.init`. To pre-set this value during `docker run` time, set the environmnt variable `YACY_NETWORK_UNIT_AGENT`. The correspondig run command would be:
+```
+docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 -e YACY_NETWORK_UNIT_AGENT=Choomba -v yacy_search_server_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
+```
+This can also be used to re-start a previously started image to overwrite the already stored configuration values.
 
 ### Kubernetes ###
 
