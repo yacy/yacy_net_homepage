@@ -24,7 +24,7 @@ or
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin:0px; padding:0px;">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="on0" value="Your contribution is happily received as a tax-deductable, legal payment.">
-<img src="../img/pp-logo-100px.png">&nbsp;
+<img src="https://yacy.net/img/pp-logo-100px.png">&nbsp;
 <input type="radio" name="os0" value="beneficial">&nbsp;5 &euro;&nbsp;
 <input type="radio" name="os0" value="generous" checked>&nbsp;25 &euro;&nbsp;
 <input type="radio" name="os0" value="gracious">&nbsp;50 &euro;&nbsp;
@@ -36,7 +36,6 @@ or
         </div>
       </div>
 </div>
-
 
 You may also download and try out YaCy first and come back later to donate. Please help!
 
@@ -63,15 +62,22 @@ YaCy can run under a normal user account, no root rights are needed if Java 8 is
 
 * Install JDK 8 (Oracle or preferably OpenJDK). You get Java for Linux from [https://adoptopenjdk.net/](https://adoptopenjdk.net/) but you should follow the installer package system that comes with your linux distribution.
 * <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz" role="button">Download generic YaCy</a> from [https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz](https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz), i.e. by
-
-* Unpack the tarball.
-* Run `startYACY.sh` inside your decompressed folder.
 ```
 wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
 ```
 
-This can be done by running in a terminal:
+* Unpack the tarball.
+```
+tar xfz yacy_v1.924_20210209_10069.tar.gz
+```
 
+* Run `startYACY.sh` inside your decompressed folder.
+```
+cd yacy
+./startYACY.sh
+```
+
+Installing from start to finish would look something like this, depending on your distro.
 ```
 sudo apt-get update
 sudo dpkg --configure -a
@@ -93,12 +99,12 @@ cd yacy
 * <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.dmg" role="button">Download YaCy for MacOS</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.dmg](https://download.yacy.net/yacy_v1.924_20201214_10042.dmg)
 * Double-click the downloaded `.dmg`-file and copy the YaCy app out of the mounted drive into your "Application" folder.
 * To run YaCy, just double-click the YaCy app icon in your "Application" folder.
-* YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
+* YaCy is now running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
 
 
 ### Docker ###
 
-The Official YaCy Images are hosted on Dockerub at https://hub.docker.com/r/yacy/yacy_search_server
+The Official YaCy Images are hosted on Dockerhub at https://hub.docker.com/r/yacy/yacy_search_server
 
 We provide amd64, arm64v8 and arm32v7 versions with the following tags:
 * amd64: `yacy/yacy_search_server:latest`
@@ -109,9 +115,9 @@ i.e. to install YaCy in intel-based environmnts, run:
 ```
 docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 -v yacy_search_server_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
 ```
-then open http://localhost:8090
+then open http://localhost:8090 in your web-browser.
 
-The default login for YaCy on docker is `admin`:`yacy` 
+The default login for YaCy on Docker is `admin`:`yacy` 
 
 To upgrade YaCy, follow the default upgrade pattern for docker images, i.e.
 ```
@@ -137,7 +143,7 @@ This can also be used to re-start a previously started image to overwrite the al
 ### Kubernetes ###
 
 ```
-# optional: for a quick and easy installation of kubernetes, run minikube
+# optional: for a quick and easy installation of Kubernetes, run minikube
 minikube start
 minikube dashboard
 
@@ -159,14 +165,13 @@ minikube service list
 minikube service yacy
 minikube service yacy -n searchlab # in case you are running in namespace 'searchlab'
 
-# optional: shut down the yacy deployment
+# optional: shut down the YaCy deployment
 kubectl delete service yacy
 kubectl delete deployment yacy
 
 # optional: switch back to default namespace
 config set-context --current --namespace=default
 ```
-
 
 ### Any OS with Java 8
 Automatic development builds can be obtained from
@@ -176,8 +181,8 @@ Automatic development builds can be obtained from
 ### Get the Source Code
 The source code is inside the generic tarball. It is recommended you clone the Git repository at
 [https://github.com/yacy/yacy_search_server](https://github.com/yacy/yacy_search_server).
-### Compile YaCy yourself
 
+### Compile YaCy yourself
 You can download and build your own YaCy with these simple steps. You need:
 
 * jdk-8 installed (Oracle Java 8 or OpenJDK 8)
@@ -190,155 +195,10 @@ git clone https://github.com/yacy/yacy_search_server.git
 cd yacy_search_server
 ant clean all dist
 ```
+
 The compiled tarball will then be in the `RELEASE` folder.
 
 To start YaCy from your compiled code, simply run:
 ```
 ./startYACY.sh
 ```
-
-<!--
-### Debian Package
-Our packages are released at [http://debian.yacy.net/](http://debian.yacy.net/).
-Please see the instructions below for the installation process.
--->
-<!--
-### Debian Packages
-
-Install YaCy on Debian-based GNU/Linux operating systems using our repository:
-
-```
-http://debian.yacy.net
-```
-
-Become root (i.e. with `sudo su -`) and create a Debian source list file for YaCy sources:
-
-```
-echo 'deb http://debian.yacy.net ./' > /etc/apt/sources.list.d/yacy.list 
-```
-
-Install the developer key with one of the two next methods
-
-```
-wget http://debian.yacy.net/yacy_orbiter_key.asc -O- | apt-key add -
-apt-key advanced --keyserver pgp.net.nz --recv-keys 03D886E7
-```
-
-And finally install YaCy itself. 
-
-```
-apt-get update
-apt-get install openjdk-8-jre-headless # java 8 is required, only a headless version is needed
-apt-get install yacy
-```
-
-YaCy is now running on port 8090 on your machine, and you can access it with [http://localhost:8090](http://localhost:8090).
-
-
-#### Important File Locations
-
-After the installation, the YaCy application path is:
-
-```
-/usr/share/yacy
-```
-
-The DATA-path is:
-
-```
-/var/lib/yacy
-```
-
-The configuration files should be here:
-
-```
-/etc/yacy/
-```
-
-`/etc/yacy/yacy.conf` is created using the `/usr/share/yacy/defaults/yacy.init` file on the first run.
-
-The log files should be here:
-
-```
-/var/log/yacy/
-```
-
-#### Managing YaCy
-Having installed YaCy using the Debian repository, YaCy is started automatically following a OS startup, and stopped before shutdown. You can also start and stop YaCy as root from the command line with:
-
-```
-/etc/init.d/yacy stop
-/etc/init.d/yacy start
-/etc/init.d/yacy restart
-```
-
-You can use systemctl as root to turn on or off automatic YaCy startup upon booting.
-
-Automatic startup :
-
-```
-systemctl enable yacy
-```
-
-Turn off automatic startup:
-
-```
-systemctl disable yacy
-```
-
-The YaCy web server runs on port 8090 by default. The administration landing page is at `http://localhost:8090/`
-but you can also assign any other port to the interface using the administration pages in YaCy. Port 80 is possible, but it is better to facilitate access to this port using [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding).
-
-#### Changing password
-If not setting a username and password during installation, the username will be "admin" and the password will be randomly generated. Your running YaCy node will not be as useful before changing password-protected settings. Access the password-protected parts by changing the password manually in a terminal. You can do this by going to /usr/share/yacy/bin and running:
-
-```
-./passwd.sh <new password>
-```
-
-(Note: your new password will appear in plain text in the terminal).
-
-```
-cd /usr/share/yacy/bin
-./passwd.sh <new password>
-```
-
-#### Automatic Updates
-When configured this way, the YaCy-internal auto-updater does not work. An automatic update must be done with OS tools. i.e. with a crontab command. An example for that is the following line, which you must write into `/etc/crontab`
-
-```
-0 6 * * * root apt-get update && apt-get -y --force-yes install yacy
-```
-
-In Ubuntu, the above line is only valid for the system crontab file (located at /etc/crontab) - you can edit this file on newer Ubuntu OS directly without using the crontab command. Below are comments from the file in Ubuntu 12.04:
-
-```
-# /etc/crontab: system-wide crontab
-# Unlike any other crontab, you don't have to run the `crontab`
-# command to install the new version when you edit this file
-# and files in /etc/cron.d. These files also have username fields,
-# that none of the other crontabs do.
-```
-
-If you want to use the root user crontab in Ubuntu instead, an example would be:
-
-```
-username@hostname:~$ sudo crontab -e 
-no crontab for root - using an empty one
-
-Select an editor. To change later, run 'select-editor'.
- 1. /bin/ed
- 2. /bin/nano        ← (easiest)
- 3. /usr/bin/vim.basic
-
-Choose 1-3 [2]: <enter>
-```
-
-Then add the following at the end of the file:
-
-```
-0 6 * * * /usr/bin/apt-get update && /usr/bin/apt-get -y --force-yes install yacy
-```
-
-Please note, there is no username on the line above, and absolute (full) paths are used here to prevent binary location problems!
--->
