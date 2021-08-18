@@ -140,6 +140,14 @@ docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 -e YACY_NETWOR
 ```
 This can also be used to re-start a previously started image to overwrite the already stored configuration values.
 
+#### Backup of DATA folder ####
+All data from YaCy is written into the data folder which is stored in the docker volume `yacy_search_server_data`. To back-up that data, just run
+```
+docker run --rm -v yacy_search_server_data:/opt/yacy_search_server/DATA -v /tmp:/tmp openjdk:8-stretch bash -c "cd /opt/yacy_search_server && tar -cz -f /tmp/DATA.tar.gz DATA"
+```
+Then the back-up is located in `/tmp/DATA.tar.gz`
+
+
 ### Kubernetes ###
 
 ```
