@@ -104,9 +104,9 @@ cd yacy
 
 ### Docker ###
 
-Running YaCy in docker is easy. If you don't hava docker installed, get it from https://docs.docker.com/get-docker/ (for Mac, Windows and Linux) or read the instructions from https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/ to install docker on Raspberry Pi or any other ARM-based devices.
+Running YaCy in docker is easy. If you don't hava docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for Mac, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install docker on Raspberry Pi or any other ARM-based devices.
 
-The Official YaCy Images are hosted on Dockerhub at https://hub.docker.com/r/yacy/yacy_search_server
+The Official YaCy Images are hosted on Dockerhub at [https://hub.docker.com/r/yacy/yacy_search_server](https://hub.docker.com/r/yacy/yacy_search_server)
 
 We provide amd64, arm64v8 and arm32v7 versions with the following tags:
 
