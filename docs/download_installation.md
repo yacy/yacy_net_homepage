@@ -147,7 +147,7 @@ This can also be used to re-start a previously started image to overwrite the al
 All data from YaCy is written into the data folder which is stored in the docker volume `yacy_search_server_data`. To back-up that DATA folder to `/tmp/DATA.tar.gz`, just run
 ```
 docker stop yacy_search_server
-docker run --rm -v yacy_search_server_data:/opt/yacy_search_server/DATA -v /tmp:/tmp openjdk:8-stretch bash -c "cd /opt/yacy_search_server && tar -cz -f /tmp/DATA.tar.gz DATA"
+docker run --rm -v yacy_search_server_data:/opt/yacy_search_server/DATA -v /tmp:/tmp openjdk:8-stretch bash -c "cd /opt/yacy_search_server && tar -cf - DATA | xz -3v -T0 > /tmp/DATA.tar.xz"
 docker start yacy_search_server
 ```
 
