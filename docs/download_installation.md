@@ -14,7 +14,7 @@ YaCy is libre software - licensed GPL-2+. Downloads are provided free, with the 
       <div class="row">
         <div class="col-md-4" style="background-color:#4E5D6C; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h3>Become a YaCy Patron</h3>
-with <a href="https://www.patreon.com/0rb1t3r" target="_blank"><img src="https://yacy.net/images/become_a_patron_button.png" width="120"></a><br/>
+with <a href="https://www.patreon.com/bePatron?u=185903" target="_blank"><img src="https://yacy.net/images/become_a_patron_button.png" width="120"></a><br/>
 or
 <a href="https://github.com/users/Orbiter/sponsorship" target="_blank"><img src="https://yacy.net/images/logo-mona-100.png" width="32" height="32"></a>
 <a href="https://github.com/users/Orbiter/sponsorship" target="_blank">GitHub Sponsors</a></br>
