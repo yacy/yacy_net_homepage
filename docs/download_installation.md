@@ -8,6 +8,7 @@ YaCy is available as packages for Linux, Windows, Macintosh and also as Docker I
 
 ## Please Support YaCy
 
+
 YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Please consider to become a permanent supporter of YaCy to ensure that YaCy can actively be developed! 
 
 ### Become a YaCy Patron
@@ -17,6 +18,7 @@ YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Pleas
 <br><br><br><br><br>
 
 ### One-Time Donation
+
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin:0px; padding:0px;">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="on0" value="Your contribution is happily received as a tax-deductable, legal payment.">
