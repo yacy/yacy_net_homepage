@@ -8,19 +8,15 @@ YaCy is available as packages for Linux, Windows, Macintosh and also as Docker I
 
 ## Please Support YaCy
 
-YaCy is libre software - licensed GPL-2+. Downloads are provided free, with the option to donate:
+YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Please consider to become a permanent supporter of YaCy to ensure that YaCy can actively be developed! 
 
-<div class="container">
-      <div class="row">
-        <div class="col-md-4" style="background-color:#4E5D6C; padding-left:15px; padding-right:15px; position:relative; left:15px;">
-          <h3>Become a YaCy Patron</h3>
-with <a href="https://www.patreon.com/0rb1t3r" target="_blank"><img src="https://yacy.net/images/become_a_patron_button.png" width="120"></a><br/>
-or
-<a href="https://github.com/users/Orbiter/sponsorship" target="_blank"><img src="https://yacy.net/images/logo-mona-100.png" width="32" height="32"></a>
-<a href="https://github.com/users/Orbiter/sponsorship" target="_blank">GitHub Sponsors</a></br>
-        </div>
-        <div class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
-          <h3>One-Time Donation</h3>
+### Become a YaCy Patron
+
+<a href="https://www.patreon.com/bePatron?u=185903"><img src="../../img/sponsor_patreon.png" height="128" align="left" style="padding-left:8%;padding-right:20px"></a>
+<a href="https://github.com/users/Orbiter/sponsorship"><img src="../../img/sponsor_github.png" height="128" align="left" style="padding-left:8%"></a>
+<br><br><br><br><br>
+
+### One-Time Donation
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin:0px; padding:0px;">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="on0" value="Your contribution is happily received as a tax-deductable, legal payment.">
@@ -33,11 +29,7 @@ or
 ">
 <input class="btn btn-success btn-sm" type="submit" name="submit" value="Donate">
 </form><br/>
-        </div>
-      </div>
-</div>
 
-You may also download and try out YaCy first and come back later to donate. Please help!
 
 ## Installation
 
