@@ -32,10 +32,30 @@ YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Pleas
 <input class="btn btn-success btn-sm" type="submit" name="submit" value="Donate">
 </form><br/>
 
-
 ## Installation
 
 Installation is very easy on any system. If it looks complex here it's just because we give directions in great detail.
+
+### Compile YaCy yourself
+You can download and build your own YaCy with these simple steps. This is probably the best and easiest ways for everyone who knwos how to use a command line interface. You need:
+
+* jdk-8 installed (Oracle Java 8 or OpenJDK 8)
+* ant
+* git
+
+Then run:
+```
+git clone https://github.com/yacy/yacy_search_server.git
+cd yacy_search_server
+ant clean all dist
+```
+
+The compiled tarball will then be in the `RELEASE` folder. 
+
+To start YaCy from your compiled code, simply run:
+```
+./startYACY.sh
+```
 
 ### YaCy for Windows
 
@@ -193,24 +213,3 @@ Automatic development builds can be obtained from
 ### Get the Source Code
 The source code is inside the generic tarball. It is recommended you clone the Git repository at
 [https://github.com/yacy/yacy_search_server](https://github.com/yacy/yacy_search_server).
-
-### Compile YaCy yourself
-You can download and build your own YaCy with these simple steps. You need:
-
-* jdk-8 installed (Oracle Java 8 or OpenJDK 8)
-* ant
-* git
-
-Then run:
-```
-git clone https://github.com/yacy/yacy_search_server.git
-cd yacy_search_server
-ant clean all dist
-```
-
-The compiled tarball will then be in the `RELEASE` folder.
-
-To start YaCy from your compiled code, simply run:
-```
-./startYACY.sh
-```
