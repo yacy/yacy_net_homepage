@@ -28,12 +28,12 @@ There are these three use cases you can choose from:
         <div id="mode-portal" class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>Your Search Portal</h2>
 	  <img src="img/usecase_webportal.png">
-          <p>Your YaCy installation is independent from other peers. Define your own web index and starting your own web crawl.</p>
+          <p>Your YaCy installation is independent from other peers. Define your own web index and start your own web crawl.</p>
        </div>
         <div id="mode-intranet" class="col-md-4" style="background-color:#4E5D6C; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>Intranet Search</h2>
 	  <img src="img/usecase_intranet.png">
-          <p>Create a search portal for your intranet or web pages or your (shared) file system.</p><br/>
+          <p>Create a search portal for your intranet, web pages or your (shared) file system.</p><br/>
         </div>
       </div>
 </div>
