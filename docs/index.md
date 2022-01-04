@@ -23,7 +23,7 @@ There are these three use cases you can choose from:
         <div id="mode-p2p" class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>P2P Mode</h2>
 	  <img src="img/usecase_freeworld.png">
-          <p>Web Search by the people, for the people: decentralized, all users are equal, no central, no search request storage, shared index.</p>
+          <p>Web Search by the people, for the people: completely decentralized, shared indexing, all users are equal, no search request storage.</p>
         </div>
         <div id="mode-portal" class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>Your Search Portal</h2>
@@ -61,7 +61,7 @@ window.onresize = setSpace;
 </script>
 
 ## Decentralization
-Imagine if, rather than relying on the proprietary software of a large professional search engine operator, your search engine was run by many private computers which aren't under the control of any one company or individual. Well, that's what YaCy does! 
+Imagine if, rather than relying on the proprietary software of a large professional search engine operator, your search engine was run across many private devices, not under the control of any one company or individual. Well, that's what YaCy does!
 
 Here is a live image of the YaCy network:
 
