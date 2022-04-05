@@ -37,7 +37,7 @@ YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Pleas
 Installation is very easy on any system. If it looks complex here it's just because we give directions in great detail.
 
 ### Compile YaCy yourself
-You can download and build your own YaCy with these simple steps. This is probably the best and easiest ways for everyone who knwos how to use a command line interface. You need:
+You can download and build your own YaCy with these simple steps. This is probably the best and easiest ways for everyone who knows how to use a command line interface. You need:
 
 * jdk-8 installed (Oracle Java 8 or OpenJDK 8)
 * ant
@@ -118,7 +118,7 @@ cd yacy
 
 ### Docker ###
 
-Running YaCy in docker is easy. If you don't hava docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for Mac, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install docker on Raspberry Pi or any other ARM-based devices.
+Running YaCy in docker is easy. If you don't have docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for Mac, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install docker on Raspberry Pi or any other ARM-based devices.
 
 The Official YaCy Images are hosted on Dockerhub at [https://hub.docker.com/r/yacy/yacy_search_server](https://hub.docker.com/r/yacy/yacy_search_server)
 
@@ -128,7 +128,7 @@ We provide amd64, arm64v8 and arm32v7 versions with the following tags:
 * arm64v8: `yacy/yacy_search_server:aarch64-latest` 
 * arm32v7: `yacy/yacy_search_server:armv7-latest`
 
-i.e. to install YaCy in intel-based environmnts, run:
+i.e. to install YaCy in intel-based environments, run:
 ```
 docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 -v yacy_search_server_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
 ```
@@ -151,7 +151,7 @@ This will mount the data volume from the upgraded yacy instance.
 #### Configuration with Environment Variables ####
 All of the environment variables (see https://github.com/yacy/yacy_search_server/blob/master/defaults/yacy.init ) can be overwritten with the `docker run` command. The environment variables are named like those in the `yacy.init` files, with all `.` (dot) replaced with `_` (underscore), all uppercase and prefixed with `YACY_`. 
 
-For example: the default peer name can be set with `network.unit.agent` in `yacy.init`. To pre-set this value during `docker run` time, set the environmnt variable `YACY_NETWORK_UNIT_AGENT`. The correspondig run command would be:
+For example: the default peer name can be set with `network.unit.agent` in `yacy.init`. To pre-set this value during `docker run` time, set the environment variable `YACY_NETWORK_UNIT_AGENT`. The corresponding run command would be:
 ```
 docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 -e YACY_NETWORK_UNIT_AGENT=Choomba -v yacy_search_server_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
 ```
