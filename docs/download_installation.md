@@ -1,7 +1,7 @@
 # Download and Installation of YaCy
 
 
-YaCy is available as packages for Linux, Windows, Macintosh and also as Docker Image. You can also install YaCy on any other operation system either by compiling it yourself or using a tarball. YaCy needs Java 8, OpenJDK 8 is recommended.
+YaCy is available as packages for Linux, Windows, Macintosh and also as Docker Image. You can also install YaCy on any other operation system either by compiling it yourself or using a tarball. YaCy needs Java 8 (OpenJDK 8 is recommended).
 
 <p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/download_installation.md" role="button" target="_blank">Improve this doc</a>
 </p>
@@ -9,7 +9,7 @@ YaCy is available as packages for Linux, Windows, Macintosh and also as Docker I
 ## Please Support YaCy
 
 
-YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Please consider to become a permanent supporter of YaCy to ensure that YaCy can actively be developed! 
+YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Please consider becoming a permanent supporter to ensure that YaCy can actively be developed! 
 
 ### Become a YaCy Patron
 
@@ -37,7 +37,7 @@ YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Pleas
 Installation is very easy on any system. If it looks complex here it's just because we give directions in great detail.
 
 ### Compile YaCy yourself
-You can download and build your own YaCy with these simple steps. This is probably the best and easiest ways for everyone who knwos how to use a command line interface. You need:
+You can download and build your own YaCy with these simple steps. This is probably the best and easiest way for anyone who knows how to use a command line interface. You need:
 
 * jdk-8 installed (Oracle Java 8 or OpenJDK 8)
 * ant
@@ -62,7 +62,7 @@ To start YaCy from your compiled code, simply run:
 * *IMPORTANT* Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/) *first*.
 * <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.exe" role="button">Download YaCy for Windows</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.exe](https://download.yacy.net/yacy_v1.924_20201214_10042.exe)
 * Install YaCy by double-clicking the downloaded installer.
-* When the message "Windows protected your PC (in Windows 10) appears, klick "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", klick "yes".
+* When the message "Windows protected your PC (in Windows 10) appears, click "More info", then "Run anyway". When asked "Do you want to allow this app from an unknown publisher to make changes to your device", click "yes".
 * Within the YaCy Installer, klick "Next", "I Agree", "Next", "Install", "Finish".
 * To run YaCy, double-click the YaCy app icon (which may be on your desktop).
 * Whenever the following dialog appears click "allow private networks" and "allow access"
@@ -70,7 +70,7 @@ To start YaCy from your compiled code, simply run:
 * YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
 
 
-### YaCy for Linux and other OS
+### YaCy for Linux
 You must install Java 8 on your computer if you don't have it already, and start the YaCy start shell script.
 YaCy can run under a normal user account, no root rights are needed if Java 8 is already installed.
 
@@ -102,7 +102,7 @@ cd yacy
 ./startYACY.sh
 ```
 
-* YaCy is now running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
+* YaCy is now running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web browser.
 * No password is required when accessing this YaCy instance from localhost.
 * Headless operation can be achieved by setting a password on the host console with `bin/passwd.sh <password>`.
 
@@ -113,12 +113,12 @@ cd yacy
 * <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.dmg" role="button">Download YaCy for MacOS</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.dmg](https://download.yacy.net/yacy_v1.924_20201214_10042.dmg)
 * Double-click the downloaded `.dmg`-file and copy the YaCy app out of the mounted drive into your "Application" folder.
 * To run YaCy, just double-click the YaCy app icon in your "Application" folder.
-* YaCy is now running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
+* YaCy is now running on port 8090. Open [http://localhost:8090](http://localhost:8090) in your web browser.
 
 
 ### Docker ###
 
-Running YaCy in docker is easy. If you don't hava docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for Mac, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install docker on Raspberry Pi or any other ARM-based devices.
+Running YaCy in Docker is easy. If you don't have Docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for Mac, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install docker on Raspberry Pi or other ARM-based devices.
 
 The Official YaCy Images are hosted on Dockerhub at [https://hub.docker.com/r/yacy/yacy_search_server](https://hub.docker.com/r/yacy/yacy_search_server)
 
@@ -155,7 +155,7 @@ For example: the default peer name can be set with `network.unit.agent` in `yacy
 ```
 docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 -e YACY_NETWORK_UNIT_AGENT=Choomba -v yacy_search_server_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
 ```
-This can also be used to re-start a previously started image to overwrite the already stored configuration values.
+This can also be used to restart a previously started image to overwrite the already stored configuration values.
 
 #### Backup and restore of DATA folder ####
 All data from YaCy is written into the data folder which is stored in the docker volume `yacy_search_server_data`. To back-up that DATA folder to `/tmp/DATA.tar.gz`, just run
@@ -175,7 +175,7 @@ docker start yacy_search_server
 ### Kubernetes ###
 
 ```
-# optional: for a quick and easy installation of Kubernetes, run minikube
+# optional: for quick and easy installation of Kubernetes, run minikube
 minikube start
 minikube dashboard
 
