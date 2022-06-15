@@ -13,8 +13,8 @@ YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Pleas
 
 ### Become a YaCy Patron
 
-<a href="https://www.patreon.com/bePatron?u=185903"><img src="../../img/sponsor_patreon.png" height="128" align="left" style="padding-left:8%;padding-right:20px"></a>
-<a href="https://github.com/users/Orbiter/sponsorship"><img src="../../img/sponsor_github.png" height="128" align="left" style="padding-left:8%"></a>
+<a href="https://www.patreon.com/bePatron?u=185903"><img src="../../img/sponsor_patreon.png" alt="Become a Patron" height="128" align="left" style="padding-left:8%;padding-right:20px"></a>
+<a href="https://github.com/users/Orbiter/sponsorship"><img src="../../img/sponsor_github.png" alt="Become a GitHub Sponsor" height="128" align="left" style="padding-left:8%"></a>
 <br><br><br><br><br>
 
 ### One-Time Donation
@@ -22,7 +22,7 @@ YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Pleas
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin:0px; padding:0px;">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="on0" value="Your contribution is happily received as a tax-deductable, legal payment.">
-<img src="https://yacy.net/img/pp-logo-100px.png">&nbsp;
+<img src="https://yacy.net/img/pp-logo-100px.png" alt="PayPal">&nbsp;
 <input type="radio" name="os0" value="beneficial">&nbsp;5 &euro;&nbsp;
 <input type="radio" name="os0" value="generous" checked>&nbsp;25 &euro;&nbsp;
 <input type="radio" name="os0" value="gracious">&nbsp;50 &euro;&nbsp;
