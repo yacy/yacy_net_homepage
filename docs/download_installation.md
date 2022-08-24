@@ -37,7 +37,7 @@ YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Pleas
 Installation is very easy on any system. If it looks complex here it's just because we give directions in great detail.
 
 ### Compile YaCy yourself
-You can download and build your own YaCy with these simple steps. This is probably the best and easiest ways for everyone who knwos how to use a command line interface. You need:
+You can download and build your own YaCy with these simple steps. This is probably the best and easiest ways for everyone who knows how to use a command line interface. You need:
 
 * jdk-8 installed (Oracle Java 8 or OpenJDK 8)
 * ant
