@@ -105,7 +105,7 @@ First of all: run YaCy in senior mode. This helps to enrich the global index and
 
 ### Something seems not to be working properly ; what should I do?
 
-YaCy is still undergoing development, so one should opt for a stable version for use. The latest stable version can be downloaded from the YaCy homepage http://www.yacy.net. If you are experiencing a strange behaviour of YaCy then you should search the Wiki or the forum http://www.yacy-forum.org/ for known issues. If the issue is unknown, then you can ask for help on the forum (and provide the YaCy version, details on the occurrence of the issue, and if possible an excerpt from the log file in order to help fix the bug).
+YaCy is still undergoing development, so one should opt for a stable version for use. The latest stable version can be downloaded from the YaCy homepage https://yacy.net. If you are experiencing a strange behaviour of YaCy then you should search the forum https://community.searchlab.eu/ for known issues. If the issue is unknown, then you can ask for help on the forum (and provide the YaCy version, details on the occurrence of the issue, and if possible an excerpt from the log file in order to help fix the bug).
 
 ### How can I index Tor or Freenet pages?
 The indexing of Tor or Freenet pages is for the moment deliberately avoided in the source code because it is not desired to index these pages at this stage of the development of YaCy. However, the crawling of such sites is planned in the future. Most likely the crawl results will not distributed globally, but will only be available to the local peer.
