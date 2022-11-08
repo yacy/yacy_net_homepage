@@ -1,7 +1,7 @@
 # Download and Installation of YaCy
 
 
-YaCy is available as packages for Linux, Windows, Macintosh and also as Docker Image. You can also install YaCy on any other operation system either by compiling it yourself or using a tarball. YaCy needs Java 8, OpenJDK 8 is recommended.
+YaCy is available as packages for Linux, Windows, macOS and also as a Docker Image. You can also install YaCy on any other operation system either by compiling it yourself or using a tarball. YaCy needs Java 8, OpenJDK 8 is recommended.
 
 <p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/download_installation.md" role="button" target="_blank">Improve this doc</a>
 </p>
@@ -9,7 +9,7 @@ YaCy is available as packages for Linux, Windows, Macintosh and also as Docker I
 ## Please Support YaCy
 
 
-YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Please consider to become a permanent supporter of YaCy to ensure that YaCy can actively be developed! 
+YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Please consider becoming a permanent supporter of YaCy to ensure that YaCy can actively be developed! 
 
 ### Become a YaCy Patron
 
@@ -37,7 +37,7 @@ YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Pleas
 Installation is very easy on any system. If it looks complex here it's just because we give directions in great detail.
 
 ### Compile YaCy yourself
-You can download and build your own YaCy with these simple steps. This is probably the best and easiest ways for everyone who knwos how to use a command line interface. You need:
+You can download and build your own YaCy with these simple steps. This is probably the best and easiest ways for everyone who knows how to use a command line interface. You need:
 
 * jdk-8 installed (Oracle Java 8 or OpenJDK 8)
 * ant
@@ -107,10 +107,10 @@ cd yacy
 * Headless operation can be achieved by setting a password on the host console with `bin/passwd.sh <password>`.
 
 
-### On Macintosh
+### On macOS
 
 * Install Java 8 from [https://adoptopenjdk.net/](https://adoptopenjdk.net/).
-* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.dmg" role="button">Download YaCy for MacOS</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.dmg](https://download.yacy.net/yacy_v1.924_20201214_10042.dmg)
+* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.dmg" role="button">Download YaCy for macOS</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.dmg](https://download.yacy.net/yacy_v1.924_20201214_10042.dmg)
 * Double-click the downloaded `.dmg`-file and copy the YaCy app out of the mounted drive into your "Application" folder.
 * To run YaCy, just double-click the YaCy app icon in your "Application" folder.
 * YaCy is now running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
@@ -118,7 +118,7 @@ cd yacy
 
 ### Docker ###
 
-Running YaCy in docker is easy. If you don't hava docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for Mac, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install docker on Raspberry Pi or any other ARM-based devices.
+Running YaCy in docker is easy. If you don't hava docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for macOS, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install docker on Raspberry Pi or any other ARM-based devices.
 
 The Official YaCy Images are hosted on Dockerhub at [https://hub.docker.com/r/yacy/yacy_search_server](https://hub.docker.com/r/yacy/yacy_search_server)
 
