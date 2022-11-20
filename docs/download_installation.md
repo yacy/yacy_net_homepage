@@ -207,7 +207,7 @@ config set-context --current --namespace=default
 
 ### Any OS with Java 8
 Automatic development builds can be obtained from
-[https://download.yacy.net/](https://download.yacy.net/).
+[https://release.yacy.net/](https://release.yacy.net/).
 
 
 ### Get the Source Code
