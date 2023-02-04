@@ -55,7 +55,7 @@ Time for a search depends on many factors. One is, if you perform a local-only s
 In general YaCy's architecture does not do peer-hopping, it also doesn't have a TTL (time-to-live). It is expected that search results are instantly responded to the requester. This can be done by asking the index-owning peer directly which is in fact possible by using DHT's (distributed hash tables). Because YaCy needs some redundancy to compensate for missing peers, it asks several peers simultaneously. To collect their response, YaCy waits a little time of at most 6 seconds (by default, you can change that).
 
 ### Do I need to set up and run a separate database?
-No. YaCy contains its own database engine, which does not need any extra set-up or configuration.
+No. YaCy contains its built-in database engine (solr), which does not need any extra set-up or configuration. Or you can use a standalone external solr instance instead, if you wish.
 
 ### What does Virgin, Junior, Senior, Principal Status mean?
 
@@ -81,6 +81,10 @@ Even if only 1/10 of the peers which were Junior as of March 2012 become Senior,
 ### My peer says it runs in 'Junior Mode'. How can I run it in Senior Mode?
 Open your firewall for port 8090 (or the port you configured) or program your router to forward this port to your computer.
 
+Or, if you have the option of running a ssh tunnel on a host with public ip, you can run: 
+`ssh -f -R remotehost.org:8090:localhost:8090 remotelogin@remotehost.org -N` 
+and create tunnel to remotehost.org, port 8090. 
+
 ### Will running YaCy jeopardize my privacy?
 YaCy respects user privacy. All password- or cookies-protected pages are excluded from indexing. Additionally, pages loaded using GET or POST parameters are not indexed by default. Thus, only publicly accessible, non-password-protected pages will be indexed.
 
@@ -101,23 +105,63 @@ First check whether YaCy still runs. If it doesn't run, it may not have been shu
 ### How can I help?
 First of all: run YaCy in senior mode. This helps to enrich the global index and to make YaCy more attractive. If you want to add your own code, you are welcome; but please contact the author first and discuss your idea to see how it may fit into the overall architecture. You can help a lot by simply giving us feedback or telling us about new ideas. You can also help by telling other people about this software. And if you find a bug or you see an uncovered use-case, we welcome your bug-report. Any feed-back is welcome.
 
-## Technology
+## Usage 
 
 ### Something seems not to be working properly ; what should I do?
 
 YaCy is still undergoing development, so one should opt for a stable version for use. The latest stable version can be downloaded from the YaCy homepage https://yacy.net. If you are experiencing a strange behaviour of YaCy then you should search the forum https://community.searchlab.eu/ for known issues. If the issue is unknown, then you can ask for help on the forum (and provide the YaCy version, details on the occurrence of the issue, and if possible an excerpt from the log file in order to help fix the bug).
 
-### How can I index Tor or Freenet pages?
-The indexing of Tor or Freenet pages is for the moment deliberately avoided in the source code because it is not desired to index these pages at this stage of the development of YaCy. However, the crawling of such sites is planned in the future. Most likely the crawl results will not distributed globally, but will only be available to the local peer.
+### YaCy is running teribly slow; what should I do? 
+As an indexing and search host, YaCy is quite resource hungry. Fast disks (or RAID) and plenty of RAM will help. 
+
+It occupies only the amount of RAM specified in “Maximum Used Memory”, so if you have more physical RAM, increasing this value should help. 
+
+Sometimes also ‘Database Optimisation’ helps, but it takes some time to run.
+
+
+## DHT - Distributed Hash Table
 
 ### How do I give the index of one peer to another?
 This actually happens automatically through the DHT distribution of the words. However, there is also the possibility of transferring the entire index to another peer. This can either be done through a so-called Index-Transfer (link needs update) or a index-Import (link needs update).
 
-### Will already-indexed pages (i.e. indexed and index-exchanged) automatically be reindexed after a few days/years?
-Unfortunately no. However, there is the possibility for a chronological "recrawl" to be executed for a URL (or an entire website if desired). Learn more about this feature under "Index Control" -> "Index Creation."
+### Why does RWIs (P2P Chunks) decrease?
+YaCy maintains two indexes, the RWI (“Reverse Word Index”) and the Solr Index. The RWI is the distributed Word Index that is generated and then waits to be distributed to other peers according to a distributed hashtable schema. The target peers then host the RWIs again while on your own peer the RWI is deleted.
+
+That results in larger RWIs on the target peers but on a smaller number of RWIs on your peer. That is not a contradiction: it increases the size of some of the RWIs but decreases the number of RWIs. That applies to all peers.
 
 ### Are DHT entries unique in a search network or can URLs also appear twice or three times?
 URLs are analyzed more than once so that a peer delayed does not lose his part in the search index. As for the indexes they are stored redundantly on multiple peers.
+
+
+## Crawling / indexing
+
+### How do I avoid indexing of some files?
+One way is to limit the crawler using regular expressions in “filters” section in advanced crawler. For example, “.*\.tar\.gz” in “Load filter on URLs” field in “crawler filter” section, means that no tar.gz files will be browsed. you can use multiple of them using “or” (|) operator, for example “.*tar\.gz|.*\.zip” will ignore urls that end with .tar.gz OR .zip.
+
+There are two separate filters, one for crawling (crawler filter), and one for actual indexing (“document filter”).
+
+Note that regexp is not “normal regexp” but a “java pattern”.
+
+### Will already-indexed pages (i.e. indexed and index-exchanged) automatically be reindexed after a few days/years?
+Unfortunately no. However, there is the possibility for a chronological "recrawl" to be executed for a URL (or an entire website if desired). Learn more about this feature under "Index Control" -> "Index Creation."
+
+### How can I index Tor or Freenet pages?
+The indexing of Tor or Freenet pages is for the moment deliberately avoided in the source code because it is not desired to index these pages at this stage of the development of YaCy. However, the crawling of such sites is planned in the future. Most likely the crawl results will not distributed globally, but will only be available to the local peer.
+
+###  How to remove a certain type of files from Solr index (i.e .png or .svg)?
+That's easy. Go to Index Deletion /IndexDeletion_p.html
+
+* In the first text window “Delete by URL Matching” enter i.e. .*\.png for PNG files.
+* check the radio button “matching with regular expression”
+* hit “Simulate Deletion”. This does not actually delete anything, but enables the button “Engange Deletion” and show how many documents would be deleted.
+
+Now you can decide if you actually want to do this and
+
+* click on “Engange Deletion”.
+
+This cannot be undone.
+
+The String that you entered here is a [Java Pattern](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
 
 ### How can I change the Connection Timeout value?
 This can be done on the configuration page "Admin Console" -> "Advanced behavior" http://localhost:8090/ConfigProperties_p.html. Just search for the line client-timeout and change the value there. The timeout is in milliseconds.
@@ -125,6 +169,8 @@ This can be done on the configuration page "Admin Console" -> "Advanced behavior
 Do not forget to restart YaCy after the change.
 
 Alternatively, another way to do this is through the configuration file httpProxy.conf in DATA/SETTINGS. If this type of configuration is to be performed then YaCy must be stopped before.
+
+## Passwords
 
 ### I can not log in YaCy anymore as I forgot my password. How do I reset my password?
 If you have lost your password, you can reset it (or choose a new one). There are two methods:
@@ -162,3 +208,5 @@ For the moment not directly. Automatically limiting that size would mean having 
 You can set two minimums of free disk space at /Performance_p.html: one for the crawls, and the other for DHT-in. The number for crawls seems to have to be equal or bigger than the number for DHT-in. Note that, with DHT-in disabled, global searching using the peer's UI is disabled. Also proxy/crawling privacy might suffer.
 You can also just disable “Index Receive” at /ConfigNetwork_p.html, so that your index is only augmented through crawling (over which you have some control).
 For a very indirect additional limit, you can change the Index Reference Size at /IndexControlRWIs_p.html.
+
+
