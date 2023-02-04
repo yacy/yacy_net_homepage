@@ -85,5 +85,5 @@ https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
 
 * if they don't, politely ask
 
-* if in doubt, follow the [github contribution guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects_
+* if in doubt, follow the [github contribution guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
 
