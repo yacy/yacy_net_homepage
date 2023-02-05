@@ -82,7 +82,9 @@ Even if only 1/10 of the peers which were Junior as of March 2012 become Senior,
 Open your firewall for port 8090 (or the port you configured) or program your router to forward this port to your computer.
 
 Or, if you have the option of running a ssh tunnel on a host with public ip, you can run: 
-`ssh -f -R remotehost.org:8090:localhost:8090 remotelogin@remotehost.org -N` 
+```
+ssh -f -R remotehost.org:8090:localhost:8090 remotelogin@remotehost.org -N
+``` 
 and create tunnel to remotehost.org, port 8090. 
 
 ### Will running YaCy jeopardize my privacy?
@@ -103,7 +105,19 @@ We expect YaCy to show different results than Google, for several reasons. As lo
 First check whether YaCy still runs. If it doesn't run, it may not have been shut down properly. Start YaCy again, then uninstall. Alternatively delete the yacy.running file in the yacy/DATA/ directory, then uninstall.
 
 ### How can I help?
-First of all: run YaCy in senior mode. This helps to enrich the global index and to make YaCy more attractive. If you want to add your own code, you are welcome; but please contact the author first and discuss your idea to see how it may fit into the overall architecture. You can help a lot by simply giving us feedback or telling us about new ideas. You can also help by telling other people about this software. And if you find a bug or you see an uncovered use-case, we welcome your bug-report. Any feed-back is welcome.
+First of all: run YaCy in senior mode. This helps to enrich the global index and to make YaCy more attractive.  
+
+If you want to add your own code, you are welcome; but please contact the author first and discuss your idea to see how it may fit into the overall architecture. 
+
+You can help a lot by simply giving us feedback or telling us about new ideas. 
+
+You can also help by telling other people about this software. 
+
+And if you find a bug or you see an uncovered use-case, we welcome your [bug-report](https://github.com/yacy/yacy_search_server/issues).  
+
+Any feed-back is welcome. 
+
+You can [contribute](contribute.md) your code on GitHub, both to [YaCy](https://github.com/yacy/yacy_search_server) and it's [documentation](https://github.com/yacy/yacy_net_homepage).
 
 ## Usage 
 
@@ -111,13 +125,12 @@ First of all: run YaCy in senior mode. This helps to enrich the global index and
 
 YaCy is still undergoing development, so one should opt for a stable version for use. The latest stable version can be downloaded from the YaCy homepage https://yacy.net. If you are experiencing a strange behaviour of YaCy then you should search the forum https://community.searchlab.eu/ for known issues. If the issue is unknown, then you can ask for help on the forum (and provide the YaCy version, details on the occurrence of the issue, and if possible an excerpt from the log file in order to help fix the bug).
 
-### YaCy is running teribly slow; what should I do? 
-As an indexing and search host, YaCy is quite resource hungry. Fast disks (or RAID) and plenty of RAM will help. 
+### YaCy is running terribly slow; what should I do? 
+As an indexing and search host, YaCy is quite resource hungry. It's written in Java. Fast disks (SSD or RAID) and plenty of RAM will help. 
 
 It occupies only the amount of RAM specified in “Maximum Used Memory”, so if you have more physical RAM, increasing this value should help. 
 
 Sometimes also ‘Database Optimisation’ helps, but it takes some time to run.
-
 
 ## DHT - Distributed Hash Table
 
@@ -132,7 +145,6 @@ That results in larger RWIs on the target peers but on a smaller number of RWIs 
 ### Are DHT entries unique in a search network or can URLs also appear twice or three times?
 URLs are analyzed more than once so that a peer delayed does not lose his part in the search index. As for the indexes they are stored redundantly on multiple peers.
 
-
 ## Crawling / indexing
 
 ### How do I avoid indexing of some files?
@@ -140,7 +152,7 @@ One way is to limit the crawler using regular expressions in “filters” secti
 
 There are two separate filters, one for crawling (crawler filter), and one for actual indexing (“document filter”).
 
-Note that regexp is not “normal regexp” but a “java pattern”.
+Note that regexp is not “normal regexp” but a ["Java Pattern"](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
 
 ### Will already-indexed pages (i.e. indexed and index-exchanged) automatically be reindexed after a few days/years?
 Unfortunately no. However, there is the possibility for a chronological "recrawl" to be executed for a URL (or an entire website if desired). Learn more about this feature under "Index Control" -> "Index Creation."
@@ -208,5 +220,3 @@ For the moment not directly. Automatically limiting that size would mean having 
 You can set two minimums of free disk space at /Performance_p.html: one for the crawls, and the other for DHT-in. The number for crawls seems to have to be equal or bigger than the number for DHT-in. Note that, with DHT-in disabled, global searching using the peer's UI is disabled. Also proxy/crawling privacy might suffer.
 You can also just disable “Index Receive” at /ConfigNetwork_p.html, so that your index is only augmented through crawling (over which you have some control).
 For a very indirect additional limit, you can change the Index Reference Size at /IndexControlRWIs_p.html.
-
-
