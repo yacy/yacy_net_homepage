@@ -34,7 +34,7 @@ No. P2P (peer to peer) only describes the technology by which computers exchange
 ### What are global and local indexes?
 Once you use the proxy, a local copy of the indexed data is automatically created. You can access the global index only if the program has a connection to the YaCy network. This is effectively the combination of all local indexes.
 
-### I am not a technican. Can I install YaCy easily and use it to index my own web pages?
+### I am not a technician. Can I install YaCy easily and use it to index my own web pages?
 YaCy is very easy to install. You don't need any special knowledge or additional software; also you don't need to set up an extra database engine. Indexing your own website isn't hard too: Simply crawl it and turn off DHT Distribution and DHT Receive to keep the index of your site on your peer.
 
 ### Can I crawl and index the web with YaCy?
