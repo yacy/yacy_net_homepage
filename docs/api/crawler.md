@@ -9,29 +9,33 @@ The parameters used here are explained below in detail. Each YaCy crawl job has 
 
 To start a new crawl and create its profile following parameters are needed
 
+### Start Point
 
-* crawlingstart =<br>
+* `crawlingstart` =<br>
 (no value needed) - this key must be present to trigger a crawl start
 
-* crawlingMode =<br>
-Possible values: 'url', 'sitemap', 'sitelist', 'file'. The crawler can be started with different modes:
-'url': start from a given url which is the root of a crawl tree. The url is given in 'crawlingURL'. If this url is a http-link, then the Crawl will subsequently load all linked documents from http until a given depth is reached. If this url is a smb- or ftp-link, then the given resource will be listed completely using a special listing process.
-'sitemap': use a sitemap to retrieve all files that are listed in the sitemap. The sitemap-URL is given in 'sitemapURL'
-'sitelist': use a list of crawl start URLs. This is like starting with one url, but using several of them. The list of urls is retrieved by loading the url given in 'crawlingURL'. Each of the urls in that file is then used to start it's individual crawl. This makes sense if the 'range' attribute contains the value 'domain' or 'subpath' which creates an individual must-match pattern for each of the urls in the sitelist.
-'file': use a file in the local file system to provide a start document. The crawl will then start like with a root url but the file itself will not be placed to the index, only the documents which are linked in that document.
-* crawlingURL =<br>
+* `crawlingMode` = `url` / `sitemap` / `sitelist` /  `file`<br>
+The crawler can be started with different modes:
+    - `url`: start from a given url which is the root of a crawl tree. The url is given in 'crawlingURL'. If this url is a http-link, then the Crawl will subsequently load all linked documents from http until a given depth is reached. If this url is a smb- or ftp-link, then the given resource will be listed completely using a special listing process.
+    - `sitemap`: use a sitemap to retrieve all files that are listed in the sitemap. The sitemap-URL is given in 'sitemapURL'
+    - `sitelist`: use a list of crawl start URLs. This is like starting with one url, but using several of them. The list of urls is retrieved by loading the url given in 'crawlingURL'. Each of the urls in that file is then used to start it's individual crawl. This makes sense if the 'range' attribute contains the value 'domain' or 'subpath' which creates an individual must-match pattern for each of the urls in the sitelist.
+    - `file`: use a file in the local file system to provide a start document. The crawl will then start like with a root url but the file itself will not be placed to the index, only the documents which are linked in that document.
+* `crawlingURL` = (url)<br>
 The crawl start url. This value must be present in all cases of the crawlingMode options. The crawler's double-check does not check this start url which means that in the index existing start-URLs are always loaded (but can be loaded from the cache, see the cachePolicy option for that.
-* sitemapURL =<br>
+* `sitemapURL` = (urr) <br>
 Only to be defined if 'crawlingMode' = 'sitemap'. This is an url which is typically linked within a robots.txt file. The sitemapURL must point to a resource which is formed as described in http://www.sitemaps.org
-* crawlingFile =<br>
+* `crawlingFile` =<br>
 Only to be defined if 'crawlingMode' = 'file'. This is a path to a file in the local file system. The content of the file is parsed and all urls inside that document are roots for crawl starts as defined in this crawl request.
-* crawlingDepth =<br>
+
+### Crawler Filter
+
+* `crawlingDepth` = (zahl)<br>
 This defines how often the Crawler will follow links embedded in websites.
 A minimum of 0 is recommended and means that the page set as crawling URL, sitemap orfile will be added to the index, but no linked content is indexed. 2-4 is good for normal indexing. Be careful with the depth, consider a branching factor of average 20; A crawleing depth of 8 would index 25.600.000.000 pages, maybe this is the whole WWW.
 
-* crawlingDepthExtension =<br>
+* `crawlingDepthExtension` = (string)<br>
 This is a regular expression that can be used to extend the crawling depth to infinity. That means, if this pattern matches with the URL, the crawling depth is not a limitation any more on the ongoing crawl. Default is an empty String, which is a never-match regular expression.
-* range =<br>
+* `range` = `domain` / `subpath`<br>
 Possible values are 'domain', 'subpath' or not set, which means 'wide'. Default is 'wide'. If this value is set to 'domain' or 'subpath', the 'mustmatch' parameter is set automatically and overrides given values in that field. 'domain' creates a 'mustmatch' value which restricts the crawl to pages on the same domain of the start-url; 'subpath' creates a 'mustmatch' value which restricts the crawl to pages within the same subpath of the start-url.
 * mustmatch =<br>
 The filter is a regular expression that must match with the URLs which are used to be crawled; default is 'catch all'.
@@ -46,6 +50,8 @@ This filter must not match with the IP of the host to allow that the page is acc
 This filter can be used to filter documents to be indexed. Even if a document was loaded by the crawler because the mustmatch filter allows that, this filter can be used to restrict documents to be indexed. Default is catch-all.
 * indexmustnotmatch =<br>
 This filter must not match to allow that the page is accepted for indexong. Default is an empty string, which is a never-match to exclude no documents from indexing.
+* noindexWhenCanonicalUnequalURL = `on`/`off`<br>
+When this is set to `on`, all canonical urls are compared with the document url. If they are not equal, the document is not indexed. In case that the canonical tag is not present, the indexing is done.
 * deleteold =<br>
 if 'range' is either 'domain' or 'subpath' or the mustmatch-value is not catchall, this option can be used to delete all urls for given start-hosts. Possible values for 'deleteold' are 'off' (do not delete), 'on' (delete all documents for the start host(s), or 'age'. If 'age' is used, the values 'deleteIfOlderNumber' and 'deleteIfOlderUnit' must be set and this defines the limit for the deletion: if the load date of a stored document is older than the given time, then it is deleted.
 * deleteIfOlderNumber =<br>
