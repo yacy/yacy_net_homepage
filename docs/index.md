@@ -61,7 +61,7 @@ window.onresize = setSpace;
 </script>
 
 ## Decentralization
-Imagine if, rather than relying on the proprietary software of a large professional search engine operator, your search engine was run by many private computers which aren't under the control of any one company or individual. Well, that's what YaCy does! 
+Imagine if, rather than relying on the proprietary software of a large professional search engine operator, your search engine was run across many private devices, not under the control of any one company or individual. Well, that's what YaCy does!
 
 Here is a live image of the YaCy network:
 
