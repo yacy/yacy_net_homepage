@@ -18,9 +18,9 @@
             <a class="navbar-brand" href="{{ nav.homepage.url|url }}">
 <!--{{ config.site_name }}-->
 {%- if page.url == '' -%}
-<img src="img/YaCyLogo2011_60.png" height="40">
+<img src="img/YaCyLogo2011_60.png" alt="YaCy" height="40">
 {% else %}
-<img src="../img/YaCyLogo2011_60.png" height="40">
+<img src="../img/YaCyLogo2011_60.png" alt="YaCy" height="40">
 {%- endif %}
 </a>
         </div>
@@ -53,9 +53,10 @@
 
             <ul class="nav navbar-nav navbar-right">
 		    <li>
-                        <a href="https://searchlab.eu">
-                           Forum
-                        </a>
+                        <a href="https://searchlab.eu">{%- if page.url == '' -%}<img src="img/new.png" alt="New" width="30">{% else %}<img src="../img/new.png" alt="New" width="30">{%- endif %}YaCy Searchlab</a>
+                    </li>
+		    <li>
+                        <a href="https://community.searchlab.eu">Community Forum</a>
                     </li>
 
                 {%- block next_prev %}

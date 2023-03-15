@@ -8,7 +8,7 @@ body {
 } 
 </style>
 <div class="jumbotron" style="background: none;"><div class="container">
-  <img src="img/YaCyLogo2011_240.png" width="240">
+  <img src="img/YaCyLogo2011_240.png" alt="YaCy" width="240">
   <h2>Search Engine Software</h2>
 </div></div>
 
@@ -22,17 +22,17 @@ There are these three use cases you can choose from:
       <div class="row">
         <div id="mode-p2p" class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>P2P Mode</h2>
-	  <img src="img/usecase_freeworld.png">
-          <p>Web Search by the people, for the people: completely decentralized, shared indexing, all users are equal, no search request storage.</p>
+	  <img src="img/usecase_freeworld.png" alt="YaCy Use Case: Freeworld">
+          <p>Web Search by the people, for the people: decentralized, all users are equal, no central, no search request storage, shared index.</p>
         </div>
         <div id="mode-portal" class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>Your Search Portal</h2>
-	  <img src="img/usecase_webportal.png">
+	  <img src="img/usecase_webportal.png" alt="YaCy Use Case: Web Portal">
           <p>Your YaCy installation is independent from other peers. Define your own web index and starting your own web crawl.</p>
        </div>
         <div id="mode-intranet" class="col-md-4" style="background-color:#4E5D6C; padding-left:15px; padding-right:15px; position:relative; left:15px;">
           <h2>Intranet Search</h2>
-	  <img src="img/usecase_intranet.png">
+	  <img src="img/usecase_intranet.png" alt="YaCy Use Case: Intranet">
           <p>Create a search portal for your intranet or web pages or your (shared) file system.</p><br/>
         </div>
       </div>
@@ -65,7 +65,7 @@ Imagine if, rather than relying on the proprietary software of a large professio
 
 Here is a live image of the YaCy network:
 
-![YaCy P2P Network](https://yacy.searchlab.eu/NetworkPicture.png?width=960&height=720&bgcolor=2C3E4F&pal=10080&pol=10080)
+![YaCy P2P Network](https://yacy.searchlab.eu/NetworkPicture.png?width=960&height=720&bgcolor=2C3E4F&pal=10080&pol=10080&coronaangle=120)
 
 ## Installation is easy!
 
