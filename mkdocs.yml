@@ -12,6 +12,7 @@ nav:
   - Home: index.md
   - Demo: demonstration_tutorial_screenshot.md
   - Download: download_installation.md
+  - Docs: docs.md
   - FAQ: faq.md
 
 markdown_extensions:
