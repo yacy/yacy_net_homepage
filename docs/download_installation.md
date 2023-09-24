@@ -58,11 +58,6 @@ The source code is inside the generic tarball. It is recommended you clone the G
 
 YaCy can run under a normal user account, no root rights are needed.
 
-* Go to download folder in the terminal
-```
-cd ~/Downloads
-```
-
 * Unpack the tarball.
 ```
 tar xfz yacy<VERSION>.tar.gz
@@ -71,8 +66,17 @@ tar xfz yacy<VERSION>.tar.gz
 * Run `startYACY.sh` inside your decompressed folder.
 ```
 cd yacy<VERSION>
+./startYACY.sh
+
 ```
+Installing from start to finish would look something like this, depending on your distro.
 ```
+sudo apt-get update
+sudo dpkg --configure -a
+sudo apt-get install -y openjdk-11-jre-headless
+wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
+tar xfz yacy_v1.924_20210209_10069.tar.gz
+cd yacy
 ./startYACY.sh
 ```
 
@@ -175,33 +179,21 @@ You need:
 
 Then run:
 ```
-git clone https://github.com/yacy/yacy_search_server.git
-```
-```
+git clone --depth 1 https://github.com/yacy/yacy_search_server.git
 cd yacy_search_server
+ant clean all
 ```
-```
-ant clean all dist
-```
-
-The compiled tarball will then be in the `RELEASE` folder. 
 
 To start YaCy from your compiled code, simply run:
 ```
 ./startYACY.sh
 ```
 
-Installing from start to finish would look something like this, depending on your distro.
+If you want to make a release, run
 ```
-sudo apt-get update
-sudo dpkg --configure -a
-sudo apt-get install -y openjdk-11-jre-headless
-wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
-tar xfz yacy_v1.924_20210209_10069.tar.gz
-cd yacy
-./startYACY.sh
+ant clean all dist
 ```
-
+The compiled tarball will then be in the `RELEASE` folder. 
 
 
 # Kubernetes 
