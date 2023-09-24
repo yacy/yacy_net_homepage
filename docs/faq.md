@@ -8,6 +8,18 @@
 ### What is this?
 YaCy is a distributed Web Search Engine, based on a peer-to-peer network.
 
+### What can I use YaCy for? 
+Use cases range from:
+
+* site search for your own website (may be shared with the p2p network or isolated),
+* narrow-domain specialised search engine (e. g. gene-manipulation scientific magazines, sites about trains, computer security, encyclopedias, german law, language-domain...) with the advantage of crawling all the pages (not selective, as other search engines do),
+* whole-world alternative search engine, using the P2P (RWI), sharing crawled index with other peers and taking advantage of indices of the others, bypassing the censorship of local laws,
+* intranet search behind the firewall, not sharing the data with any 3rd party,
+* personal web search used as a cache, indexing whatever you're browsing (limited by https now),
+* news retrieval tool with user-defined recrawl time,
+* experimental project (such as onion web search), connected with other software via [API](https://wiki.yacy.net/index.php/Dev:API),
+* to research in a field of decentralised search engines.
+
 ### What does indexing mean?
 Indexing means that a web page is separated into the single words on it and to save the URLs to the sites containing them under a reference to the word itself in a database. So searching for a word (or many words) may be easily performed by fetching all URLs "belonging" to the search term.
 
