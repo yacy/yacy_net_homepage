@@ -1,4 +1,4 @@
-YaCy is available as packages for Linux, Windows, macOS and also as a Docker Image. You can also install YaCy on any other operation system either by compiling it yourself or using a tarball. YaCy needs Java 8, OpenJDK 8 is recommended.
+YaCy is available as packages for Linux, Windows, macOS and also as a Docker Image. You can also install YaCy on any other operation system either by compiling it yourself or using a tarball. YaCy needs Java 11, Temurin 11 is recommended.
 
 <p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/download_installation.md" role="button" target="_blank">Improve this doc</a>
 </p>
@@ -7,16 +7,20 @@ YaCy is available as packages for Linux, Windows, macOS and also as a Docker Ima
 
 ## Prequisites 
 
+You either need Java or Docker.
+
 ### On Linux, Windows and macOS
 
-First download and install Java from [https://adoptopenjdk.net/](https://adoptopenjdk.net/) on Linux use your supported plattform like ```dnf``` or ```apt-get``` 
+Because YaCy requires Java, first download and install Java (>= Java 11) from [https://adoptium.net/](https://adoptium.net/). On Linux use your supported plattform like ```dnf``` or ```apt-get``` 
 
 ### With Docker
 
-Running YaCy in docker is easy. If you don't hava docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for macOS, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install docker on Raspberry Pi or any other ARM-based devices.
+If you run YaCy with Docker you don't need to install Java on your system, it's all contained in the Coder Container.
+If you don't hava Docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for macOS, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install Docker on Raspberry Pi or any other ARM-based devices.
 
 
 ## Download 
+
 
 * <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.exe" role="button">Download YaCy for Windows</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.exe](https://download.yacy.net/yacy_v1.924_20201214_10042.exe)
 * <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz" role="button">Download Yacy for Linux</a> from [https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz](https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz)
@@ -77,7 +81,7 @@ cd yacy<VERSION>
 * Double-click the downloaded `.dmg`-file and copy the Yacy.app to the "Application" folder.
 * To run YaCy, just double-click the YaCy app icon in your "Application" folder.
 
-### Any OS with Java >= 8
+### Any OS with Java >= 11
 Automatic development builds can be obtained from
 [https://release.yacy.net/](https://release.yacy.net/).
 
@@ -139,19 +143,22 @@ docker start yacy_search_server
 ```
 This will mount the data volume from the upgraded yacy instance.
 
+## Post-Installation
 
-
-## When all works
+When all works,
 
 * YaCy is now running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
-* No password is required when accessing this YaCy instance from localhost.
-* Headless operation can be achieved by setting a password on the host console with `bin/passwd.sh <password>`.
+* No password is required when accessing this YaCy instance from localhost. Howwever if you access your peer from another host, the default password for the account `admin` is `yacy`.
 
-## ...and if not
+You should always set a new admin password!
 
-Get help:
-* https://community.searchlab.eu/categories
-* https://yacy.net/demonstration_tutorial_screenshot/
+* You can set the administration password in the front-end at `/ConfigAccounts_p.html`, or
+* Headless operation can be achieved by setting a password on the host console with `bin/passwd.sh <password>`
+
+ If you have problems, get help with the YaCy community:
+ 
+* [https://community.searchlab.eu](https://community.searchlab.eu)
+* see also the [YaCy Screenshots](https://yacy.net/demonstration_tutorial_screenshot/)
 
 
 # Build by your own
@@ -162,7 +169,7 @@ You can download and build your own YaCy with these simple steps. This is probab
 
 You need:
 
-* jdk-8 installed (Oracle Java 8 or OpenJDK 8)
+* jdk-11 installed (Oracle Java 11 or OpenJDK 11)
 * ant
 * git
 
@@ -188,7 +195,7 @@ Installing from start to finish would look something like this, depending on you
 ```
 sudo apt-get update
 sudo dpkg --configure -a
-sudo apt-get install -y openjdk-8-jre-headless
+sudo apt-get install -y openjdk-11-jre-headless
 wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
 tar xfz yacy_v1.924_20210209_10069.tar.gz
 cd yacy

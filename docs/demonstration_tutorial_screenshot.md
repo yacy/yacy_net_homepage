@@ -98,7 +98,7 @@ These videos are short and most have nice music from [Shiryu Music](https://shir
 </script>
 
 ### Demo: YaCy Installation in Windows
-Please install Java 8 first, the automatic Java installation within YaCy does not work any more.
+Please install Java 11 (or higher) first, the automatic Java installation within YaCy does not work any more.
 <div id="video01">
 <img src="../img/tutorial_01_Installation_in_Windows.png" alt="YaCy Tutorial 01: Installation in Windows" width="720" height="405"  onmouseover="document.getElementById('video01').innerHTML = embed01;">
 </div>
@@ -109,7 +109,7 @@ Please install Java 8 first, the automatic Java installation within YaCy does no
 </div>
 
 ### Demo: YaCy Installation in Ubuntu and any other Linux Systems
-Instead of Java-7 now please install Java-8
+Instead of Java 7 now please install Java 11 (or higher)
 <div id="video03">
 <img src="../img/tutorial_03_Installation_in_Ubuntu_and_any_other_Linux.png" alt="YaCy Tutorial 03: Installation in Ubuntu and any other Linux" width="720" height="405"  onmouseover="document.getElementById('video03').innerHTML = embed03;">
 </div>
