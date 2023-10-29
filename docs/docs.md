@@ -3,6 +3,8 @@
 ## Basics
 * [Download and installation](download_installation.md) - guide for unix, windows and macos
 * [FAQ](faq.md) - Frequently asked questions 
+* [Readme](https://github.com/yacy/yacy_search_server/blob/master/README.md) - at github.com
+
 
 ## Operation
 * [Headless - YaCy on a Remote Server](operation/headless.md)
