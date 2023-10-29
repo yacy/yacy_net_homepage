@@ -8,6 +8,7 @@
 * [Headless - YaCy on a Remote Server](operation/headless.md)
 * [Shrink Debian by removing all graphical features to turn it into a headless server](operation/shrink.md)
 * [Set a static IP to a debian server](operation/staticip.md)
+* [Setting the ranking rules](operation/ranking.md)
 
 ## Developers
 * [How to contribute](contribute.md)
