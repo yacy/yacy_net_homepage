@@ -24,7 +24,8 @@ Use cases range from:
 Indexing means that a web page is separated into the single words on it and to save the URLs to the sites containing them under a reference to the word itself in a database. So searching for a word (or many words) may be easily performed by fetching all URLs "belonging" to the search term.
 
 ### What is a DHT?
-A distributed hash table (DHT) is a class of a decentralized distributed system that provides a lookup service similar to a hash table; (key, value) pairs are stored in a DHT, and any participating node can efficiently retrieve the value associated with a given key. Responsibility for maintaining the mapping from keys to values is distributed among the nodes, in such a way that a change in the set of participants causes a minimal amount of disruption.(source:Wikipedia)
+A distributed hash table ([DHT](https://en.wikipedia.org/wiki/Distributed_hash_table)) is a class of a decentralized distributed system that provides a lookup service similar to a hash table; (key, value) pairs are stored in a DHT, and any participating node can efficiently retrieve the value associated with a given key. Responsibility for maintaining the mapping from keys to values is distributed among the nodes, in such a way that a change in the set of participants causes a minimal amount of disruption. (source:
+[Wikipedia](https://en.wikipedia.org/wiki/Distributed_hash_table))
 
 ### What's the meaning of "to crawl"?
 A so-called "crawler" fetches a web page and parses out all links on it; this is the first step or "depth 0". It continues to get all web pages linked on the first document which is then called "depth 1" and does the same respectively for all documents of this step. The crawler is limitable to a specified depth or can even crawl indefinitely and so can crawl the whole "indexable Web", including those parts of the indexable web who are censored by commercial search-engines and therefore normally not part of what most people are presented as The visible web.
@@ -87,11 +88,11 @@ See [download and installation](download_installation.md) guide to install on Li
 
 ### How do I access my peer? 
 
-After successful start of YaCy, it should be running at localhost, port 8090, so you can access it by putting `http://localhost:8090` in your browser.
+After successful start of YaCy, it should be running at localhost, port 8090, so you can access it by entering `http://localhost:8090` in your browser.
 
 ### How do I search? 
 
-Just put your query into the search field.  Your instance will ask the other peers for results and collect them in search result page. It may take some time. By default the results are transfered to your peer as "RWI" and stored localy, so the next search will find the results more quickly.
+Just enter your query into the search field.  Your instance will ask the other peers for results and collect them in search result page. It may take some time. By default, the results are transfered to your peer as "RWI" and stored localy, so the next search will find the results more quickly.
 
 You can also use some modifiers to refine your search.  For example, `/date` added to a query will sort the results by date (of indexing).  `inurl:` parameter will filter the results based on url, so `inurl:nytimes.com` will show just results from New York Times.
 
@@ -143,7 +144,7 @@ Alternatively, another way to do this is through the configuration file httpProx
 
 ### Something seems not to be working properly ; what should I do?
 
-YaCy is still undergoing development, so one should opt for a stable version for use. The latest stable version can be downloaded from the YaCy homepage https://yacy.net. If you are experiencing a strange behaviour of YaCy then you should search the forum https://community.searchlab.eu/ for known issues. If the issue is unknown, then you can ask for help on the forum (and provide the YaCy version, details on the occurrence of the issue, and if possible an excerpt from the log file in order to help fix the bug).
+YaCy is still undergoing development, so one should opt for a stable version for use. The latest stable version can be downloaded from the [YaCy homepage](https://yacy.net). If you are experiencing a strange behaviour of YaCy then you should search the [community forum](https://community.searchlab.eu/) for known issues. If the issue is unknown, then you can ask for help on the forum (and provide the YaCy version, details on the occurrence of the issue, and if possible an excerpt from the log file in order to help fix the bug) or [start an issue](https://github.com/yacy/yacy_search_server/issues/) on github.
 
 First thing to see while experiencing some errors, is the log located at `DATA/LOG/yacy00.log`. You can monitor it live using `tail` command. While it flips around when certain size is reached, it's better to use -F option:
 ```
@@ -179,7 +180,7 @@ URLs are analyzed more than once so that a peer delayed does not lose his part i
 ## Crawling / indexing
 
 ### How do I avoid indexing of some files?
-One way is to limit the crawler using regular expressions in “filters” section in advanced crawler. For example, “.*\.tar\.gz” in “Load filter on URLs” field in “crawler filter” section, means that no tar.gz files will be browsed. you can use multiple of them using “or” (|) operator, for example “.*tar\.gz|.*\.zip” will ignore urls that end with .tar.gz OR .zip.
+One way is to limit the crawler using regular expressions in “filters” section in advanced crawler. For example, “.\*\.tar\.gz” in “Load filter on URLs” field in “crawler filter” section, means that no tar.gz files will be browsed. You can use multiple of them using “or” (``|``) operator, for example “.\*tar\.gz|.\*\.zip” will ignore urls that end with .tar.gz OR .zip.
 
 There are two separate filters, one for crawling (crawler filter), and one for actual indexing (“document filter”).
 
