@@ -1,11 +1,13 @@
+# Download and installation
+
 YaCy is available as packages for Linux, Windows, macOS and also as a Docker Image. You can also install YaCy on any other operation system either by compiling it yourself or using a tarball. YaCy needs Java 11, Temurin 11 is recommended.
 
 <p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/download_installation.md" role="button" target="_blank">Improve this doc</a>
 </p>
 
-# Quick install 
+## Quick install 
 
-## Prequisites 
+### Prequisites 
 
 You either need Java or Docker.
 
@@ -166,7 +168,7 @@ You should always set a new admin password!
 * see also the [YaCy Screenshots](https://yacy.net/demonstration_tutorial_screenshot/)
 
 
-# Build by your own
+## Build by your own
 
 Installation is very easy on any system. If it looks complex here it's just because we give directions in great detail.
 
@@ -197,7 +199,7 @@ ant clean all dist
 The compiled tarball will then be in the `RELEASE` folder. 
 
 
-# Kubernetes 
+## Kubernetes 
 
 ```
 # optional: for a quick and easy installation of Kubernetes, run minikube
@@ -230,17 +232,17 @@ kubectl delete deployment yacy
 config set-context --current --namespace=default
 ```
 
-# Please Support YaCy
+## Please Support YaCy
 
 YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Please consider becoming a permanent supporter of YaCy to ensure that YaCy can actively be developed! 
 
-## Become a YaCy Patron
+### Become a YaCy Patron
 
 <a href="https://www.patreon.com/bePatron?u=185903"><img src="../../img/sponsor_patreon.png" alt="Become a Patron" height="128" align="left" style="padding-left:8%;padding-right:20px"></a>
 <a href="https://github.com/users/Orbiter/sponsorship"><img src="../../img/sponsor_github.png" alt="Become a GitHub Sponsor" height="128" align="left" style="padding-left:8%"></a>
 <br><br><br><br><br>
 
-## One-Time Donation
+### One-Time Donation
 
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin:0px; padding:0px;">
 <input type="hidden" name="cmd" value="_s-xclick">
