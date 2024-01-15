@@ -1,11 +1,13 @@
+# Download and installation
+
 YaCy is available as packages for Linux, Windows, macOS and also as a Docker Image. You can also install YaCy on any other operation system either by compiling it yourself or using a tarball. YaCy needs Java 11, Temurin 11 is recommended.
 
 <p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/download_installation.md" role="button" target="_blank">Improve this doc</a>
 </p>
 
-# Quick install 
+## Quick install 
 
-## Prequisites 
+### Prequisites 
 
 You either need Java or Docker.
 
@@ -166,7 +168,7 @@ You should always set a new admin password!
 * see also the [YaCy Screenshots](https://yacy.net/demonstration_tutorial_screenshot/)
 
 
-# Build by your own
+## Build by your own
 
 Installation is very easy on any system. If it looks complex here it's just because we give directions in great detail.
 
@@ -197,7 +199,7 @@ ant clean all dist
 The compiled tarball will then be in the `RELEASE` folder. 
 
 
-# Kubernetes 
+## Kubernetes 
 
 ```
 # optional: for a quick and easy installation of Kubernetes, run minikube
@@ -233,4 +235,5 @@ config set-context --current --namespace=default
 # Licence
 
 YaCy is libre software - licensed GPL-2+. 
+
 
