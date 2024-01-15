@@ -11,9 +11,11 @@
 * [Shrink Debian by removing all graphical features to turn it into a headless server](operation/shrink.md)
 * [Set a static IP to a debian server](operation/staticip.md)
 * [Setting the ranking rules](operation/ranking.md)
+* [YaCy config settings](operation/yacy_conf.md)
 
 ## Developers
 * [How to contribute](contribute.md)
+* [Description of the YaCy Distributed Web Search Engine](https://yacy.net/material/Description_of_the_YaCy_Distributed_Web_Search_Engine_Herrmann_Ning_Diaz_Preneel_ESAT_KULeuven_COSIC_article-2459.pdf) - scientific paper describing the technology
 * [Crawler API](api/crawler.md)
 * [javadoc](https://yacy.net/api/javadoc/) - generated documentation for YaCy's java source code
 
