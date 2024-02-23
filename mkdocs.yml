@@ -13,15 +13,20 @@ theme:
 
 nav:
     - Basic:
-      - download_installation.md
+
       - FAQ: faq.md
 
+    - Installation:
+
+      - download_installation.md
+      - installation/headless.md
+      - installation/shrink.md
+      - installation/staticip.md
+
+    
     - Operation:
-      - operation/yacy_conf.md
       - operation/ranking.md
-      - operation/headless.md
-      - operation/shrink.md
-      - operation/staticip.md
+      - operation/yacy_conf.md
 
     - Developers:
       - Contribute: contribute.md
