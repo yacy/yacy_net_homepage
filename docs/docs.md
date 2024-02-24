@@ -19,6 +19,27 @@
 * [Crawler API](api/crawler.md)
 * [javadoc](https://yacy.net/api/javadoc/) - generated documentation for YaCy's java source code
 
+## Converted from old-wiki
+may be outdated, you can help the community by checking and [improving](contribute.md) the pages
+
+### Installation
+* [System Requirements](installation/requirements.md)
+* [Arch Install Guide](installation/archinstall.md)
+* [Installation of YaCy on Debian](installation/debianinstall.md)
+* [YaCy High-Availability Configuration on Debian](installation/debian_high_availability.md)
+* [HowTo install YaCy on Gentoo](installation/gentooinstall.md)
+* [GNU Install](installation/gnuinstall.md)
+* [FreeBSD Install Guide](installation/freebsdinstall.md)
+* [Install YaCy-packages from OpenSUSE Build Service](installation/obsinstall.md)
+* [Set up Raspberry Pi with YaCy](installation/raspberry_pi.md)
+
+### Operation
+* [YaCy and Tor](operation/yacy-tor.md)
+* [Portforwarding](operation/portforwarding.md)
+* [Using the YaCy Front-End over HTTPS](operation/yacyoverhttps.md)
+
+
+
 
 ## Old and obsolete
 The original YaCy wiki is closed now (no new registration or editing) and
