@@ -7,9 +7,9 @@
 
 
 ## Operation
-* [Headless - YaCy on a Remote Server](operation/headless.md)
-* [Shrink Debian by removing all graphical features to turn it into a headless server](operation/shrink.md)
-* [Set a static IP to a debian server](operation/staticip.md)
+* [Headless - YaCy on a Remote Server](installation/headless.md)
+* [Shrink Debian by removing all graphical features to turn it into a headless server](installation/shrink.md)
+* [Set a static IP to a debian server](installation/staticip.md)
 * [Setting the ranking rules](operation/ranking.md)
 * [YaCy config settings](operation/yacy_conf.md)
 
