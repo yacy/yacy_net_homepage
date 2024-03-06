@@ -190,7 +190,23 @@ Note that regexp is not “normal regexp” but a ["Java Pattern"](https://docs.
 Unfortunately no. However, there is the possibility for a chronological "recrawl" to be executed for a URL (or an entire website if desired). Learn more about this feature under "Index Control" -> "Index Creation."
 
 ### How can I index Tor or Freenet pages?
-The indexing of Tor or Freenet pages is for the moment deliberately avoided in the source code because it is not desired to index these pages at this stage of the development of YaCy. However, the crawling of such sites is planned in the future. Most likely the crawl results will not distributed globally, but will only be available to the local peer.
+The indexing of Tor or Freenet pages is for the moment deliberately avoided
+in the source code because it is not desired to index these pages at this
+stage of the development of YaCy.  However, the crawling of such sites is
+planned in the future.  [There were attempts.](operation/yacy-tor.md) Most
+likely the crawl results will not distributed globally, but will only be
+available to the local peer.
+
+### How can I crawl with YaCy when I am behind a proxy?
+
+You can set-up proxy settings on `http://<host>:<port>/Settings_p.html?page=proxy`
+or in [configuration file](operation/yacy_conf.md#proxy-settings)
+`DATA/SETTINGS/yacy.conf`:
+
+        remoteProxyUse=true
+        remoteProxyHost=localhost  # hostname or address of proxy
+        remoteProxyPort=8118       # proxy port
+
 
 ###  How to remove a certain type of files from Solr index (i.e .png or .svg)?
 That's easy. Go to Index Deletion /IndexDeletion_p.html
@@ -206,6 +222,47 @@ Now you can decide if you actually want to do this and
 This cannot be undone.
 
 The String that you entered here is a [Java Pattern](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
+
+The actual deletion is done later, upon clean-up (probably), deleted pages
+disappear from index after some time. 
+
+### What is postprocessing?
+
+After the crawl is finished, the CollectionConfiguration process is executed
+by Switchboard to compute all the Citation values and furthermore check
+and mark, if the document is unique to the index (for later low-ranking of
+non-unique documents).  The status or progress of postprocessing is
+displayed in the Crawler Monitor.
+
+
+
+### What is Citation Reference?
+
+While the values for the reference evaluation are computed, also a
+backlink-structure can be discovered and written to the index as well.  The
+host browser shows such backlinks to each presented links.  The host browser
+therefore can show an information where an document is linked.  The citation
+reference is computed as likelyhood for a random click path with recursive
+usage of previously computed likelyhood.  This process is repeated until the
+likelyhood converges to a specific number.  This number is then normalized
+to a ranking value CRn, 0<=CRn<=1.  The value CRn can therefore be used to
+rank popularity within intra-domain link structures.
+
+
+
+### What is the difference between Citation Reference (reverse link index) and Webgraph?
+
+They contain both the same: links leading from page to page to calculate
+their CitationRank and hence the 'popularity'.
+
+The only difference is in storage: "Webgraph" is stored in second solr core,
+"Citation Reference" is stored internaly
+(e. g. `DATA/INDEX/freeworld/SEGMENTS/default/citation*`). 
+
+The number of solr Webgraph entries is limited by 2147483519, which is
+reached after several millions of pages indexed.  This limitation could be
+overcome by using solr cluster.
+
 
 
 ## Passwords

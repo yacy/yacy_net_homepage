@@ -33,7 +33,7 @@ Thread about Whitelisting feature:
 
 An independent YaCy network to index Tor hidden services is to be build.
 No normal Internet sites should be indexed for that purpose. There also
-is a [another YaCy network](./en:yacy-tor.html#Similar_YaCy_networks) to
+is a [another YaCy network](#similar-yacy-networks) to
 index both Tor hidden-services and normal Web sites.
 
 ## Help
