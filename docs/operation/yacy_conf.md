@@ -1183,6 +1183,14 @@ the `prereq-value` is a memory pre-requisite: that much bytes must
 be available/free in the heap; othervise the loop is not executed
 and another idlesleep is performed
 
+`recrawlindex_busysleep=10`
+
+`recrawlindex_idlesleep=2000`
+
+`recrawlindex_loadprereq=8.0`
+
+`recrawlindex_memprereq=1048576`
+
 `20_dhtdistribution_idlesleep=30000`
 
 `20_dhtdistribution_busysleep=15000`
@@ -2350,10 +2358,13 @@ green / success/3#2
 ## Debug flags
 
 `debug.search.local.dht.off=false`
+set true to disable local RWI search
 
 `debug.search.local.solr.off=false`
+set true to disable local solr search
 
 `debug.search.remote.dht.off=false`
+set true to disable remote RWI search
 
 `debug.search.remote.dht.testlocal=false`
 
