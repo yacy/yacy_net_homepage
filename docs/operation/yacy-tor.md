@@ -24,8 +24,7 @@ should look like this: `*.onion/.*`
 
 Thread about Whitelisting feature:
 
-  - <http://forum.yacy-websuche.de/viewtopic.php?f=5&t=999&hilit=#p7478>
-
+  - <https://web.archive.org/web/20140904195156/http://forum.yacy-websuche.de/viewtopic.php?f=5&t=999&hilit=#p7478>
   
 
 
@@ -39,7 +38,7 @@ index both Tor hidden-services and normal Web sites.
 ## Help
 
 Should you have questions or need help, go to the [English YaCy
-forum](http://www.huzzaar.com/yacy-forum/)
+forum](https://community.searchlab.eu/)
 
 ## Part 1 - Configuring Tor and Privoxy
 
@@ -369,7 +368,7 @@ located in there, e.g.  `chown -R yacy: ./` |
 
 Thread about Whitelisting feature:
 
-  - <http://forum.yacy-websuche.de/viewtopic.php?f=5&t=999&hilit=#p7478>
+  - <https://web.archive.org/web/20140904195156/http://forum.yacy-websuche.de/viewtopic.php?f=5&t=999&hilit=#p7478>
 
 ~~YaCy only supports a blacklist by default, therefore you have to
 download
@@ -379,7 +378,7 @@ filter is available.~~
 
 Sorry, but this Whitelist can't be used at this moment:
 
-  - <http://forum.yacy-websuche.de/viewtopic.php?f=5&t=999&hilit=#p7478>
+  - <https://web.archive.org/web/20140904195156/http://forum.yacy-websuche.de/viewtopic.php?f=5&t=999&hilit=#p7478>
 
 Now we just have to make an entry to only index *.onion* sites:
 
@@ -398,7 +397,7 @@ accept only \*.onion domains.
 #### Defining the YaCy-Tor-network
 
 By now, YaCy is able to build and define separated networks:
-[Netzdefinition](./de:netzdefinition.html "De:Netzdefinition")
+[Network Definition](./network-definition.md)
 
 The current definitions can be downloaded from
 [\[2\]](http://byi4akelnxrz5tab.onion:8081/yacy.network.unit.tor) and

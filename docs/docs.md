@@ -5,11 +5,12 @@
 * [FAQ](faq.md) - Frequently asked questions 
 * [Readme](https://github.com/yacy/yacy_search_server/blob/master/README.md) - at github.com
 
-
-## Operation
+## Installation
 * [Headless - YaCy on a Remote Server](installation/headless.md)
 * [Shrink Debian by removing all graphical features to turn it into a headless server](installation/shrink.md)
 * [Set a static IP to a debian server](installation/staticip.md)
+
+## Operation
 * [Setting the ranking rules](operation/ranking.md)
 * [YaCy config settings](operation/yacy_conf.md)
 
@@ -21,6 +22,10 @@
 
 ## Converted from old-wiki
 may be outdated, you can help the community by checking and [improving](contribute.md) the pages
+
+### Basics
+* [Use cases](use_cases.md)
+* [Features](features.md)
 
 ### Installation
 * [System Requirements](installation/requirements.md)
@@ -34,12 +39,13 @@ may be outdated, you can help the community by checking and [improving](contribu
 * [Set up Raspberry Pi with YaCy](installation/raspberry_pi.md)
 
 ### Operation
-* [YaCy and Tor](operation/yacy-tor.md)
+* [Index Creation - Crawl Start](operation/crawlstart_p.md)
+* [Autoupdate](operation/autoupdate.md)
 * [Portforwarding](operation/portforwarding.md)
 * [Using the YaCy Front-End over HTTPS](operation/yacyoverhttps.md)
-
-
-
+* [Performance Tuning](operation/performance.md)
+* [YaCy and Tor](operation/yacy-tor.md)
+* [Network Definition](operation/network-definition.md)
 
 ## Old and obsolete
 The original YaCy wiki is closed now (no new registration or editing) and
