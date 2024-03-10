@@ -1,6 +1,6 @@
 # Using the YaCy Front-End over HTTPS
 
-It is possible to put a SSL encoding in front of YaCy to get the YaCy
+It is possible to put a SSL encryption in front of YaCy to get the YaCy
 interface accessible using https. This can easily be done using stunnel
 and openssl.
 
@@ -52,7 +52,4 @@ Now the YaCy search page can be opened at <https://localhost>
 
 _Converted from
 <http://wiki.yacy.de/index.php?title=En:YaCyOverHTTPS>, may be outdated_
-
-
-
 
