@@ -13,6 +13,7 @@
 ## Operation
 * [Setting the ranking rules](operation/ranking.md)
 * [YaCy config settings](operation/yacy_conf.md)
+* [Logging in YaCy](operation/logging.md)
 
 ## Developers
 * [How to contribute](contribute.md)
