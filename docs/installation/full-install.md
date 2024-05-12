@@ -25,7 +25,7 @@
 ```
 # su -l yacy
 
-$ wget https://download.yacy.net/yacy_v1.930_202404051704_de941c6fe.tar.gz
+$ wget https://release.yacy.net/yacy_latest.tar.gz
 $ tar -xf yacy_v1.930_202404051704_de941c6fe.tar.gz -C ..
 $ exit
 
