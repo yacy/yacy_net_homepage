@@ -48,6 +48,10 @@ may be outdated, you can help the community by checking and [improving](contribu
 * [YaCy and Tor](operation/yacy-tor.md)
 * [Network Definition](operation/network-definition.md)
 
+### Developers
+* [Solr and YaCy integration](dev/solr.md)
+* [YaCy and Solr Cloud](dev/solrcloud.md)
+
 ## Old and obsolete
 The original YaCy wiki is closed now (no new registration or editing) and
 will be abandoned in future, but still contains valuable information.  You
