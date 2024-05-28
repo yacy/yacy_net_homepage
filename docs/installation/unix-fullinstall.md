@@ -1,14 +1,23 @@
-# Full YaCy installation guide
-##### (systemd or runit, nginx, let's encrypt)
+# Unix full installation guide
+(with systemd or runit, nginx, let's encrypt)
 
 ## Prerequisites
-- Any UNIX-like system which has Nginx, Certbot and Wget in its repos (assuming your distribution is Debian, but actually you can install it even on StaLI.
+
+- Any UNIX-like system which has Nginx, Certbot and Wget in its repos
+  (assuming your distribution is Debian, packages are installed using `apt`,
+  but actually you can install it even on StaLI).
+
 - A domain name
-- Systemd or Runit-powered UNIX-like system (for using on Runit system, see this: https://aur.archlinux.org/packages/yacy-runit)
-- `also, if anyone reading it has some free time, please write services and instructions for their installation for sysvinit, openrc, dinit, etc...`
+
+- Systemd or Runit-powered UNIX-like system (for using on Runit system, see
+  this: https://aur.archlinux.org/packages/yacy-runit)
+
+- _also, if anyone reading it has some free time, please write services and
+  instructions for their installation for sysvinit, openrc, dinit, etc..._
 
 ## Installation
-#### Note: `#` before the command means running as root.
+_Note: `#` before the command means running as root._
+
 **1.** Install needed packages:
 ```
 # apt install nginx certbot python3-certbot-nginx wget openjdk-17-jdk-headless
@@ -16,12 +25,14 @@
 
 **2.** Create a user needed for running YaCy
 ```
-# useradd --system yacydm -m -d /home/yacy
+# useradd --system yacyadm -m -d /home/yacy
 # useradd --system yacy -m -d /home/yacy
 ```
 
 **3.** Download, unpack and fix permissions for YaCy\*, please replace download link with new one **for *"Linux"*** located [here](https://yacy.net/download_installation/#download)
-#### `$` here means running as user created later, not your own user.
+
+_`$` here means running as user created later, not your own user._
+
 ```
 # su -l yacy
 
@@ -29,11 +40,13 @@ $ wget https://release.yacy.net/yacy_latest.tar.gz
 $ tar -xf yacy_v1.930_202404051704_de941c6fe.tar.gz -C ..
 $ exit
 
-# chown -R yacydm:yacydm /home/yacy/
+# chown -R yacyadm:yacyadm /home/yacy/
 # chown -R yacy:yacy /home/yacy/DATA/
 ```
 
-**4.** Install systemd service (runit instructions are missing, so if anyone write it, I would be grateful. Write by editing this page on GitHub.)
+**4.** Install systemd service (runit instructions are missing, so if anyone
+write it, I would be grateful.  Write by editing this page on GitHub.)
+
 ```
 # cat > yacy.service << EOF
 [Unit]
