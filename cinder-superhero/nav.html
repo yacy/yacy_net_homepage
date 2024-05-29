@@ -52,12 +52,12 @@
             {%- endblock %}
 
             <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="https://community.searchlab.eu">{%- if page.url == '' -%}<img src="img/discourse_icon.png" alt="YaCy Support GPT" height="16" width="16">{% else %}<img src="../img/discourse_icon.png" alt="YaCy Support GPT" height="16" width="16">{%- endif %} Community Forum</a>
+            </li>
 		    <li>
-                        <a href="https://searchlab.eu">{%- if page.url == '' -%}<img src="img/new.png" alt="New" width="30">{% else %}<img src="../img/new.png" alt="New" width="30">{%- endif %}YaCy Searchlab</a>
-                    </li>
-		    <li>
-                        <a href="https://community.searchlab.eu">Community Forum</a>
-                    </li>
+                <a href="https://chatgpt.com/g/g-h7fLnaDuI-yacy-support">{%- if page.url == '' -%}<img src="img/openai-white-logomark.png" alt="YaCy Support GPT" height="16" width="16">{% else %}<img src="../img/openai-white-logomark.png" alt="YaCy Support GPT" height="16" width="16">{%- endif %} YaCy Support GPT</a>
+            </li>
 
                 {%- block next_prev %}
                     {%- if page and (page.next_page or page.previous_page) %}
