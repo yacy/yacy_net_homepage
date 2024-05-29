@@ -144,13 +144,23 @@ Alternatively, another way to do this is through the configuration file httpProx
 
 ### Something seems not to be working properly ; what should I do?
 
-YaCy is still undergoing development, so one should opt for a stable version for use. The latest stable version can be downloaded from the [YaCy homepage](https://yacy.net). If you are experiencing a strange behaviour of YaCy then you should search the [community forum](https://community.searchlab.eu/) for known issues. If the issue is unknown, then you can ask for help on the forum (and provide the YaCy version, details on the occurrence of the issue, and if possible an excerpt from the log file in order to help fix the bug) or [start an issue](https://github.com/yacy/yacy_search_server/issues/) on github.
+YaCy is still undergoing development, so one should opt for a stable version
+for use.  The latest stable version can be downloaded from the [YaCy
+homepage](https://yacy.net).  If you are experiencing a strange behaviour of
+YaCy then you should search the [community
+forum](https://community.searchlab.eu/) for known issues.  If the issue is
+unknown, then you can ask for help on the forum (and provide the YaCy
+version, details on the occurrence of the issue, and if possible an excerpt
+from the [log file](operation/logging.md) in order to help fix the bug) or [start an
+issue](https://github.com/yacy/yacy_search_server/issues/) on github.
+
 
 First thing to see while experiencing some errors, is the log located at `DATA/LOG/yacy00.log`. You can monitor it live using `tail` command. While it flips around when certain size is reached, it's better to use -F option:
 ```
 tail -F DATA/LOG/yacy00.log
 ```
-You can also filter lines by using `grep` command (eg. `tail -F DATA/LOG/yacy00.log | grep DHT` to show only DHT lines) or -v parameter of grep to ignore some lines (eg. `tail -F DATA/LOG/yacy00.log | grep -v DHT` to ignore DHT lines).
+See more about setting and using the [yacy log](operation/logging.md).
+
 
 ### YaCy is running terribly slow; what should I do? 
 As an indexing and search host, YaCy is quite resource hungry. It's written in Java. Fast disks (SSD or RAID) and plenty of RAM will help. 

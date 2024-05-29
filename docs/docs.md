@@ -13,6 +13,7 @@
 ## Operation
 * [Setting the ranking rules](operation/ranking.md)
 * [YaCy config settings](operation/yacy_conf.md)
+* [Logging in YaCy](operation/logging.md)
 
 ## Developers
 * [How to contribute](contribute.md)
@@ -46,6 +47,10 @@ may be outdated, you can help the community by checking and [improving](contribu
 * [Performance Tuning](operation/performance.md)
 * [YaCy and Tor](operation/yacy-tor.md)
 * [Network Definition](operation/network-definition.md)
+
+### Developers
+* [Solr and YaCy integration](dev/solr.md)
+* [YaCy and Solr Cloud](dev/solrcloud.md)
 
 ## Old and obsolete
 The original YaCy wiki is closed now (no new registration or editing) and
