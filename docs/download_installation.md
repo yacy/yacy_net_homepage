@@ -24,7 +24,7 @@ If you don't hava Docker installed, get it from [https://docs.docker.com/get-doc
 
 * <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.exe" role="button">Download YaCy for Windows</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.exe](https://download.yacy.net/yacy_v1.924_20201214_10042.exe)
 * <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.tar.gz" role="button">Download Yacy for Linux</a> from [https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.tar.gz](https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.tar.gz)
-* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.dmg" role="button">Download YaCy for macOS</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.dmg](https://download.yacy.net/yacy_v1.924_20201214_10042.dmg)
+* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.dmg" role="button">Download YaCy for macOS</a> from [https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.dmg](https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.dmg)
 * <a class="btn btn-success btn" href="https://release.yacy.net/yacy_latest.tar.gz" role="button">Download latest developer release</A> for Linux from [https://release.yacy.net/](https://release.yacy.net/)
 
 ### With Docker
@@ -85,6 +85,8 @@ cd yacy
 
 * Double-click the downloaded `.dmg`-file and copy the Yacy.app to the "Application" folder.
 * To run YaCy, just double-click the YaCy app icon in your "Application" folder.
+
+The Macintosh application does not store it's index within the application folder (like the linux version does); instead the index is written to `~/Library/Application\ Support/net.yacy.YaCy/DATA/`. If you want to migrate YaCy index on Mac you don't need to do anything, the new YaCy version simply takes the same location again.
 
 ### Any OS with Java >= 11
 Automatic development builds can be obtained from
