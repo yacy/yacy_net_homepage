@@ -65,7 +65,44 @@ Imagine if, rather than relying on the proprietary software of a large professio
 
 Here is a live image of the YaCy network:
 
-![YaCy P2P Network](https://yacy.searchlab.eu/NetworkPicture.png?width=960&height=720&bgcolor=2C3E4F&pal=10080&pol=10080&coronaangle=120)
+<img id="NetworkPicture" src="https://yacy.searchlab.eu/NetworkPicture.png?width=960&height=720&bgcolor=2C3E4F&pal=10080&pol=10080&coronaangle=0" alt="YaCy P2P Network" width="960" height="720" />
+      
+<script type="text/javascript">
+  <!--
+    imagestub = "https://yacy.searchlab.eu/NetworkPicture.png?width=960&height=720&bgcolor=2C3E4F&pal=10080&pol=10080&coronaangle=";
+    imageanimindex = 0;
+    imageloadindex = 0;
+    imagecycles = 0;
+    imagearray = new Array(6);
+    setTimeout("initanimation()", 100);
+    setTimeout("doanimation()", 1000);
+    function initanimation() {
+      handle = new Date().getTime();
+      for (j = 0; j < 6; j++) initanimationphase(j, handle);
+    }
+    function initanimationphase(phase, handle) {
+      imagearray[phase] = new Image(1024, 720);
+      angle = phase * 60;
+      imagearray[phase].src = imagestub + angle + "&handle=" + handle;
+    }
+    function doanimation() {
+      var networkPicture = document.getElementById("NetworkPicture");
+      if (networkPicture != null) {
+        networkPicture.src = imagearray[imageanimindex].src;
+        imageanimindex++;
+        if (imageanimindex == 6) { imageanimindex = 0; }
+        imagecycles++;
+        if (imagecycles == 25) {
+          initanimationphase(imageloadindex, new Date().getTime());
+          imageloadindex++;
+          if (imageloadindex == 6) { imageloadindex = 0; }
+          imagecycles = 0;
+        }
+        setTimeout("doanimation()", 100);
+      }
+    }
+  -->
+  </script>
 
 ## Installation is easy!
 
