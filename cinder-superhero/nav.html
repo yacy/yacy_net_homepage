@@ -52,9 +52,15 @@
             {%- endblock %}
 
             <ul class="nav navbar-nav navbar-right">
-		    <li>
-                        <a href="https://community.searchlab.eu">Community Forum</a>
-                    </li>
+            <li>
+                <a href="https://community.searchlab.eu">{%- if page.url == '' -%}<img src="img/discourse_icon.png" alt="YaCy User Forum" height="16" width="16">{% else %}<img src="../img/discourse_icon.png" alt="YaCy User Forum" height="16" width="16">{%- endif %} User Forum</a>
+            </li>
+	    <li>
+                <a href="https://chatgpt.com/g/g-h7fLnaDuI-yacy-support">{%- if page.url == '' -%}<img src="img/openai-white-logomark.png" alt="YaCy Support GPT" height="16" width="16">{% else %}<img src="../img/openai-white-logomark.png" alt="YaCy Support GPT" height="16" width="16">{%- endif %} Support GPT</a>
+            </li>
+	    <li>
+                <a href="https://yacystats.de">{%- if page.url == '' -%}<img src="img/yacystats.png" alt="yacystats" height="16" width="16">{% else %}<img src="../img/yacystats.png" alt="yacystats" height="16" width="16">{%- endif %} Stats</a>
+            </li>
 
                 {%- block next_prev %}
                     {%- if page and (page.next_page or page.previous_page) %}
@@ -75,20 +81,15 @@
 
 
                 {%- block repo %}
-                    <li>
-                        <a href="https://github.com/yacy/yacy_search_server">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </li>
+		    <li>
+                       <a href="https://github.com/yacy/yacy_search_server">
+                           <i class="fab fa-github"></i> GitHub
+                       </a>
+                   </li>
                 {%- endblock %}
 
                 {%- block search_button %}
                     {%- if 'search' in config['plugins'] %}
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                            <i class="fas fa-search"></i> Search
-                        </a>
-                    </li>
                     {%- endif %}
                 {%- endblock %}
 
