@@ -1,20 +1,39 @@
-site_name: YaCy
-site_author: Michael Christen
-site_description: "YaCy P2P - Decentralized Search Engine"
-site_url: "https://yacy.net"
-repo_url: "https://github.com/yacy/yacy_net_homepage.git"
+site_name: YaCy Docs
+site_author: Michael Christen et al.
+site_description: "YaCy P2P - Decentralized Search Engine - documentation"
+//site_url: "https://yacy.net/"
+site_url: "https://eldar.cz/yacydoc/"
+repo_url: "https://github.com/okybaca/yacy_net_homepage/"
+edit_uri: "blob/standalone/docs/"
+use_directory_urls: false
 
 theme:
-    name: null
-    custom_dir: 'cinder-superhero'
+    name: readthedocs
+//    custom_dir: 'cinder-superhero'
 
 nav:
-  - Home: index.md
-  - Demo: demonstration_tutorial_screenshot.md
-  - Download: download_installation.md
-  - Docs: docs.md
-  - FAQ: faq.md
+    - Basic:
 
+      - FAQ: faq.md
+
+    - Installation:
+
+      - download_installation.md
+      - installation/headless.md
+      - installation/shrink.md
+      - installation/staticip.md
+
+    
+    - Operation:
+      - operation/ranking.md
+      - operation/yacy_conf.md
+
+    - Developers:
+      - Contribute: contribute.md
+      - Crawler API: api/crawler.md
+
+
+  
 markdown_extensions:
   - admonition
   - attr_list
