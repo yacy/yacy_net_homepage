@@ -14,23 +14,48 @@ theme:
 nav:
     - Basic:
 
+      - download_installation.md
       - FAQ: faq.md
+      - Use cases: use_cases.md
+      - Features: features.md
 
     - Installation:
 
-      - download_installation.md
+      - installation/requirements.md
+      - installation/unix-fullinstall.md
+
+      - installation/debianinstall.md
+      - installation/debian_high_availability.md
       - installation/headless.md
       - installation/shrink.md
       - installation/staticip.md
+      - installation/archinstall.md
+      - installation/gentooinstall.md
+      - installation/gnuinstall.md
+      - installation/freebsdinstall.md
+      - installation/obsinstall.md
+      - installation/raspberry_pi.md
 
     
     - Operation:
+      - operation/crawlstart_p.md
       - operation/ranking.md
       - operation/yacy_conf.md
+      - operation/rwi-index-distribution.md
+      - operation/autoupdate.md
+      - operation/portforwarding.md
+      - operation/yacyoverhttps.md
+      - operation/performance.md
+      - operation/logging.md
+      - operation/network-definition.md
+      - operation/yacy-tor.md
+
 
     - Developers:
       - Contribute: contribute.md
       - Crawler API: api/crawler.md
+      - dev/solr.md
+      - dev/solrcloud.md
 
 
   
