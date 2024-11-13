@@ -80,8 +80,11 @@ to sort by last_modified and bring the most current documents to the top,
 `div(add(references_internal_i,product(references_external_i,references_exthosts_i)),add(clickdepth_i,1))`
 
 to consider documents with many external references as more important but
-also count the clickdepth.  Just try to do your own experiments using the
-attributes from the index schema.
+also count the clickdepth.  
+
+
+Just try to do your own experiments using the attributes from the index
+schema.
 
 
 ### Boost Query
@@ -98,6 +101,15 @@ double content to the back.  You can use this like a default filter for your
 documents which move forward or backward in the result list independently
 from the searched word.
 
+
+If you want, for example, to prefer documents from a particular TLD (_.au_
+in this example), use boost query:
+
+`host_s = query => *.au^50`
+
+To understand the solr queries, see [Solr Query
+Guide](https://solr.apache.org/guide/solr/latest/query-guide/query-syntax-and-parsers.html)
+or a [simple tutorial](https://solrtutorial.com/solr-query-syntax.html).
 
 ### Filter Query
 
