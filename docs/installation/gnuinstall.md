@@ -64,30 +64,14 @@ by using the distributions package management system.
 
 
 
-
-[![](../images/thumb/galternatives.png/300px-galternatives.png)](./datei:galternatives.png.html)
-
-
-
-
-
-[](./datei:galternatives.png.html "vergrößern")
-
-
-
-Auswahl verschiedener Java-VMs mit galternatives
-
-
-
-
-
-
-
 ### Debian
 
 In Debian & Ubuntu JVMs are managed through the 'alternatives' system.
 You can chose the wanted virtual machine by running
 "update-alternatives" or graphically through "galternatives".
+
+
+![Galternatives screenshot](../../img/Galternatives.png)
 
 ### modify YaCy init script
 

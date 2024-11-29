@@ -1934,12 +1934,15 @@ this is only shown, if the about.body is filled.
 ## Index distribution and transfer
 
 follwing specifies if the http post body should be transfered
-using content-encoding gzip during index transfer
+using content-encoding gzip during index transfer:
+
 1. indexDistribution: which is done periodically if you have enabled 
-	Index Distribution via IndexControl_p.html
+	Index Distribution via `IndexControl_p.html`
+
 2. indexTransfer: which can be used to transfer the whole index of a peer
-	this can be started via IndexTransfer_p.html
-3. indexControl: which can be triggered manually via IndexControl_p.html to
+	this can be started via `IndexTransfer_p.html`
+
+3. indexControl: which can be triggered manually via `IndexControl_p.html` to
 	transfer a chosen subset of the peer index     
 
 `indexDistribution.gzipBody = true`
