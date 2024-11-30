@@ -105,6 +105,8 @@ The default address for the YaCy search and administration page is http://localh
 ### Why does YaCy show different results from Google?
 We expect YaCy to show different results than Google, for several reasons. As long as YaCy has only a few peers working, it cannot compete with Google. Hence the importance of having a great number of YaCy peers working. But even then YaCy will provide different and better results than Google, since it can be adapted to the user's own preferences and is not influenced by commercial aspects.
 
+## Network
+
 ### What does Virgin, Junior, Senior, Principal Status mean?
 
 #### virgin
@@ -142,6 +144,8 @@ Do not forget to restart YaCy after the change.
 
 Alternatively, another way to do this is through the configuration file httpProxy.conf in DATA/SETTINGS. If this type of configuration is to be performed then YaCy must be stopped before.
 
+## Troubleshooting
+
 ### Something seems not to be working properly ; what should I do?
 
 YaCy is still undergoing development, so one should opt for a stable version
@@ -169,6 +173,8 @@ It occupies only the amount of RAM specified in “Maximum Used Memory”, so if
 
 Sometimes also ‘Database Optimisation’ helps, but it takes some time to run.
 
+For more tips see the [Performance Tuning](operation/performance.md) page.
+
 ### I can not uninstall, because YaCy is still running
 First check whether YaCy still runs. If it doesn't run, it may not have been shut down properly. Start YaCy again, then uninstall. Alternatively delete the yacy.running file in the yacy/DATA/ directory, then uninstall.
 
@@ -190,7 +196,12 @@ URLs are analyzed more than once so that a peer delayed does not lose his part i
 ## Crawling / indexing
 
 ### How do I avoid indexing of some files?
-One way is to limit the crawler using regular expressions in “filters” section in advanced crawler. For example, “.\*\.tar\.gz” in “Load filter on URLs” field in “crawler filter” section, means that no tar.gz files will be browsed. You can use multiple of them using “or” (``|``) operator, for example “.\*tar\.gz|.\*\.zip” will ignore urls that end with .tar.gz OR .zip.
+One way is to limit the crawler using regular expressions in “filters”
+section in [advanced crawler](operation/crawlstart_p.md).  For example,
+`.*\.tar\.gz` in “Load filter on URLs” field in “crawler filter” section,
+means that no tar.gz files will be browsed.  You can use multiple of them
+using “or” (``|``) operator - for example `.*\.tar\.gz|.*\.zip` will ignore
+urls that end with `.tar.gz` OR `.zip`.
 
 There are two separate filters, one for crawling (crawler filter), and one for actual indexing (“document filter”).
 
@@ -221,7 +232,7 @@ or in [configuration file](operation/yacy_conf.md#proxy-settings)
 ###  How to remove a certain type of files from Solr index (i.e .png or .svg)?
 That's easy. Go to Index Deletion /IndexDeletion_p.html
 
-* In the first text window “Delete by URL Matching” enter i.e. .*\.png for PNG files.
+* In the first text window “Delete by URL Matching” enter i.e. `.*\.png` for PNG files.
 * check the radio button “matching with regular expression”
 * hit “Simulate Deletion”. This does not actually delete anything, but enables the button “Engange Deletion” and show how many documents would be deleted.
 
@@ -243,6 +254,23 @@ by Switchboard to compute all the Citation values and furthermore check
 and mark, if the document is unique to the index (for later low-ranking of
 non-unique documents).  The status or progress of postprocessing is
 displayed in the Crawler Monitor.
+
+The postprocess calculates the pagerank which is computational madness. 
+Therefore the postprocessing is disabled in recent releases.  If it is not
+disabled in yours, please do so.
+
+To enable the posprocessing again you must switch on a specific index field
+(“process_sxt”) in the index schema which you can find here:
+`http://localhost:8090/IndexSchema_p.html`
+
+Then freshly crawled content can be processed - but postprocessing starts
+only after the complete crawl has finished and the crawl stack is completely
+empty.  The postprocessing does not start instantly but only if the cleanup
+job runs - which runs every 10 minutes.
+
+Another condition is, that the Web Structure Index is switched on which you
+can find at `http://localhost:8090/IndexFederated_p.html` - but that should be
+on by default.
 
 
 
@@ -303,7 +331,7 @@ Then you will be able to log again into YaCy with the account/password you enter
 ## Disk space
 
 ### How can I limit the size of single files to be downloaded?
-The maximum file size can be set under Advanced settings -> Crawler settings. Maximum sizes can be specified for HTTP and FTP. The file size is in bytes. A converter can be found at Bit and Byte (bits and bytes) (broken link)
+The maximum file size can be set under _Advanced settings -> Crawler settings_. Maximum sizes can be specified for HTTP and FTP. The file size is in bytes. 
 
 ### How many links/words and how much disk space can a YaCy instance manage?
 The number of storable links/words is theoretically not limited, but it becomes actually limited following the slowdown of the indexing process with the increase of the links/words number. There are users with more than 10 million Web pages indexed in their YaCy instance. Also, the necessary space for the index of a web page depends on the size and nature of the document. With 10 million web pages indexed, an index size of 20GB is not uncommon.
@@ -329,14 +357,29 @@ For more theoretical concepts behind YaCy, you can see [slides for talks of Mich
 ### How can I help?
 First of all: run YaCy in senior mode. This helps to enrich the global index and to make YaCy more attractive.  
 
-If you want to add your own code, you are welcome; but please contact the author first and discuss your idea to see how it may fit into the overall architecture. 
+If you're advanced user, you can be a big help for newbies in the 
+[community forum](https://community.searchlab.eu/). Answering the questions
+and sharing both your knowledge and experiments keeps the community alive.
+
+If you want to [add your own code](contribute.md), you are welcome; but
+please contact the author first and discuss your idea to see how it may fit
+into the overall architecture.
+
+If you can do Java, you can try to fix some of the 
+[issues on github](https://github.com/yacy/yacy_search_server/issues). 
+Every Java developer is warmly welcomed.
+
+The [documentation](https://github.com/yacy/yacy_net_homepage) also needs a
+lot of improvement, and you can help a lot by editing it or adding your own
+remarks and experience.
+
+And if you find a bug or you see an uncovered use-case, we welcome your
+[bug-report](https://github.com/yacy/yacy_search_server/issues).  Please
+describe the problem precisely (expected and real behavior), try to provide
+as much information possible to reconstruct the problem and	 attach the
+respective [log entries](operation/logging.md).
 
 You can help a lot by simply giving us feedback or telling us about new ideas. 
 
 You can also help by telling other people about this software. 
 
-And if you find a bug or you see an uncovered use-case, we welcome your [bug-report](https://github.com/yacy/yacy_search_server/issues).  
-
-Any feed-back is welcome. 
-
-You can [contribute](contribute.md) your code on GitHub, both to [YaCy](https://github.com/yacy/yacy_search_server) and it's [documentation](https://github.com/yacy/yacy_net_homepage).
