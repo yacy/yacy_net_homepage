@@ -14,6 +14,7 @@
 ## Operation
 * [Setting the ranking rules](operation/ranking.md)
 * [YaCy config settings](operation/yacy_conf.md)
+* [RWI index distribution](operation/rwi-index-distribution.md)
 * [Logging in YaCy](operation/logging.md)
 
 ## Developers
