@@ -10,6 +10,7 @@
 * [Shrink Debian by removing all graphical features to turn it into a headless server](installation/shrink.md)
 * [Set a static IP to a debian server](installation/staticip.md)
 * [Unix full installation guide](installation/unix-fullinstall.md) - with systemd or runit, nginx, let's encrypt
+* [Android installation](installation/android.md) - using termux and source build
 
 ## Operation
 * [Setting the ranking rules](operation/ranking.md)
