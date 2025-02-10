@@ -3,7 +3,7 @@
 ## Basics
 * [Download and installation](download_installation.md) - guide for unix, windows and macos
 * [FAQ](faq.md) - Frequently asked questions 
-* [Readme](https://github.com/yacy/yacy_search_server/blob/master/README.md) - at
+* [Readme](https://github.com/yacy/yacy_search_server/blob/master/README.md) - at github.com
 * [Use cases](use_cases.md)
 * [Features](features.md)
 
