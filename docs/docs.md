@@ -3,7 +3,7 @@
 ## Basics
 * [Download and installation](download_installation.md) - guide for unix, windows and macos
 * [FAQ](faq.md) - Frequently asked questions 
-* [Readme](https://github.com/yacy/yacy_search_server/blob/master/README.md) - at github.com
+* [Readme](https://github.com/yacy/yacy_search_server/blob/master/README.md) - at
 * [Use cases](use_cases.md)
 * [Features](features.md)
 
@@ -22,6 +22,7 @@
 * [FreeBSD Install Guide](installation/freebsdinstall.md)
 * [Install YaCy-packages from OpenSUSE Build Service](installation/obsinstall.md)
 * [Set up Raspberry Pi with YaCy](installation/raspberry_pi.md)
+* [Android installation](installation/android.md) - using termux and source build
 
 
 ## Operation
