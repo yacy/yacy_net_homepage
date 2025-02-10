@@ -35,7 +35,7 @@ nav:
       - installation/freebsdinstall.md
       - installation/obsinstall.md
       - installation/raspberry_pi.md
-
+      - installation/android.md
     
     - Operation:
       - operation/crawlstart_p.md
