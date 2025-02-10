@@ -8,5 +8,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
-    - run: pip install mkdocs
+    - run: pip install --break-system-packages mkdocs
     - run: mkdocs build
