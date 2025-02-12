@@ -1,10 +1,9 @@
-# YaCy.net Home Page
+# YaCy standalone documentation
 
-This is the home page of the YaCy project at http://yacy.net
+This is an YaCy - p2p search engine - documentation, forked from the [official
+homepage repository](https://github.com/yacy/yacy_net_homepage), made
+standalone and hosted at <https://eldar.cz/yacydocs>.
 
-Development-builds are visible at https://yacy.github.io/yacy_net_homepage/
-Github pages are not used to host the home page for privacy reasons! (github/Microsoft would see every request...)
-The live page at yacy.net is build + hosted on a private server automatically.
 
 ## How to contribute documentation to the home page:
 
