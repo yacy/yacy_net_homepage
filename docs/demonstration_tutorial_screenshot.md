@@ -10,7 +10,7 @@ We have screenshots, tutorial movies, and a live demonstration. If you want to j
 
 ### Search Results
 
-This is the search result page using peer-to-peer data:
+This is the search results page using peer-to-peer data:
 ![YaCy Search Engine Result List](img/screenshot_search_result.png)
 
 Search result pages can be configured:
@@ -27,7 +27,7 @@ Search result ranking can be configured:
 
 ### Crawling
 
-Before search resuls can be provided, a web crawl must be done to harvest the required document corpus.
+Before search results can be provided, a web crawl must be done to harvest the required document corpus.
 
 There is a easy-to-use simple crawl start service which takes almost only the starting URL as input:
 ![YaCy Search Engine Site Crawler/Spider](img/screenshot_crawler_site.png)
@@ -41,7 +41,7 @@ For more complex harvesting tasks, here is the Expert Crawl Start service:
 
 ### Data Analysis
 
-A running YaCy instance has many management tasks runnning and it creates a lot of data.
+A running YaCy instance has many management tasks running and it creates a lot of data.
 To visualize that data about itself and the data it harvested from the internet, there are a lot of
 dashboards and monitoring features.
 
@@ -51,7 +51,8 @@ The status page which informs about the current activities of your YaCy instance
 Crawled web pages can be reconstructed and browsed with the host browser where you see the internal link structure and all kind of details of the parsing results:
 ![YaCy Search Engine Host Browser](img/screenshot_host_browser.png)
 
-While the host browser reveals the structure of documents within all of the single domains, the web strucure service shows how domains are linked to each other:
+While the host browser reveals the structure of documents within all of the single domains, the web
+structure service shows how domains are linked to each other:
 ![YaCy Search Engine Web Structure](img/screenshot_web_structure.png)
 
 ### Configuration
@@ -61,7 +62,10 @@ YaCy can be configured in every detail using the web interface. You can use a co
 Here you see the use case configuration. This is actually the first service which YaCy shows to you because the first thing you have to do is to choose which use case you are prefering: Peer-to-Peer operation, your own Search Portal, or Intranet Indexing:
 ![YaCy Search Engine Basic Configuration for Use Case: Peer-to-Peer, Portal, Intranet](img/screenshot_use_case_configuration.png)
 
-The main purpose of YaCy is to aquire a lot of data from the web and make them searchable. Consequently, this uses a lot of disk space. We make the resources which YaCy takes configurable with the following service. YaCy loves to use more RAM if available, give it more RAM and it performes better! 
+The main purpose of YaCy is to aquire a lot of data from the web and make
+them searchable.  Consequently, this uses a lot of disk space.  We make the
+resources which YaCy takes configurable with the following service.  YaCy
+loves to use more RAM if available, give it more RAM and it performs better!
 ![YaCy Search Engine Performance Setting](img/screenshot_performance_settings.png)
 
 
@@ -81,7 +85,7 @@ Every connection that YaCy does, peer-to-peer or crawling, is monitored as well:
 
 ## Tutorial Movies
 
-We have a youtube channel! Yes, thats a google service - therefore all videos embedded here are mouseover-activated, that means as long as you do not touch them, there is no referrer appearing at a G server.
+We have a YouTube channel! Yes, thats a Google service - therefore all videos embedded here are mouseover-activated, that means as long as you do not touch them, there is no referrer appearing at a G server.
 
 These videos are short and most have nice music from [Shiryu Music](https://shiryu.bandcamp.com/) in the background. Shiryu is just great and inspiring! 
 
@@ -129,7 +133,7 @@ Instead of Java 7 now please install Java 11 (or higher)
 <img src="../img/tutorial_06_Secret_Agents_with_YaCy_RSS_Feed_Reader.png" alt="YaCy Tutorial 06: Secret Agents with YaCy RSS Feed Reader" width="720" height="405"  onmouseover="document.getElementById('video06').innerHTML = embed06;">
 </div>
 
-### Demo: Location Search with YaCy and Opensteetmap and Geonames
+### Demo: Location Search with YaCy and Openstreetmap and Geonames
 <div id="video07">
 <img src="../img/tutorial_07_Search_Locations_on_Map_with_Openstreetmap_and_Geonames.png" alt="YaCy Tutorial 07: Search Locations on a Map with Openstreetmap and Geonames" width="720" height="405"  onmouseover="document.getElementById('video07').innerHTML = embed07;">
 </div>
