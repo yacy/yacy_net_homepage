@@ -11,12 +11,12 @@ You either need Java or Docker.
 
 ### On Linux, Windows and macOS
 
-Because YaCy requires Java, first download and install Java (>= Java 11) from [https://adoptium.net/](https://adoptium.net/). On Linux use your supported plattform like ```dnf``` or ```apt-get``` 
+Because YaCy requires Java, first download and install Java (>= Java 11) from [https://adoptium.net/](https://adoptium.net/). On Linux use your supported platform like ```dnf``` or ```apt-get``` 
 
 ### With Docker
 
-If you run YaCy with Docker you don't need to install Java on your system, it's all contained in the Coder Container.
-If you don't hava Docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for macOS, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install Docker on Raspberry Pi or other ARM-based devices.
+If you run YaCy with Docker you don't need to install Java on your system, it's all contained in the Docker Container.
+If you don't have Docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for macOS, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install Docker on Raspberry Pi or other ARM-based devices.
 
 
 ## Download 
@@ -86,7 +86,7 @@ cd yacy
 * Double-click the downloaded `.dmg`-file and copy the Yacy.app to the "Application" folder.
 * To run YaCy, just double-click the YaCy app icon in your "Application" folder.
 
-The Macintosh application does not store it's index within the application folder (like the linux version does); instead the index is written to `~/Library/Application\ Support/net.yacy.YaCy/DATA/`. If you want to migrate YaCy index on Mac you don't need to do anything, the new YaCy version simply takes the same location again.
+The Macintosh application does not store its index within the application folder (like the linux version does); instead the index is written to `~/Library/Application\ Support/net.yacy.YaCy/DATA/`. If you want to migrate YaCy index on Mac you don't need to do anything, the new YaCy version simply takes the same location again.
 
 ### Any OS with Java >= 11
 Automatic development builds can be obtained from
@@ -94,7 +94,7 @@ Automatic development builds can be obtained from
 
 ### Docker ###
 
-Running YaCy in docker is easy. If you don't have docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for Mac, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install docker on Raspberry Pi or any other ARM-based devices.
+Running YaCy in Docker is easy. If you don't have docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for Mac, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install Docker on Raspberry Pi or any other ARM-based devices.
 
 The Official YaCy Images are hosted on Dockerhub at [https://hub.docker.com/r/yacy/yacy_search_server](https://hub.docker.com/r/yacy/yacy_search_server)
 
@@ -104,7 +104,7 @@ We provide amd64, arm64v8 and arm32v7 versions with the following tags:
 * arm64v8: `yacy/yacy_search_server:aarch64-latest` 
 * arm32v7: `yacy/yacy_search_server:armv7-latest`
 
-i.e. to install YaCy in intel-based environments, run:
+i.e., to install YaCy in intel-based environments, run:
 
 ```
 docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 -v yacy_search_server_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
@@ -155,7 +155,7 @@ This will mount the data volume from the upgraded yacy instance.
 When all works,
 
 * YaCy is now running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web browser.
-* No password is required when accessing this YaCy instance from localhost. Howwever if you access your peer from another host, the default password for the account `admin` is `yacy`.
+* No password is required when accessing this YaCy instance from localhost. However if you access your peer from another host, the default password for the account `admin` is `yacy`.
 
 You should always set a new admin password!
 
