@@ -49,4 +49,4 @@ The password is stored in hashed form in the file <yacy-home>DATA/SETTINGS/yacy.
 * remove property adminAccount
 * set property serverAccount to <account>:<password>, i.e. serverAccount=admin:mysecretpassword
 
-When YaCy is started the next time, the serverAccount is encrypted and removed to prevent that the property is there in clear text form.
+When YaCy is started the next time, the serverAccount is encrypted and removed to prevent that the property is there in cleartext form.

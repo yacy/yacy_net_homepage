@@ -13,12 +13,12 @@ You either need Java or Docker.
 
 ### On Linux, Windows and macOS
 
-Because YaCy requires Java, first download and install Java (>= Java 11) from [https://adoptium.net/](https://adoptium.net/). On Linux use your supported plattform like ```dnf``` or ```apt-get``` 
+Because YaCy requires Java, first download and install Java (>= Java 11) from [https://adoptium.net/](https://adoptium.net/). On Linux use your supported platform like ```dnf``` or ```apt-get``` 
 
 ### With Docker
 
-If you run YaCy with Docker you don't need to install Java on your system, it's all contained in the Coder Container.
-If you don't hava Docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for macOS, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install Docker on Raspberry Pi or any other ARM-based devices.
+If you run YaCy with Docker you don't need to install Java on your system, it's all contained in the Docker Container.
+If you don't have Docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for macOS, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install Docker on Raspberry Pi or other ARM-based devices.
 
 
 ## Download 
@@ -48,13 +48,13 @@ The source code is inside the generic tarball. It is recommended you clone the G
 ### On Windows
 
 * Double-clicking the downloaded installer.
-* When the message `Windows protected your PC` (in Windows 10) appears, klick `More info`->`Run anyway`. 
-  * When asked `Do you want to allow this app from an unknown publisher to make changes to your device`, klick `yes`.
-* Within the YaCy Installer, klick `Next`, `I Agree`, `Next`, `Install`, `Finish`.
+* When the message `Windows protected your PC` (in Windows 10) appears, click `More info`->`Run anyway`. 
+  * When asked `Do you want to allow this app from an unknown publisher to make changes to your device`, click `yes`.
+* Within the YaCy Installer, click `Next`, `I Agree`, `Next`, `Install`, `Finish`.
 * To run YaCy, double-click the YaCy app icon (which may be on your desktop).
 * Whenever the following dialog appears click `allow private networks` and `allow access`
 ![Windows Java Security Setting](img/win_java_security_dialog.png)
-* YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
+* YaCy is then running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web browser.
 
 
 ### On Linux
@@ -88,7 +88,7 @@ cd yacy
 * Double-click the downloaded `.dmg`-file and copy the Yacy.app to the "Application" folder.
 * To run YaCy, just double-click the YaCy app icon in your "Application" folder.
 
-The Macintosh application does not store it's index within the application folder (like the linux version does); instead the index is written to `~/Library/Application\ Support/net.yacy.YaCy/DATA/`. If you want to migrate YaCy index on Mac you don't need to do anything, the new YaCy version simply takes the same location again.
+The Macintosh application does not store its index within the application folder (like the linux version does); instead the index is written to `~/Library/Application\ Support/net.yacy.YaCy/DATA/`. If you want to migrate YaCy index on Mac you don't need to do anything, the new YaCy version simply takes the same location again.
 
 ### Any OS with Java >= 11
 Automatic development builds can be obtained from
@@ -96,7 +96,7 @@ Automatic development builds can be obtained from
 
 ### Docker ###
 
-Running YaCy in docker is easy. If you don't have docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for Mac, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install docker on Raspberry Pi or any other ARM-based devices.
+Running YaCy in Docker is easy. If you don't have docker installed, get it from [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) (for Mac, Windows and Linux) or read the instructions from [https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/](https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/) to install Docker on Raspberry Pi or any other ARM-based devices.
 
 The Official YaCy Images are hosted on Dockerhub at [https://hub.docker.com/r/yacy/yacy_search_server](https://hub.docker.com/r/yacy/yacy_search_server)
 
@@ -106,12 +106,12 @@ We provide amd64, arm64v8 and arm32v7 versions with the following tags:
 * arm64v8: `yacy/yacy_search_server:aarch64-latest` 
 * arm32v7: `yacy/yacy_search_server:armv7-latest`
 
-i.e. to install YaCy in intel-based environments, run:
+i.e., to install YaCy in intel-based environments, run:
 
 ```
 docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 -v yacy_search_server_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
 ```
-then open http://localhost:8090 in your web-browser.
+then open http://localhost:8090 in your web browser.
 
 The default login for YaCy on Docker is `admin`:`yacy` 
 
@@ -134,7 +134,7 @@ For example: the default peer name can be set with `network.unit.agent` in `yacy
 ```
 docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 -e YACY_NETWORK_UNIT_AGENT=Choomba -v yacy_search_server_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
 ```
-This can also be used to re-start a previously started image to overwrite the already stored configuration values.
+This can also be used to restart a previously started image to overwrite the already stored configuration values.
 
 #### Backup and restore of DATA folder 
 All data from YaCy is written into the data folder which is stored in the docker volume `yacy_search_server_data`. To back-up that DATA folder to `/tmp/DATA.tar.gz`, just run
@@ -156,8 +156,8 @@ This will mount the data volume from the upgraded yacy instance.
 
 When all works,
 
-* YaCy is now running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web-browser.
-* No password is required when accessing this YaCy instance from localhost. Howwever if you access your peer from another host, the default password for the account `admin` is `yacy`.
+* YaCy is now running on port 8090 on your machine. Open [http://localhost:8090](http://localhost:8090) in your web browser.
+* No password is required when accessing this YaCy instance from localhost. However if you access your peer from another host, the default password for the account `admin` is `yacy`.
 
 You should always set a new admin password!
 
@@ -174,7 +174,8 @@ You should always set a new admin password!
 
 Installation is very easy on any system. If it looks complex here it's just because we give directions in great detail.
 
-You can download and build your own YaCy with these simple steps. This is probably the best and easiest ways for everyone who knows how to use a command line interface. 
+You can download and build your own YaCy with these simple steps. This is probably the best and easiest way for
+anyone who knows how to use a command line interface. 
 
 You need:
 
@@ -204,7 +205,7 @@ The compiled tarball will then be in the `RELEASE` folder.
 ## Kubernetes 
 
 ```
-# optional: for a quick and easy installation of Kubernetes, run minikube
+# optional: for quick and easy installation of Kubernetes, run minikube
 minikube start
 minikube dashboard
 
@@ -235,7 +236,7 @@ config set-context --current --namespace=default
 ```
 
 # Licence
-
 YaCy is libre software - licensed GPL-2+. 
+
 
 
