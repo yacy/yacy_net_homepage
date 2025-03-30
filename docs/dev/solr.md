@@ -11,7 +11,7 @@ YaCy as external storage. This can be activated with one single click if
 you have a running Solr, configured for YaCy.
 
 The remote index scheme is similar (but extended) to SolrCell; see
-<http://wiki.apache.org/solr/ExtractingRequestHandler> We added some
+<https://cwiki.apache.org/confluence/display/solr/ExtractingRequestHandler> We added some
 more generic fields, added a second solr core and therefore we need to
 use the solr.xml and schema.xml from a YaCy installation.
 
@@ -48,24 +48,36 @@ servlet container, do only one of the following three:
 
 ## Use the example-deployment in a Solr package
 
-This is probably the easiest and fastest way to test a YaCy-Solr
-connection. Don't do this for a production environment; one of the next
-two options is better for this. The following steps uses Solr 4.1.0; you
-can use the most recent version as well.
+This is probably the easiest and fastest way to test a YaCy-Solr connection. 
+Don't do this for a production environment; one of the next two options is
+better for this.  The following steps uses Solr 4.1.0 as an example, YaCy
+uses version Solr 9 since 1.94.  You can use the most recent version as
+well.
 
-  - Download solr-4.1.0.tgz from <http://lucene.apache.org/solr/>
+### Install Solr
+Easiest would be installing Solr from your's OS packaging system (such as apt or pkg), 
+use actual path to solr db then, instead of `~/solr-4.1.0/example/`.
+
+Or you can download manually:
+
+  - Download solr-4.1.0.tgz from <https://solr.apache.org/downloads.html>
   - Decompress solr-4.1.0.tgz (with 'tar xfz solr-4.1.0.tgz') and put
     solr-4.1.0 into ~/
-  - We must defined two cores for Solr: the default collection1 and an
-    addition 'webgraph' core. This is done by copying the YaCy solr.xml
+
+### Create search cores
+Solr uses distinct databases called cores.
+
+  - We must define two cores for Solr: the default `collection1` and an
+    additional `webgraph` core, if you use webgraph feature.  This is done
+    by copying the `solr.xml` from YaCy:
 
 <!-- end list -->
 
     cp ~/yacy/defaults/solr/solr.xml ~/solr-4.1.0/example/solr/collection1/conf/
 
-  - The webgraph core is basically a copy of the default collection1
-    core. Create a configuration for the webgraph as a clone of
-    collection1:
+  - The `webgraph` core is basically a copy of the default `collection1`
+    core. Create a configuration for the `webgraph` as a clone of
+    `collection1`:
 
 <!-- end list -->
 
@@ -96,12 +108,16 @@ commands:
 
 Solr is then running at <http://127.0.0.1:8983/solr>
 
+
+### Setup YaCy for external Solr
+
   - Start YaCy (if not already running) and open
     <http://localhost:8090/IndexFederated_p.html>
   - in the "Solr URL(s)" field, enter: <http://127.0.0.1:8983/solr> (or
     a remote address, if you want to run solr on a different server)
   - uncheck the "Use deep-embedded local Solr" flag and check the "Use
     remote Solr server(s)" flag
+
 
 ## Deploy Solr in Tomcat
 
@@ -246,8 +262,26 @@ tar.gz file. This filename can then be processed further with your own
 copy-and-deploy script to fill a remote Solr with that.
 
 
+# Upgrading
 
-For cluster solr usage, see [Solr Cloud instructions](./solrcloud.md)
+When upgrading YaCy from one major version to newer (such as from 1.93 to
+1.94), new version of Solr is usually used. 
+
+After upgrading both YaCy and Solr, always check whether the core configuration wasn't changed
+by:
+
+	diff -r ~/yacy/defaults/solr/ ~/solr-4.1.0/example/solr/collection1/conf/
+
+and change the files in `solr/collection1/conf` accordingly.
+
+
+Unfortunately, you cannot upgrade two major versions up (such as from 1.92
+to 1.94). If you need to do so, either upgrade one major version first, or
+export your index and reimport it after reinstallation. 
+
+
+
+For cluster Solr usage, see [Solr Cloud instructions](./solrcloud.md)
 
 
 _Converted from
