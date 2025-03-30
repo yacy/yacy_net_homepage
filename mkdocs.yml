@@ -56,7 +56,7 @@ nav:
       - Crawler API: api/crawler.md
       - dev/solr.md
       - dev/solrcloud.md
-
+      - dev/solr-schema.md
 
   
 markdown_extensions:
