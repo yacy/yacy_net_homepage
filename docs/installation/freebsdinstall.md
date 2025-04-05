@@ -42,6 +42,37 @@ That's it! You can now cd into directory and start YaCy.
     cd yacy
     ./startYACY.sh
 
+
+## Use external Solr
+If you want to use an external Solr instead of the build-in one, then:
+
+* Install `textproc/apache-solr` port using:
+
+	`pkg install apache-solr` or ports.
+  
+  Solr's database is located in `/var/db/solr`, in FreeBSD.
+
+* Create Solr cores by following [External Solr guide](../dev/solr.md#create-search-cores).
+
+* For Solr 9 you have to add line:
+
+	`SOLR_MODULES=scripting`
+
+  to `/usr/local/etc/solr.in.sh`, to enable XSLT. You can also tune some
+  variables in that config file, such as max memory in `SOLR_HEAP` or
+  address/port.
+
+* Start-up Solr by:
+
+	`service solr start`,
+
+* and/or make it run on startup by adding:
+	`solr_enable="YES"`
+  to `/etc/rc.conf`.
+
+* [Configure YaCy to use external solr](../dev/solr.md#setup-yacy-for-external-solr).
+
+
 ## Side notes for YaCy developers and advanced users
 
 To make the installation easier `/usr/bin/env bash` in various scripts
@@ -52,7 +83,6 @@ which could theoretically be used in bin/apicall.sh. However the way the
 password is sent (using MD5:...) appears to be causing problems. I was
 not yet able to work around this. If this could be fixed curl/wget would
 not be required.
-
 
 
 
