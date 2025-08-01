@@ -71,7 +71,7 @@ You can chose the wanted virtual machine by running
 "update-alternatives" or graphically through "galternatives".
 
 
-![Galternatives screenshot](../../img/Galternatives.png)
+![Galternatives screenshot](../img/Galternatives.png)
 
 ### modify YaCy init script
 

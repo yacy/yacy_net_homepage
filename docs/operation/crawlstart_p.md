@@ -1,10 +1,10 @@
-# Index Creation - Crawl Start
+# Advanced Crawler
 
 
 
 
 
-[![](../images/thumb/yacy_crawlstart_p_svn6915_0.69_en.png/300px-yacy_crawlstart_p_svn6915_0.69_en.png)](./datei:yacy_crawlstart_p_svn6915_0.69_en.png.html)
+![Advanced Crawler](../img/screenshot_expert_crawl_start.png)
 
 
 
@@ -12,7 +12,7 @@
 
 
 
-This page ist available in the Index Control Index Creation via the address
+This page is available in _Production > Advanced Crawler_ via the address
 <http://localhost:8090/CrawlStart_p.html> and allows you to start new web
 crawls by creating a new crawling profile.  In case an administrator
 password was setup you have to login as the administrator first.
@@ -106,7 +106,7 @@ URLs:
     is 'catch all' (.\*).
 
 Example: to allow only urls that contain the word 'science', set the
-filter to '.\*science.\*'.
+filter to `.*science.*`.
 
   - **Restrict to start domain** With this setting the crawler will only
     accept URLs with the domain of the start URL. It is recommended to
@@ -114,7 +114,7 @@ filter to '.\*science.\*'.
 
 Example: A crawl From URL: <http://www.server.com/folder/index.html>
 would also crawl and index all linked pages with the active filter
-.\*www.server.com.\*
+`.*www.server.com.*`
 
   - **Restrict to sub-path** With this setting the crawler will only
     accept URLs with the current sub-folder of the start URL.
