@@ -1,15 +1,13 @@
 site_name: YaCy Docs
 site_author: Michael Christen et al.
 site_description: "YaCy P2P - Decentralized Search Engine - documentation"
-//site_url: "https://yacy.net/"
 site_url: "https://eldar.cz/yacydoc/"
-repo_url: "https://github.com/okybaca/yacy_net_homepage/"
-edit_uri: "blob/standalone/docs/"
+repo_url: "https://github.com/okybaca/yacy_net_homepage/tree/standalone"
+edit_uri: "docs/"
 use_directory_urls: false
 
 theme:
     name: readthedocs
-//    custom_dir: 'cinder-superhero'
 
 nav:
     - Basic:
