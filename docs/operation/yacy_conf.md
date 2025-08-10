@@ -6,7 +6,9 @@ You can fine-tune various settings of YaCy in the config file
 You can also change all the settings in in administration interface: 
 __Administration > System Administration > Advanced Properties__.
 
-Some changes take effect only after restart. 
+Some changes take effect only after restart, some are rewritten. The safest
+way of changing the settings in config file is with yacy not running: stop
+yacy, change the settings, and start again.
 
 All the config file options and default values are listed in file
 `defaults/yacy.init`.
@@ -18,6 +20,9 @@ Options are described on this page as:
 
 
 ## System
+``host = 0.0.0.0``
+The network interface - this connector binds to as an IP address or a hostname
+
 ``port = 8090``
 	port number where the server should bind to
 

@@ -26,7 +26,7 @@
 
 
 ## Operation
-* [Index Creation - Crawl Start](operation/crawlstart_p.md)
+* [Advanced Crawler](operation/crawlstart_p.md)
 * [Setting the ranking rules](operation/ranking.md)
 * [YaCy config settings](operation/yacy_conf.md)
 * [RWI index distribution](operation/rwi-index-distribution.md)
