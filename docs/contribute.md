@@ -34,8 +34,8 @@ function yourself and do a github pull-request (see below).
 
 YaCy has many more functions than described in the [documentation](docs.md)
 and is still heavily under-documented.  You can help others by writting about your
-favourite feature, updating the old pages, correcting the mistakes or just
-spell-checking.  See 
+favourite feature, updating the old pages, fixing installation guide for
+your platform, correcting the mistakes or just spell-checking.  See 
 [github repository of documentation](https://github.com/yacy/yacy_net_homepage), 
 [documentation issues](https://github.com/yacy/yacy_search_server/issues?q=state%3Aopen%20label%3ADocumentation) 
 and github guide bellow.
@@ -79,8 +79,7 @@ Finally make a pull request, so your contribution could be merged into
 master branch.
 
 
-(or follow the github contribution guide
-<https://docs.github.com/en/get-started/quickstart/contributing-to-projects>)
+(or follow the [github contribution guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects))
 
 
 
