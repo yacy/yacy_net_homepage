@@ -54,7 +54,7 @@
 may be outdated, you can help the community by checking and [improving](contribute.md) the pages
 
 * [Index Export and Import](operation/index-export-import.md)
-
+* [Advanced Search Parameters](operation/search-parameters.md)
 
 ## Old and obsolete
 The original YaCy wiki is closed now (no new registration or editing) and
