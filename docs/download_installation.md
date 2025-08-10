@@ -23,7 +23,7 @@ If you don't have Docker installed, get it from [https://docs.docker.com/get-doc
 
 
 * <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.924_20201214_10042.exe" role="button">Download YaCy for Windows</a> from [https://download.yacy.net/yacy_v1.924_20201214_10042.exe](https://download.yacy.net/yacy_v1.924_20201214_10042.exe)
-* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.tar.gz" role="button">Download Yacy for Linux</a> from [https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.tar.gz](https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.tar.gz)
+* <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.940_202405270005_70454654f.tar.gz" role="button">Download Yacy for Linux</a> from [https://download.yacy.net/yacy_v1.940_202405270005_70454654f.tar.gz](https://download.yacy.net/yacy_v1.940_202405270005_70454654f.tar.gz)
 * <a class="btn btn-success btn" href="https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.dmg" role="button">Download YaCy for macOS</a> from [https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.dmg](https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.dmg)
 * <a class="btn btn-success btn" href="https://release.yacy.net/yacy_latest.tar.gz" role="button">Download latest developer release</A> for Linux from [https://release.yacy.net/](https://release.yacy.net/)
 

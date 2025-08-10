@@ -26,10 +26,11 @@
 
 
 ## Operation
-* [Index Creation - Crawl Start](operation/crawlstart_p.md)
+* [Advanced Crawler](operation/crawlstart_p.md)
 * [Setting the ranking rules](operation/ranking.md)
 * [YaCy config settings](operation/yacy_conf.md)
 * [RWI index distribution](operation/rwi-index-distribution.md)
+* [Yacy Packs](operation/yacy-pack.md)
 * [Autoupdate](operation/autoupdate.md)
 * [Portforwarding](operation/portforwarding.md)
 * [Using the YaCy Front-End over HTTPS](operation/yacyoverhttps.md)
@@ -52,7 +53,8 @@
 ## Converted from old-wiki
 may be outdated, you can help the community by checking and [improving](contribute.md) the pages
 
-...
+* [Index Export and Import](operation/index-export-import.md)
+* [Advanced Search Parameters](operation/search-parameters.md)
 
 ## Old and obsolete
 The original YaCy wiki is closed now (no new registration or editing) and
