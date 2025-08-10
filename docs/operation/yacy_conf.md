@@ -20,15 +20,19 @@ Options are described on this page as:
 
 
 ## System
+
+### Network
+
 ``host = 0.0.0.0``
 The network interface - this connector binds to as an IP address or a hostname
+
 
 ``port = 8090``
 	port number where the server should bind to
 
+
 ``port.ssl = 8443``
 	optional ssl port (https port) the server should bind to
-
 
 
 ``port.shutdown = -1``
@@ -36,11 +40,9 @@ The network interface - this connector binds to as an IP address or a hostname
 	( -1 = disable use of a shutdown port, 8005 = recommended default )
 
 
-
-
-
 ``upnp.enabled = true``
 use UPnP [true/false]
+
 
 ``upnp.remoteHost = ``
 remote host on UPnP device (for more than one connection)
@@ -56,6 +58,15 @@ to run yacy on port 8090, reachable from port 80, set `bindPort=8090`,
 	`iptables -t nat -A PREROUTING -p tcp -s 192.168.24.0/16 --dport 80 -j DNAT --to 192.168.24.1:8090`
 
 (of course you need to customize the ips)
+
+`staticIP=`
+staticIP if you have a static IP, you can use this setting
+
+
+`publicPort=`
+ if you use a different port to access YaCy than the one it listens on, you can use this setting
+
+
 
 ### Paths settings
 `indexPrimaryPath=DATA/INDEX` 
@@ -149,22 +160,11 @@ because of limitations of the file system, the maximum size can be set here
 `filesize.max.other = 8589934591`
 
 
-## Network
-
-### IP and port
-`staticIP=`
-staticIP if you have a static IP, you can use this setting
-
-
-`publicPort=`
- if you use a different port to access YaCy than the one it listens on, you can use this setting
-
-
 
 ### Network Definition
 There can be separate YaCy networks, and managed sub-groups of the general network.
 
-The essentials of the network definition are attached in separate property files.
+The essentials of the [network definition](network-definition.md) are attached in separate property files.
 
 The property here can also be a url where the definition can be loaded.
 
@@ -186,7 +186,6 @@ This option is only valid if the `network.unit.domain` property is set to
 'any'.
 
 
-
 `network.unit.agent =`
 A client may have its own agent name. This name can be set by the user and is set to a random value
 if not overwritten by the user. As an alternative, the name can be set with this property.
@@ -198,6 +197,7 @@ Prefer https for in-protocol operations when available on remote peers.
 
 A distinct general setting is available to control whether https sould be used for remote search queries :
 `remotesearch.https.preferred`
+
 
 ### Clusters within a network
 Every network can have an unlimited number of clusters. Clusters may be also completely
@@ -238,7 +238,7 @@ it can be rather short
 ### TLS/SSL support
 
 For a German manual see
-http://yacy-websuche.de/wiki/index.php/De:Interface%C3%9CberHTTPS
+<https://wiki.yacy.net/index.php/De:Interface%C3%9CberHTTPS>
 
 English speaking user read below:
 
