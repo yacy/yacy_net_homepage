@@ -1,6 +1,6 @@
 # Logging in YaCy
 
-Every YaCy instance keeps a log of it's operation. 
+Every YaCy instance keeps a log of its operation. 
 
 To take a look into a log is useful for debugging, when hunting an error,
 inefficiency or just for... train-spotting.
@@ -11,7 +11,7 @@ shown live at the Status page (`/Status.html`).
 
 ## Logfiles
 
-Real log is located in file `DATA/LOG/yacy00.log`. You can watch it live by
+Real log is located in the file `DATA/LOG/yacy00.log`. You can watch it live using
 common unix tools like
 [tail](https://www.man7.org/linux/man-pages/man1/tail.1.html).
 
