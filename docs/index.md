@@ -14,7 +14,7 @@ body {
 
 # YaCy is free software for your own search engine.
 
-Join a community of search engines or make your own search portal!
+Run it locally, for your organization, or join a decentralized network.
 
 There are these three use cases you can choose from:
 
