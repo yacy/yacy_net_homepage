@@ -182,7 +182,7 @@ Use this if you prefer a ready-made installer/package instead of building from G
 <a id="package-windows"></a>
 ### Windows installer
 
-* <a class="btn btn-success btn-sm" href="https://download.yacy.net/yacy_v1.924_20201214_10042.exe" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Windows installer (.exe)</a>
+* <a class="btn btn-success btn-sm" href="https://download.yacy.net/yacy_v1.941_202603291103_f0464e7fb.exe" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Windows installer (.exe)</a>
 
 Installation:
 
@@ -195,8 +195,7 @@ Installation:
 <a id="package-linux"></a>
 ### Linux tarball
 
-* <a class="btn btn-success btn-sm" href="https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.tar.gz" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Linux package (.tar.gz)</a>
-* <a class="btn btn-success btn-sm" href="https://release.yacy.net/yacy_latest.tar.gz" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Latest developer release (.tar.gz)</a>
+* <a class="btn btn-success btn-sm" href="https://download.yacy.net/yacy_v1.941_202603291103_f0464e7fb.tar.gz" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Linux package (.tar.gz)</a>
 
 Installation:
 
@@ -213,7 +212,7 @@ cd yacy<VERSION>
 <a id="package-macos"></a>
 ### macOS dmg
 
-* <a class="btn btn-success btn-sm" href="https://download.yacy.net/yacy_v1.930_202405130205_59c0cb0f3.dmg" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> macOS app image (.dmg)</a>
+* <a class="btn btn-success btn-sm" href="https://download.yacy.net/yacy_v1.941_202603291103_f0464e7fb.dmg" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> YaCy App (.dmg)</a>
 
 Installation:
 
