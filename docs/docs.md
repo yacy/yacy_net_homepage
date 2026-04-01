@@ -42,6 +42,7 @@
 
 ## Developers
 * [How to contribute](contribute.md)
+* [Development and releasing](dev/development-releasing.md)
 * [Description of the YaCy Distributed Web Search Engine](https://yacy.net/material/Description_of_the_YaCy_Distributed_Web_Search_Engine_Herrmann_Ning_Diaz_Preneel_ESAT_KULeuven_COSIC_article-2459.pdf) - scientific paper describing the technology
 * [Solr and YaCy integration](dev/solr.md)
 * [YaCy and Solr Cloud](dev/solrcloud.md)
