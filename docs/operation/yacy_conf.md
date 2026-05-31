@@ -48,17 +48,6 @@ use UPnP [true/false]
 remote host on UPnP device (for more than one connection)
 
 
-` bindPort = `
-sometimes you may want yacy to bind to another port, than the one reachable from outside.
-then set bindPort to the port yacy should bind on, and port to the port, visible from outside
-
-to run yacy on port 8090, reachable from port 80, set `bindPort=8090`,
-`port=80` and use:
-
-	`iptables -t nat -A PREROUTING -p tcp -s 192.168.24.0/16 --dport 80 -j DNAT --to 192.168.24.1:8090`
-
-(of course you need to customize the ips)
-
 `staticIP=`
 staticIP if you have a static IP, you can use this setting
 
