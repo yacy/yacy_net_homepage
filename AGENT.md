@@ -35,6 +35,15 @@ The real generated web page is created in `site/` after running `mkdocs build`.
 - After automated builds, every generated HTML file in `site/` shall be checked to be well-formed.
 - If an automated change causes malformed HTML in generated output, it must be fixed before the change is considered complete.
 
+## Mobile Usability Rule
+
+The YaCy homepage and documentation must work well for mobile users.
+
+- Design and content changes must be checked on narrow mobile-sized viewports as well as desktop viewports.
+- Pages should not require horizontal scrolling on phones.
+- Text, navigation, buttons, images, tables, and code blocks must remain readable and usable on mobile devices.
+- Do not rely on fixed desktop widths, inline positioning, or desktop-only spacing when responsive CSS can be used.
+
 ## Review Guideline
 
 When modifying the site, review changes for privacy regressions:
@@ -43,3 +52,4 @@ When modifying the site, review changes for privacy regressions:
 - Reject or replace any automatic remote dependency with a local copy.
 - Prefer relative paths and same-origin URLs for all runtime resources.
 - Review generated files in `site/` after `mkdocs build`, not only source templates/content.
+- Include a mobile viewport review for pages affected by layout, navigation, media, tables, code blocks, or call-to-action changes.

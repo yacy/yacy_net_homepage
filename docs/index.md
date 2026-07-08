@@ -1,75 +1,169 @@
 disable_toc: true
 
 <style>
-body {
-     background-image: url("img/YaCy_Network_Dark.png");
-     background-repeat:no-repeat;
-     background-size: 100%;
-} 
-</style>
-<div class="jumbotron" style="background: none;"><div class="container">
-  <img src="img/YaCyLogo2011_240.png" alt="YaCy" width="240">
-  <h2>Search Engine Software</h2>
-</div></div>
-
-# YaCy is free software for your own search engine.
-
-Run it locally, for your organization, or join a decentralized network.
-
-There are these three use cases you can choose from:
-
-<div class="container">
-      <div class="row">
-        <div id="mode-p2p" class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
-          <h2>P2P Mode</h2>
-	  <img src="img/usecase_freeworld.png" alt="YaCy Use Case: Freeworld">
-          <p>Web Search by the people, for the people: decentralized, all users are equal, no central, no search request storage, shared index.</p>
-        </div>
-        <div id="mode-portal" class="col-md-4" style="background-color:#4E5D6C; margin-right:15px; padding-left:15px; padding-right:15px; position:relative; left:15px;">
-          <h2>Your Search Portal</h2>
-	  <img src="img/usecase_webportal.png" alt="YaCy Use Case: Web Portal">
-          <p>Your YaCy installation is independent from other peers. Define your own web index and start your own web crawl.</p>
-       </div>
-        <div id="mode-intranet" class="col-md-4" style="background-color:#4E5D6C; padding-left:15px; padding-right:15px; position:relative; left:15px;">
-          <h2>Intranet Search</h2>
-	  <img src="img/usecase_intranet.png" alt="YaCy Use Case: Intranet">
-          <p>Create a search portal for your intranet, web pages or your (shared) file system.</p><br/>
-        </div>
-      </div>
-</div>
-
-<script>
-function setSpace() {
-  w = window.innerWidth || document.documentElement.clientWidth || doc.getElementsByTagName('body')[0].clientWidth;
-  margin = w * 0.4 - 360;
-  if (margin < -40) {
-     document.body.style.backgroundImage = 'none';
-     document.body.style.backgroundImage = 'url("img/YaCy_Network_Dark_Small.png")';
-     margin = -40;
+body.homepage {
+  overflow-x: hidden;
+}
+.home-hero {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin: 28px 0 44px 0;
+}
+.home-hero-copy {
+  flex: 0 0 36%;
+}
+.home-hero-logo {
+  width: 170px;
+  height: auto;
+  margin-bottom: 22px;
+}
+.home-hero h1 {
+  margin-top: 0;
+  font-size: 44px;
+  line-height: 1.1;
+}
+.home-hero-copy p {
+  font-size: 18px;
+  line-height: 1.55;
+}
+.home-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+.home-hero-screenshot {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.home-hero-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+}
+.use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0 42px 0;
+}
+.use-case-card {
+  background-color: #4E5D6C;
+  padding: 18px;
+}
+.use-case-card h2 {
+  margin-top: 0;
+}
+.use-case-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 14px auto;
+}
+.network-picture {
+  display: block;
+  width: 100%;
+  max-width: 1170px;
+  height: auto;
+  margin: 18px auto 0 auto;
+}
+@media (max-width: 991px) {
+  .home-hero {
+    display: block;
+    overflow-x: hidden;
   }
-  jumbotron = document.getElementsByClassName('jumbotron')[0];
-  jumbotron.style = 'background: none; margin-bottom: ' + margin + 'px;'
-
-  c1 = document.getElementById("mode-portal").scrollHeight;
-  if (document.readyState === 'complete') {
-    document.getElementById("mode-p2p").style.height = c1 + "px";
-    document.getElementById("mode-intranet").style.height = c1 + "px";
+  .home-hero-copy {
+    margin-bottom: 26px;
+  }
+  .home-hero h1 {
+    font-size: 36px;
+    overflow-wrap: anywhere;
+  }
+  .home-hero-actions {
+    display: block;
+  }
+  .home-hero-actions .btn {
+    display: block;
+    width: 100%;
+    margin: 0;
+    white-space: normal;
+  }
+  .home-hero-actions .btn + .btn {
+    margin-top: 10px;
+  }
+  .use-case-grid {
+    grid-template-columns: 1fr;
   }
 }
-setSpace();
-window.onresize = setSpace;
-</script>
+@media (max-width: 767px) {
+  .home-hero-copy,
+  .home-hero-screenshot {
+    max-width: 360px;
+  }
+}
+@media (max-width: 480px) {
+  .home-hero {
+    margin-top: 18px;
+  }
+  .home-hero h1 {
+    font-size: 32px;
+  }
+  .home-hero-copy p {
+    font-size: 16px;
+  }
+}
+</style>
+
+<section class="home-hero">
+  <div class="home-hero-copy">
+    <img class="home-hero-logo" src="img/YaCyLogo2011_240.png" alt="YaCy">
+    <h1>YaCy is free software for your own search engine.</h1>
+    <p>YaCy is free search engine software for local search, organization-wide search portals, and a decentralized peer-to-peer web index.</p>
+    <div class="home-hero-actions">
+      <a class="btn btn-success btn-lg" href="/download_installation/" role="button">Download YaCy</a>
+      <a class="btn btn-default btn-lg" href="https://yacy.searchlab.eu/Status.html" role="button">Try Demo</a>
+    </div>
+  </div>
+  <div class="home-hero-screenshot">
+    <img src="img/screenshot_search_result.png" alt="YaCy search results interface">
+  </div>
+</section>
+
+## Choose how you want to use YaCy
+
+Run YaCy locally, build a search portal for your organization, or join the decentralized peer-to-peer search network.
+
+<div class="use-case-grid">
+  <div id="mode-p2p" class="use-case-card">
+    <h2>P2P Mode</h2>
+    <img src="img/usecase_freeworld.png" alt="YaCy Use Case: Freeworld">
+    <p>Web Search by the people, for the people: decentralized, all users are equal, no central, no search request storage, shared index.</p>
+  </div>
+  <div id="mode-portal" class="use-case-card">
+    <h2>Your Search Portal</h2>
+    <img src="img/usecase_webportal.png" alt="YaCy Use Case: Web Portal">
+    <p>Your YaCy installation is independent from other peers. Define your own web index and start your own web crawl.</p>
+  </div>
+  <div id="mode-intranet" class="use-case-card">
+    <h2>Intranet Search</h2>
+    <img src="img/usecase_intranet.png" alt="YaCy Use Case: Intranet">
+    <p>Create a search portal for your intranet, web pages or your (shared) file system.</p>
+  </div>
+</div>
 
 ## Decentralization
-Imagine if, rather than relying on the proprietary software of a large professional search engine operator, your search engine was run across many private devices, not under the control of any one company or individual. Well, that's what YaCy does!
+YaCy does not depend on a central search provider. In peer-to-peer mode, many independently run devices contribute to a shared search index, so no single company or server controls the network.
 
 Here is a live image of the YaCy network:
 
-<img id="NetworkPicture" src="https://yacy.searchlab.eu/NetworkPicture.png?width=960&height=720&bgcolor=2C3E4F&pal=10080&pol=10080&coronaangle=0" alt="YaCy P2P Network" width="960" height="720" />
+<img id="NetworkPicture" class="network-picture" src="https://yacy.searchlab.eu/NetworkPicture.png?width=1170&height=878&bgcolor=2C3E4F&pal=10080&pol=10080&coronaangle=0" alt="YaCy P2P Network" width="1170" height="878" />
       
 <script type="text/javascript">
   <!--
-    imagestub = "https://yacy.searchlab.eu/NetworkPicture.png?width=960&height=720&bgcolor=2C3E4F&pal=10080&pol=10080&coronaangle=";
+    imagestub = "https://yacy.searchlab.eu/NetworkPicture.png?width=1170&height=878&bgcolor=2C3E4F&pal=10080&pol=10080&coronaangle=";
     imageanimindex = 0;
     imageloadindex = 0;
     imagecycles = 0;
@@ -103,13 +197,3 @@ Here is a live image of the YaCy network:
     }
   -->
   </script>
-
-## Installation is easy!
-
-The installation takes only three minutes. Just download the release, decompress the package and run the start script.
-
-Next Steps:
-<p><a class="btn btn-success btn-lg" href="/download_installation/" role="button">Download and Install YaCy</a>
-<a class="btn btn-info btn-lg" href="/demonstration_tutorial_screenshot/" role="button">Watch screenshots and tutorial movies</a>
-<a class="btn btn-warning btn-lg" href="https://yacy.searchlab.eu/Status.html" role="button">Try out the YaCy Demo Peer</a>
-</p>
