@@ -44,6 +44,27 @@
     <script src="{{ 'js/jquery.min.js'|url }}"></script>
     <script src="{{ 'js/fontawesome-all.js'|url }}"></script>
     <script src="{{ 'js/bootstrap.min.js'|url }}"></script>
+    <script>
+    (function () {
+        function resetDesktopNavigation() {
+            if (!window.matchMedia || !window.matchMedia('(min-width: 992px)').matches) {
+                return;
+            }
+            var menu = document.getElementById('site-navbar-menu');
+            var toggle = document.querySelector('.site-navbar .navbar-toggle');
+            if (!menu) {
+                return;
+            }
+            menu.classList.remove('in', 'collapsing');
+            menu.style.height = '';
+            if (toggle) {
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        }
+        window.addEventListener('resize', resetDesktopNavigation);
+        document.addEventListener('DOMContentLoaded', resetDesktopNavigation);
+    }());
+    </script>
     <script src="{{ 'js/highlight.pack.js'|url }}"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script>var base_url = {{ base_url | tojson }}</script>
@@ -64,12 +85,7 @@
         <div class="col-md-12" role="main">{% include "content.html" %}</div>
         {% else %}
         <div class="col-md-3 toc-column">
-            <button type="button" class="btn btn-default btn-block toc-toggle visible-xs visible-sm" data-toggle="collapse" data-target="#page-toc" aria-expanded="false" aria-controls="page-toc">
-                <span class="toc-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span> On this page
-            </button>
-            <div id="page-toc" class="collapse page-toc-collapse">
-                {% include "toc.html" %}
-            </div>
+            {% include "toc.html" %}
         </div>
         <div class="col-md-9" role="main">{% include "content.html" %}</div>
         {% endif %}

@@ -1,11 +1,18 @@
-<p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/download_installation.md" role="button" target="_blank">Improve this doc</a>
-</p>
-
 # Installation
 
 YaCy installation instructions for Linux, Windows, macOS, and Docker. Choose one installation method.
 
 <style>
+.install-mobile-note {
+  display: none;
+  margin: 16px 0 20px 0;
+  padding: 12px 14px;
+  background-color: #4E5D6C;
+  border-left: 4px solid #30c0ff;
+}
+.install-mobile-note p {
+  margin: 0;
+}
 .install-path-grid {
   margin: 18px 0 10px 0;
 }
@@ -74,7 +81,45 @@ YaCy installation instructions for Linux, Windows, macOS, and Docker. Choose one
   color: #5c6657;
   font-size: 12px;
 }
+div[role="main"] a,
+div[role="main"] :not(pre) > code {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+div[role="main"] :not(pre) > code {
+  white-space: normal;
+}
+div[role="main"] pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.support-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin: 14px 0 20px 0;
+}
+.support-links a {
+  display: inline-block;
+}
+.support-links img {
+  max-width: 100%;
+  height: auto;
+  padding: 0 !important;
+}
+.donation-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.donation-form img {
+  max-width: 100px;
+  height: auto;
+}
 @media (max-width: 991px) {
+  .install-mobile-note { display: block; }
   .install-path-row { justify-content: center; }
   .install-path-card { width: calc(50% - 5px); min-height: 96px; flex-basis: calc(50% - 5px); }
 }
@@ -82,6 +127,10 @@ YaCy installation instructions for Linux, Windows, macOS, and Docker. Choose one
   .install-path-card { width: 100%; min-height: 0; flex-basis: 100%; }
 }
 </style>
+
+<div class="install-mobile-note">
+  <p>YaCy runs on desktop and server systems, not on phones. If you are reading this on mobile, use this page to choose an installation method and continue on the computer or server where YaCy should run.</p>
+</div>
 
 <div class="install-path-grid">
   <div class="install-path-row">
@@ -366,16 +415,17 @@ YaCy is libre software - licensed GPL-2+. Downloads are provided for free! Pleas
 
 ## Become a YaCy Patron
 
-<a href="https://www.patreon.com/bePatron?u=185903"><img src="../../img/sponsor_patreon.png" alt="Become a Patron" height="128" align="left" style="padding-left:8%;padding-right:20px"></a>
-<a href="https://github.com/users/Orbiter/sponsorship"><img src="../../img/sponsor_github.png" alt="Become a GitHub Sponsor" height="128" align="left" style="padding-left:8%"></a>
-<br><br><br><br><br>
+<div class="support-links">
+  <a href="https://www.patreon.com/bePatron?u=185903"><img src="../img/sponsor_patreon.png" alt="Become a Patron" height="128"></a>
+  <a href="https://github.com/users/Orbiter/sponsorship"><img src="../img/sponsor_github.png" alt="Become a GitHub Sponsor" height="128"></a>
+</div>
 
 ## One-Time Donation
 
-<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin:0px; padding:0px;">
+<form class="donation-form" target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="on0" value="Your contribution is happily received as a tax-deductable, legal payment.">
-<img src="https://yacy.net/img/pp-logo-100px.png" alt="PayPal">&nbsp;
+<img src="../img/pp-logo-100px.png" alt="PayPal">&nbsp;
 <input type="radio" name="os0" value="beneficial" checked>&nbsp;<label>5 &euro;</label>&nbsp;
 <input type="radio" name="os0" value="generous">&nbsp;<label>25 &euro;</label>&nbsp;
 <input type="radio" name="os0" value="gracious">&nbsp;<label>50 &euro;</label>&nbsp;

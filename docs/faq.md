@@ -1,8 +1,5 @@
 # FAQ - Frequently Asked Questions
 
-<p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/faq.md" role="button" target="_blank">Improve this doc</a>
-</p>
-
 ## General
 
 ### What is this?
@@ -382,4 +379,3 @@ respective [log entries](operation/logging.md).
 You can help a lot by simply giving us feedback or telling us about new ideas. 
 
 You can also help by telling other people about this software. 
-

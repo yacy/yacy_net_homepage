@@ -76,12 +76,37 @@ pre {
 .site-navbar .navbar-toggle .icon-bar {
     background-color: #ffffff;
 }
-@media (max-width: 1279px) {
+@media (min-width: 992px) {
+    .site-navbar .navbar-toggle {
+        display: none !important;
+    }
+    .site-navbar .navbar-nav.navbar-right:last-child {
+        margin-right: 0;
+    }
+    .site-navbar .navbar-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+}
+@media (max-width: 991px) {
     body {
         padding-top: 0;
     }
     .site-navbar.navbar-fixed-top {
-        position: static;
+        position: relative;
+        z-index: 1030;
+    }
+    h1[id]:before,
+    h2[id]:before,
+    h3[id]:before,
+    h4[id]:before,
+    h5[id]:before,
+    h6[id]:before,
+    :target:before {
+        display: none;
+        height: 0;
+        margin-top: 0;
     }
     .site-navbar .container {
         width: auto;
@@ -145,32 +170,6 @@ pre {
 .bs-sidenav {
     font-size: 12px;
 }
-.toc-toggle {
-    margin: 20px 0 14px 0;
-    text-align: left;
-}
-.toc-menu-icon {
-    display: inline-block;
-    width: 15px;
-    margin-right: 8px;
-    vertical-align: -1px;
-}
-.toc-menu-icon span {
-    display: block;
-    height: 2px;
-    margin: 3px 0;
-    background-color: currentColor;
-}
-.toc-toggle .glyphicon {
-    margin-right: 8px;
-}
-@media (min-width: 992px) {
-    .page-toc-collapse.collapse {
-        display: block !important;
-        height: auto !important;
-        visibility: visible !important;
-    }
-}
 @media (max-width: 991px) {
     body > .container {
         max-width: 100%;
@@ -178,16 +177,7 @@ pre {
         padding-right: 15px;
     }
     .toc-column {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .page-toc-collapse .bs-sidebar {
-        margin-top: 0;
-        margin-bottom: 22px;
-    }
-    .page-toc-collapse .bs-sidenav {
-        margin-top: 0;
-        margin-bottom: 0;
+        display: none;
     }
     div[role="main"] .pull-right {
         float: none !important;

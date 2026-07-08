@@ -1,95 +1,161 @@
 # YaCy Demonstration
 
-We have screenshots, tutorial movies, and a live demonstration. If you want to jump to the section where we show where we took the beautiful teaser image from, jump to the [peer-to-peer network activity dashboard](#network-activity)!
+See what YaCy looks like in practice: search results, crawling, configuration, monitoring, and a public demo instance.
 
-<p><a class="btn btn-default btn-sm pull-right" href="https://github.com/yacy/yacy_net_homepage/blob/master/docs/demonstration_tutorial_screenshot.md" role="button" target="_blank">Improve this doc</a>
+<p>
+  <a class="btn btn-success btn-lg" href="https://yacy.searchlab.eu/Status.html" role="button">Try Demo</a>
+  <a class="btn btn-default btn-lg" href="/download_installation/" role="button">Download YaCy</a>
 </p>
 
+<style>
+.demo-shot {
+  margin: 16px 0 26px 0;
+}
+.demo-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.demo-shot figcaption {
+  margin-top: 8px;
+  color: #B1B7B9;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.demo-shot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 18px 0 34px 0;
+}
+.demo-shot-grid .demo-shot {
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .demo-shot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
 ## Screenshots
-.. the best way to show what you get ..
 
-### Search Results
+The screenshots below follow the main YaCy workflows: search, crawl, analyze, configure, and monitor the peer-to-peer network.
 
-This is the search results page using peer-to-peer data:
-![YaCy Search Engine Result List](img/screenshot_search_result.png)
+### Search
 
-Search result pages can be configured:
-![YaCy Search Engine Configuration](img/screenshot_search_result_configuration.png)
+YaCy can search a local index, a portal index, or peer-to-peer data from the shared network. The result page is the main interface your users will see.
 
-We provide a wide range of options to integrate a search page into an existing environment:
-![YaCy Search Engine Integration](img/screenshot_search_result_integration.png)
+<figure class="demo-shot demo-shot-primary">
+  <img src="../img/screenshot_search_result.png" alt="YaCy Search Engine Result List">
+  <figcaption>Search results using peer-to-peer data.</figcaption>
+</figure>
 
-There are many pre-defined themes and an easy way to configure your own colour schema:
-![YaCy Search Engine Theme Configuration](img/screenshot_appearance.png)
+<div class="demo-shot-grid">
+  <figure class="demo-shot">
+    <img src="../img/screenshot_search_result_configuration.png" alt="YaCy Search Engine Configuration">
+    <figcaption>Search page configuration for different use cases.</figcaption>
+  </figure>
+  <figure class="demo-shot">
+    <img src="../img/screenshot_search_result_integration.png" alt="YaCy Search Engine Integration">
+    <figcaption>Options for integrating search into an existing website or application.</figcaption>
+  </figure>
+  <figure class="demo-shot">
+    <img src="../img/screenshot_appearance.png" alt="YaCy Search Engine Theme Configuration">
+    <figcaption>Predefined themes and settings for custom colors.</figcaption>
+  </figure>
+  <figure class="demo-shot">
+    <img src="../img/screenshot_ranking.png" alt="YaCy Search Engine Ranking Configuration">
+    <figcaption>Ranking controls for tuning result ordering.</figcaption>
+  </figure>
+</div>
 
-Search result ranking can be configured:
-![YaCy Search Engine Ranking Configuration](img/screenshot_ranking.png)
+### Crawl
 
-### Crawling
+Before YaCy can return search results, it needs content in the index. A crawl starts with a source URL and can be kept simple for common tasks.
 
-Before search results can be provided, a web crawl must be done to harvest the required document corpus.
+<figure class="demo-shot demo-shot-primary">
+  <img src="../img/screenshot_crawler_site.png" alt="YaCy Search Engine Site Crawler/Spider">
+  <figcaption>The simple crawl start page focuses on the basic input needed to begin.</figcaption>
+</figure>
 
-There is a easy-to-use simple crawl start service which takes almost only the starting URL as input:
-![YaCy Search Engine Site Crawler/Spider](img/screenshot_crawler_site.png)
-
-A running crawl can be monitored in many ways, here is the crawler status dashboard:
-![YaCy Search Engine Crawler/Spider Monitor](img/screenshot_crawler_monitor.png)
-
-For more complex harvesting tasks, here is the Expert Crawl Start service:
-![YaCy Search Engine Expert Crawl/Spider Start](img/screenshot_expert_crawl_start.png)
-
-
-### Data Analysis
-
-A running YaCy instance has many management tasks running and it creates a lot of data.
-To visualize that data about itself and the data it harvested from the internet, there are a lot of
-dashboards and monitoring features.
-
-The status page which informs about the current activities of your YaCy instance:
-![YaCy Search Engine Status Dashboard](img/screenshot_status.png)
-
-Crawled web pages can be reconstructed and browsed with the host browser where you see the internal link structure and all kind of details of the parsing results:
-![YaCy Search Engine Host Browser](img/screenshot_host_browser.png)
-
-While the host browser reveals the structure of documents within all of the single domains, the web
-structure service shows how domains are linked to each other:
-![YaCy Search Engine Web Structure](img/screenshot_web_structure.png)
-
-### Configuration
-
-YaCy can be configured in every detail using the web interface. You can use a configuration file and also edit details inside of that file, but a web front-end is much more convenient.
-
-Here you see the use case configuration. This is actually the first service which YaCy shows to you because the first thing you have to do is to choose which use case you are prefering: Peer-to-Peer operation, your own Search Portal, or Intranet Indexing:
-![YaCy Search Engine Basic Configuration for Use Case: Peer-to-Peer, Portal, Intranet](img/screenshot_use_case_configuration.png)
-
-The main purpose of YaCy is to aquire a lot of data from the web and make
-them searchable.  Consequently, this uses a lot of disk space.  We make the
-resources which YaCy takes configurable with the following service.  YaCy
-loves to use more RAM if available, give it more RAM and it performs better!
-![YaCy Search Engine Performance Setting](img/screenshot_performance_settings.png)
+<div class="demo-shot-grid">
+  <figure class="demo-shot">
+    <img src="../img/screenshot_crawler_monitor.png" alt="YaCy Search Engine Crawler/Spider Monitor">
+    <figcaption>Running crawls can be monitored while YaCy fetches and indexes documents.</figcaption>
+  </figure>
+  <figure class="demo-shot">
+    <img src="../img/screenshot_expert_crawl_start.png" alt="YaCy Search Engine Expert Crawl Start">
+    <figcaption>The expert crawl page exposes advanced options for complex harvesting tasks.</figcaption>
+  </figure>
+</div>
 
 
-### Network Activity
+### Analyze
 
-YaCy makes a lot of network connections and it is transparent about doing that.
+A running YaCy instance continuously records what it is doing. The administration interface includes dashboards for activity, indexed documents, and link structure.
 
-In case you are running YaCy in peer-to-peer operation, you can watch the network graphic here:
-![YaCy Peer-to-Peer Network](img/screenshot_peer_network.png)
+<figure class="demo-shot demo-shot-primary">
+  <img src="../img/screenshot_status.png" alt="YaCy Search Engine Status Dashboard">
+  <figcaption>The status page shows current activity and health information.</figcaption>
+</figure>
 
-The peer-to-peer network can be investigated in detail in a table:
-![YaCy Peer List Table](img/screenshot_peer_list.png)
+<div class="demo-shot-grid">
+  <figure class="demo-shot">
+    <img src="../img/screenshot_host_browser.png" alt="YaCy Search Engine Host Browser">
+    <figcaption>Crawled pages can be inspected with parsed content and internal links.</figcaption>
+  </figure>
+  <figure class="demo-shot">
+    <img src="../img/screenshot_web_structure.png" alt="YaCy Search Engine Web Structure">
+    <figcaption>The web structure view shows how domains link to each other.</figcaption>
+  </figure>
+</div>
 
-Every connection that YaCy does, peer-to-peer or crawling, is monitored as well:
-![YaCy Network Monitor](img/screenshot_access_grid.png)
+### Configure
+
+YaCy can be configured through the web interface. You can still edit configuration files directly, but most operational settings are easier to manage in the browser.
+
+<figure class="demo-shot demo-shot-primary">
+  <img src="../img/screenshot_use_case_configuration.png" alt="YaCy Search Engine Basic Configuration for Use Case: Peer-to-Peer, Portal, Intranet">
+  <figcaption>The use case configuration is one of the first decisions: peer-to-peer search, a standalone search portal, or intranet indexing.</figcaption>
+</figure>
+
+<div class="demo-shot-grid">
+  <figure class="demo-shot">
+    <img src="../img/screenshot_performance_settings.png" alt="YaCy Search Engine Performance Setting">
+    <figcaption>Performance settings help you adapt YaCy to the machine it runs on.</figcaption>
+  </figure>
+</div>
 
 
-## Tutorial Movies
+### Network
 
-We have a YouTube channel! Yes, thats a Google service - therefore all videos embedded here are mouseover-activated, that means as long as you do not touch them, there is no referrer appearing at a G server.
+In peer-to-peer mode, YaCy is transparent about its network activity and the peers it communicates with.
 
-These videos are short and most have nice music from [Shiryu Music](https://shiryu.bandcamp.com/) in the background. Shiryu is just great and inspiring! 
+<figure class="demo-shot demo-shot-primary">
+  <img src="../img/screenshot_peer_network.png" alt="YaCy Peer-to-Peer Network">
+  <figcaption>The network graphic visualizes peer-to-peer activity.</figcaption>
+</figure>
 
-<p><a class="btn btn-danger btn-lg" href="https://www.youtube.com/yacy_tutorials" role="button">Subscribe to the YaCy Tutorial Youtube channel</a></p>
+<div class="demo-shot-grid">
+  <figure class="demo-shot">
+    <img src="../img/screenshot_peer_list.png" alt="YaCy Peer List Table">
+    <figcaption>The peer list provides a table view of known peers.</figcaption>
+  </figure>
+  <figure class="demo-shot">
+    <img src="../img/screenshot_access_grid.png" alt="YaCy Network Monitor">
+    <figcaption>The access grid shows connections made by crawling and peer-to-peer communication.</figcaption>
+  </figure>
+</div>
+
+
+## Video Tutorials
+
+The YaCy tutorial videos are hosted on YouTube. To avoid loading YouTube automatically, this page shows local preview images first. The video iframe is loaded only when you interact with a preview.
+
+<p><a class="btn btn-danger btn-lg" href="https://www.youtube.com/yacy_tutorials" role="button">Open YaCy Tutorial Channel</a></p>
 
 <script>
     embed01 = "<iframe width='720' height='405' src='//www.youtube.com/embed/CFwebavBU0s?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
@@ -137,13 +203,3 @@ Instead of Java 7 now please install Java 11 (or higher)
 <div id="video07">
 <img src="../img/tutorial_07_Search_Locations_on_Map_with_Openstreetmap_and_Geonames.png" alt="YaCy Tutorial 07: Search Locations on a Map with Openstreetmap and Geonames" width="720" height="405"  onmouseover="document.getElementById('video07').innerHTML = embed07;">
 </div>
-
-
-## Live Demonstration
-
-Well, YaCy is all about running your own search engine, not using a central one. Therefore we highly recommend you download and try out your own YaCy instance instead of trying this demonstration. Therefore, please consider this demonstration not as production-grade search portal, just as help to find out what YaCy is and how it looks.
-
-We provide here a link to the administration page of the test instance where you can also find your way to the search page. Administration functions are disabled but you are able to browse through the services without a password:
-
-### YaCy Demo Peer
-<p><a class="btn btn-default btn-lg" href="https://yacy.searchlab.eu/Status.html" role="button">Click here to operate a YaCy Demo Peer</a></p>
