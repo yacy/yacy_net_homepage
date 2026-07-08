@@ -44,6 +44,15 @@ The YaCy homepage and documentation must work well for mobile users.
 - Text, navigation, buttons, images, tables, and code blocks must remain readable and usable on mobile devices.
 - Do not rely on fixed desktop widths, inline positioning, or desktop-only spacing when responsive CSS can be used.
 
+## YaCy Backend Image Size Rule
+
+When requesting generated images from a YaCy backend, use the defined largest image size for every rendering mode.
+
+- Do not ask the backend YaCy server for different image dimensions based on desktop, tablet, or mobile viewport size.
+- The requested backend image dimensions must stay fixed once the maximum intended size has been chosen.
+- Use frontend rendering, CSS constraints, and responsive layout rules to make that fixed-size image fit the page.
+- This is especially important for live YaCy backend graphics such as `NetworkPicture.png`, where changing request dimensions can have backend side effects.
+
 ## Review Guideline
 
 When modifying the site, review changes for privacy regressions:

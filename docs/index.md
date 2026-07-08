@@ -162,8 +162,9 @@ Here is a live image of the YaCy network:
 <img id="NetworkPicture" class="network-picture" src="https://yacy.searchlab.eu/NetworkPicture.png?width=1170&height=878&bgcolor=2C3E4F&pal=10080&pol=10080&coronaangle=0" alt="YaCy P2P Network" width="1170" height="878" />
       
 <script type="text/javascript">
-  <!--
-    imagestub = "https://yacy.searchlab.eu/NetworkPicture.png?width=1170&height=878&bgcolor=2C3E4F&pal=10080&pol=10080&coronaangle=";
+    networkImageWidth = 1170;
+    networkImageHeight = 878;
+    imagestub = "https://yacy.searchlab.eu/NetworkPicture.png?width=" + networkImageWidth + "&height=" + networkImageHeight + "&bgcolor=2C3E4F&pal=10080&pol=10080&coronaangle=";
     imageanimindex = 0;
     imageloadindex = 0;
     imagecycles = 0;
@@ -175,7 +176,7 @@ Here is a live image of the YaCy network:
       for (j = 0; j < 6; j++) initanimationphase(j, handle);
     }
     function initanimationphase(phase, handle) {
-      imagearray[phase] = new Image(1024, 720);
+      imagearray[phase] = new Image(networkImageWidth, networkImageHeight);
       angle = phase * 60;
       imagearray[phase].src = imagestub + angle + "&handle=" + handle;
     }
@@ -195,5 +196,4 @@ Here is a live image of the YaCy network:
         setTimeout("doanimation()", 100);
       }
     }
-  -->
   </script>

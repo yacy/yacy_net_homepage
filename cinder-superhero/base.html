@@ -63,7 +63,14 @@
         {% if page.meta.disable_toc %}
         <div class="col-md-12" role="main">{% include "content.html" %}</div>
         {% else %}
-        <div class="col-md-3">{% include "toc.html" %}</div>
+        <div class="col-md-3 toc-column">
+            <button type="button" class="btn btn-default btn-block toc-toggle visible-xs visible-sm" data-toggle="collapse" data-target="#page-toc" aria-expanded="false" aria-controls="page-toc">
+                <span class="toc-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span> On this page
+            </button>
+            <div id="page-toc" class="collapse page-toc-collapse">
+                {% include "toc.html" %}
+            </div>
+        </div>
         <div class="col-md-9" role="main">{% include "content.html" %}</div>
         {% endif %}
         {% endblock %}
