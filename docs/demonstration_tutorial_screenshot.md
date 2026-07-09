@@ -33,6 +33,51 @@ See what YaCy looks like in practice: search results, crawling, configuration, m
 .demo-shot-grid .demo-shot {
   margin: 0;
 }
+.video-preview {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 10px 0 26px 0;
+  padding: 0;
+  overflow: hidden;
+  color: #ffffff;
+  background-color: #111111;
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+}
+.video-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.video-preview span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 18px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  background-color: rgba(218,54,43,0.95);
+  border-radius: 4px;
+}
+.video-preview:hover span,
+.video-preview:focus span {
+  background-color: #da362b;
+}
+.video-frame {
+  max-width: 720px;
+  margin: 10px 0 26px 0;
+  aspect-ratio: 16 / 9;
+}
+.video-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 @media (max-width: 767px) {
   .demo-shot-grid {
     grid-template-columns: 1fr;
@@ -153,53 +198,87 @@ In peer-to-peer mode, YaCy is transparent about its network activity and the pee
 
 ## Video Tutorials
 
-The YaCy tutorial videos are hosted on YouTube. To avoid loading YouTube automatically, this page shows local preview images first. The video iframe is loaded only when you interact with a preview.
+The YaCy tutorial videos are hosted on YouTube. To avoid loading YouTube automatically, this page shows local preview images first. Click a preview to load the video.
 
 <p><a class="btn btn-danger btn-lg" href="https://www.youtube.com/yacy_tutorials" role="button">Open YaCy Tutorial Channel</a></p>
 
 <script>
-    embed01 = "<iframe width='720' height='405' src='//www.youtube.com/embed/CFwebavBU0s?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
-    embed02 = "<iframe width='720' height='405' src='//www.youtube.com/embed/XDoVNzOMoIo?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
-    embed03 = "<iframe width='720' height='405' src='//www.youtube.com/embed/iqJuf_EA1UE?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
-    embed04 = "<iframe width='720' height='405' src='//www.youtube.com/embed/t5y5MmnmraA?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
-    embed05 = "<iframe width='720' height='405' src='//www.youtube.com/embed/UUAylWYqzac?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
-    embed06 = "<iframe width='720' height='405' src='//www.youtube.com/embed/hGwjllUdjU0?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
-    embed07 = "<iframe width='720' height='405' src='//www.youtube.com/embed/o3-v2oaXSa0?list=UUvy0FJxqOAlSZ2VXskej79Q' frameborder='0' allowfullscreen></iframe>"
+document.addEventListener('DOMContentLoaded', function () {
+  var previews = document.querySelectorAll('.video-preview');
+  previews.forEach(function (preview) {
+    preview.addEventListener('click', function () {
+      var videoId = preview.getAttribute('data-video-id');
+      var title = preview.getAttribute('data-video-title') || 'YaCy tutorial video';
+      var frameWrap = document.createElement('div');
+      var iframe = document.createElement('iframe');
+
+      frameWrap.className = 'video-frame';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId) + '?autoplay=1&rel=0&list=UUvy0FJxqOAlSZ2VXskej79Q';
+      iframe.title = title;
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+
+      frameWrap.appendChild(iframe);
+      preview.replaceWith(frameWrap);
+    });
+  });
+});
 </script>
 
-### Demo: YaCy Installation in Windows
-Please install Java 11 (or higher) first, the automatic Java installation within YaCy does not work any more.
+### YaCy Installation on Windows
+Install the latest Java release before installing YaCy on Windows.
 <div id="video01">
-<img src="../img/tutorial_01_Installation_in_Windows.png" alt="YaCy Tutorial 01: Installation in Windows" width="720" height="405"  onmouseover="document.getElementById('video01').innerHTML = embed01;">
+<button class="video-preview" type="button" data-video-id="CFwebavBU0s" data-video-title="YaCy Tutorial 01: Installation in Windows">
+  <img src="../img/tutorial_01_Installation_in_Windows.png" alt="YaCy Tutorial 01: Installation in Windows" width="720" height="405">
+  <span>Load video</span>
+</button>
 </div>
 
-### Demo: YaCy Installation on a Mac
+### YaCy Installation on macOS
 <div id="video02">
-<img src="../img/tutorial_02_Installation_on_a_Mac.png" alt="YaCy Tutorial 02: Installation on a Mac" width="720" height="405"  onmouseover="document.getElementById('video02').innerHTML = embed02;">
+<button class="video-preview" type="button" data-video-id="XDoVNzOMoIo" data-video-title="YaCy Tutorial 02: Installation on a Mac">
+  <img src="../img/tutorial_02_Installation_on_a_Mac.png" alt="YaCy Tutorial 02: Installation on a Mac" width="720" height="405">
+  <span>Load video</span>
+</button>
 </div>
 
-### Demo: YaCy Installation in Ubuntu and any other Linux Systems
-Instead of Java 7 now please install Java 11 (or higher)
+### YaCy Installation on Ubuntu and Other Linux Systems
+Install the latest Java release before installing YaCy on Linux.
 <div id="video03">
-<img src="../img/tutorial_03_Installation_in_Ubuntu_and_any_other_Linux.png" alt="YaCy Tutorial 03: Installation in Ubuntu and any other Linux" width="720" height="405"  onmouseover="document.getElementById('video03').innerHTML = embed03;">
+<button class="video-preview" type="button" data-video-id="iqJuf_EA1UE" data-video-title="YaCy Tutorial 03: Installation in Ubuntu and any other Linux">
+  <img src="../img/tutorial_03_Installation_in_Ubuntu_and_any_other_Linux.png" alt="YaCy Tutorial 03: Installation in Ubuntu and any other Linux" width="720" height="405">
+  <span>Load video</span>
+</button>
 </div>
 
-### Demo: Basic Configuration of YaCy and Release Updates
+### Basic Configuration and Release Updates
 <div id="video04">
-<img src="../img/tutorial_04_Basic_Configuration_Release_Update.png" alt="YaCy Tutorial 04: Basic Configuration" width="720" height="405"  onmouseover="document.getElementById('video04').innerHTML = embed04;">
+<button class="video-preview" type="button" data-video-id="t5y5MmnmraA" data-video-title="YaCy Tutorial 04: Basic Configuration">
+  <img src="../img/tutorial_04_Basic_Configuration_Release_Update.png" alt="YaCy Tutorial 04: Basic Configuration" width="720" height="405">
+  <span>Load video</span>
+</button>
 </div>
 
-### Demo: Start a Web Crawl with YaCy
+### Start a Web Crawl with YaCy
 <div id="video05">
-<img src="../img/tutorial_05_Easy_Web_Crawl.png" alt="YaCy Tutorial 05: Easy Web Crawl"  width="720" height="405"  onmouseover="document.getElementById('video05').innerHTML = embed05;">
+<button class="video-preview" type="button" data-video-id="UUAylWYqzac" data-video-title="YaCy Tutorial 05: Easy Web Crawl">
+  <img src="../img/tutorial_05_Easy_Web_Crawl.png" alt="YaCy Tutorial 05: Easy Web Crawl" width="720" height="405">
+  <span>Load video</span>
+</button>
 </div>
 
-### Demo: Secret Agents with YaCy RSS Feed Reader
+### YaCy RSS Feed Reader
 <div id="video06">
-<img src="../img/tutorial_06_Secret_Agents_with_YaCy_RSS_Feed_Reader.png" alt="YaCy Tutorial 06: Secret Agents with YaCy RSS Feed Reader" width="720" height="405"  onmouseover="document.getElementById('video06').innerHTML = embed06;">
+<button class="video-preview" type="button" data-video-id="hGwjllUdjU0" data-video-title="YaCy Tutorial 06: Secret Agents with YaCy RSS Feed Reader">
+  <img src="../img/tutorial_06_Secret_Agents_with_YaCy_RSS_Feed_Reader.png" alt="YaCy Tutorial 06: Secret Agents with YaCy RSS Feed Reader" width="720" height="405">
+  <span>Load video</span>
+</button>
 </div>
 
-### Demo: Location Search with YaCy and Openstreetmap and Geonames
+### Location Search with YaCy, OpenStreetMap, and Geonames
 <div id="video07">
-<img src="../img/tutorial_07_Search_Locations_on_Map_with_Openstreetmap_and_Geonames.png" alt="YaCy Tutorial 07: Search Locations on a Map with Openstreetmap and Geonames" width="720" height="405"  onmouseover="document.getElementById('video07').innerHTML = embed07;">
+<button class="video-preview" type="button" data-video-id="o3-v2oaXSa0" data-video-title="YaCy Tutorial 07: Search Locations on a Map with OpenStreetMap and Geonames">
+  <img src="../img/tutorial_07_Search_Locations_on_Map_with_Openstreetmap_and_Geonames.png" alt="YaCy Tutorial 07: Search Locations on a Map with OpenStreetMap and Geonames" width="720" height="405">
+  <span>Load video</span>
+</button>
 </div>
