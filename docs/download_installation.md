@@ -121,11 +121,11 @@ This installation path is usually just a few commands:
 
 ### Requirements
 
-- JDK 11 or newer (use the most recent JDK available; JDK 11 is the minimum)
+- JDK 17 or newer (use the most recent JDK available; JDK 17 is the minimum)
 - `ant`
 - `git`
 
-On Linux, install these with your package manager (`apt`, `dnf`, etc.). On macOS, install a recent JDK and ensure `git` and `ant` are available in your shell. On Windows, use a shell environment such as **Git Bash** (or WSL) with JDK 11+, Ant, and Git installed.
+On Linux, install these with your package manager (`apt`, `dnf`, etc.). On macOS, install a recent JDK and ensure `git` and `ant` are available in your shell. On Windows, use a shell environment such as **Git Bash** (or WSL) with JDK 17+, Ant, and Git installed.
 
 ### Common build and start commands
 
@@ -145,25 +145,25 @@ After starting YaCy, open [http://localhost:8090](http://localhost:8090).
 #### Linux
 
 - YaCy can run under a normal user account (no root required for running YaCy).
-- If Java 11, Ant, and Git are installed, the common commands above are usually enough.
+- If Java 17, Ant, and Git are installed, the common commands above are usually enough.
 
 Example package install (Debian/Ubuntu):
 
 ```
 sudo apt-get update
-# Use the most recent JDK available in your distribution (minimum: JDK 11)
+# Use the most recent JDK available in your distribution (minimum: JDK 17)
 sudo apt-get install -y openjdk-17-jdk-headless ant git
 ```
 
 #### macOS
 
-- Install a recent JDK (minimum: JDK 11), `git`, and `ant`.
+- Install a recent JDK (minimum: JDK 17), `git`, and `ant`.
 - If you use Homebrew, you can install the JDK with `brew install openjdk` (requires Homebrew).
 - Run the common commands above in Terminal.
 
 #### Windows
 
-- Install a recent JDK (minimum: JDK 11), Git, and Ant.
+- Install a recent JDK (minimum: JDK 17), Git, and Ant.
 - Open **Git Bash** (or WSL) and run the common commands above.
 - If Windows asks for network access permissions for Java, allow private networks so YaCy can listen on `localhost:8090`.
 
@@ -241,14 +241,14 @@ This can also be used when restarting a previously created container to overwrit
 YaCy stores its data in the Docker volume `yacy_search_server_data`. To back up that DATA folder to `/tmp/DATA.tar.xz`, run:
 ```
 docker stop yacy_search_server
-docker run --rm -v yacy_search_server_data:/opt/yacy_search_server/DATA -v /tmp:/tmp openjdk:11-jre-slim bash -c "cd /opt/yacy_search_server && tar -cf - DATA | xz -q -3v -T0 > /tmp/DATA.tar.xz"
+docker run --rm -v yacy_search_server_data:/opt/yacy_search_server/DATA -v /tmp:/tmp openjdk:17-jre-slim bash -c "cd /opt/yacy_search_server && tar -cf - DATA | xz -q -3v -T0 > /tmp/DATA.tar.xz"
 docker start yacy_search_server
 ```
 
 To restore the DATA folder from `/tmp/DATA.tar.xz`, run:
 ```
 docker stop yacy_search_server
-docker run --rm -v yacy_search_server_data:/opt/yacy_search_server/DATA -v /tmp:/tmp openjdk:11-jre-slim bash -c "cd /opt/yacy_search_server && rm -rf DATA/* && tar xf /tmp/DATA.tar.xz"
+docker run --rm -v yacy_search_server_data:/opt/yacy_search_server/DATA -v /tmp:/tmp openjdk:17-jre-slim bash -c "cd /opt/yacy_search_server && rm -rf DATA/* && tar xf /tmp/DATA.tar.xz"
 docker start yacy_search_server
 ```
 This restores the data volume contents for the YaCy instance.

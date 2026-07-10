@@ -41,7 +41,7 @@ Main technical features :
 
 Below are the main technologies used in the project :
 
-  - Java 11
+  - Java 17
   - [XHTML](https://www.w3.org/TR/2002/REC-xhtml1-20020801/),
     [CSS](https://www.w3.org/Style/CSS/),
     [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
@@ -112,7 +112,6 @@ Below are the main technologies used in the project :
 
 _Converted from
 <http://wiki.yacy.de/index.php?title=En:Features>, may be outdated_
-
 
 
 

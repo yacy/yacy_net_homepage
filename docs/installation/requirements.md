@@ -23,7 +23,7 @@ environment on your system yet, you must install it before installing
 YaCy. GNU/Linux distributions may include, e.g. a free one called
 [OpenJDK](http://openjdk.java.net/install/). Otherwise, Java is
 available from the [Sun website](http://java.com/en/download/index.jsp).
-The minimum Java version you need for YaCy is Java 11 — which might
+The minimum Java version you need for YaCy is Java 17 — which might
 change in the future.
 
 Note that Apache Solr beeing a YaCy core component, it is a good idea to
@@ -32,7 +32,7 @@ follow also Solr recommendations. For example, YaCy 1.82 includes Solr
 Requirements](https://lucene.apache.org/solr/4_10_3/SYSTEM_REQUIREMENTS.html))
 
 Because of this — and the fact that the newer Java version is more
-powerful than the old one — you should chose Java 11 right from the
+powerful than the old one — you should chose Java 17 right from the
 start. If the only thing you want to do is just run Java programs you
 can make do with the [JRE (Java Runtime
 Environment)](https://en.wikipedia.org/wiki/Java_Runtime_Environment). If you want to develop
@@ -43,7 +43,6 @@ Java Development Kit](http://en.wikipedia.org/wiki/JDK).
 
 _Converted from <https://wiki.yacy.net/index.php?title=En:Requirements>, may
 be outdated_
-
 
 
 
