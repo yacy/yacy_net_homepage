@@ -69,7 +69,6 @@ div[role="main"] pre {
   <li><strong><a href="#install-docker">Docker</a></strong><span>Use this for servers, containers, and deployments with a persistent data volume.</span></li>
 </ul>
 
-<a id="packaged-downloads"></a>
 ## Packaged Downloads
 
 <div class="download-actions">
@@ -82,6 +81,16 @@ Use a packaged download if you prefer an installer or archive instead of buildin
 
 ### Windows Installer
 
+YaCy requires Java. Install Java 17 or newer before installing YaCy. For example, download the Windows `.msi` installer for the [Temurin JDK](https://adoptium.net/temurin/releases/?package=jdk) and run it.
+
+After installing Java, open a new Command Prompt and check that Java is available:
+
+```
+java -version
+```
+
+Then install YaCy:
+
 - Double-click the downloaded installer.
 - When `Windows protected your PC` appears, click `More info` -> `Run anyway`.
 - When asked `Do you want to allow this app from an unknown publisher to make changes to your device`, click `Yes`.
@@ -89,6 +98,36 @@ Use a packaged download if you prefer an installer or archive instead of buildin
 - Start YaCy from the installed app icon.
 
 ### macOS App
+
+YaCy requires Java. Install Java before starting YaCy. The easiest way to do this from Terminal is with [Homebrew](https://brew.sh/), a package manager for macOS.
+
+First check whether Homebrew is already installed:
+
+```
+brew --version
+```
+
+If the command is not found, install Homebrew with its official installation command:
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Follow the instructions shown in Terminal. Homebrew may ask you to run an additional command to add `brew` to your shell's `PATH`. Run that command, then open a new Terminal window and check again with `brew --version`.
+
+Now install the Temurin Java Development Kit:
+
+```
+brew install --cask temurin
+```
+
+Check that Java is available:
+
+```
+java -version
+```
+
+Then install YaCy:
 
 - Double-click the downloaded `.dmg` file.
 - Copy `YaCy.app` to the `Applications` folder.
@@ -108,7 +147,6 @@ cd yacy<VERSION>
 ./startYACY.sh
 ```
 
-<a id="install-from-git"></a>
 ## Install from Git
 
 This installs the latest YaCy code directly from the Git repository and is currently the preferred installation path.
@@ -158,7 +196,7 @@ sudo apt-get install -y openjdk-17-jdk-headless ant git
 #### macOS
 
 - Install a recent JDK (minimum: JDK 17), `git`, and `ant`.
-- If you use Homebrew, you can install the JDK with `brew install openjdk` (requires Homebrew).
+- If you use Homebrew, install the JDK with `brew install --cask temurin`. If Homebrew is not installed yet, follow the [Homebrew and Java instructions for the macOS app](#macos-app) first.
 - Run the common commands above in Terminal.
 
 #### Windows
