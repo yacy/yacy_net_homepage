@@ -72,9 +72,9 @@ div[role="main"] pre {
 ## Packaged Downloads
 
 <div class="download-actions">
-  <a class="btn btn-success" href="https://download.yacy.net/yacy_v1.941_202603291103_f0464e7fb.exe" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Windows installer (.exe)</a>
-  <a class="btn btn-success" href="https://download.yacy.net/yacy_v1.941_202603291103_f0464e7fb.dmg" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> macOS app (.dmg)</a>
-  <a class="btn btn-success" href="https://download.yacy.net/yacy_v1.941_202603291103_f0464e7fb.tar.gz" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Linux package (.tar.gz)</a>
+  <a class="btn btn-success" href="https://download.yacy.net/yacy_v1.942_202608150808_f9c4b9700.exe" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Windows installer (.exe)</a>
+  <a class="btn btn-success" href="https://download.yacy.net/yacy_v1.942_202608150808_f9c4b9700.dmg" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> macOS app (.dmg)</a>
+  <a class="btn btn-success" href="https://download.yacy.net/yacy_v1.942_202608150808_f9c4b9700.tar.gz" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Linux package (.tar.gz)</a>
 </div>
 
 Use a packaged download if you prefer an installer or archive instead of building from Git.
