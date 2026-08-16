@@ -40,6 +40,11 @@ The network interface - this connector binds to as an IP address or a hostname
 	( -1 = disable use of a shutdown port, 8005 = recommended default )
 
 
+`port.public =`
+    the public port which will be communicated to other peers for connecting to this
+    instance. If unset, `port` or `port.ssl` will be used.
+
+
 ``upnp.enabled = true``
 use UPnP [true/false]
 
@@ -64,7 +69,7 @@ staticIP if you have a static IP, you can use this setting
 
 
 `publicPort=`
- if you use a different port to access YaCy than the one it listens on, you can use this setting
+Deprecated. Please use `port.public` instead
 
 
 
